@@ -2,4 +2,3 @@
 
 EXAMPLE
 
-![alt text](<download (10).png>)
