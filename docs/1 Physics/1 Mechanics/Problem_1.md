@@ -55,9 +55,7 @@ Discuss how changes in other parameters, such as initial velocity and gravitatio
 ## Solution
 The horizontal range of a projectile depends on the projection angle in a predictable way, governed by the equation:
 
-$$
-R=v^2sin(20)/g
-$$
+![alt text](<Screenshot 2025-03-13 092850.png>)
 
 1. Sinusoidal Relationship:
 
@@ -77,5 +75,6 @@ R(30°) = R(60°)
 R(10°) = R(80°)
 
 This is because sin(20°) = sin(180° - 2θ)
+
 
 
