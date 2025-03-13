@@ -74,9 +74,28 @@ R(30°) = R(60°)
 
 R(10°) = R(80°)
 
-This is because sin(20°) = sin(180° - 2θ)
+This is because sin(20) = sin(180° - 2θ)
 
 ![alt text](image.png)
 
 Here’s the graph showing the horizontal range as a function of the projection angle! You can see the symmetric curve peaking at 45°, with key points marked at 30°, 45°, and 60° to highlight the symmetry.
 
+
+## Example
+
+$$
+R=(20)^2sin(2*45°) / 9.8
+$$
+
+$$
+R=400 * sin(90°) / 9.8
+$$
+
+$$
+R=400 * 1 / 9.8
+$$
+
+$$
+R≈40.82
+$$
+The projectile travels about 40.82 meters.
