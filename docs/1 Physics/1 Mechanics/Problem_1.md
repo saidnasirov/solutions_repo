@@ -76,5 +76,7 @@ R(10°) = R(80°)
 
 This is because sin(20°) = sin(180° - 2θ)
 
+![alt text](image.png)
 
+Here’s the graph showing the horizontal range as a function of the projection angle! You can see the symmetric curve peaking at 45°, with key points marked at 30°, 45°, and 60° to highlight the symmetry.
 
