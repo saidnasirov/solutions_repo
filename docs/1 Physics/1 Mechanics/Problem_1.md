@@ -169,12 +169,9 @@ No Air Resistance (Blue Curve)
 
 The projectile follows an ideal parabolic trajectory.
 The object reaches a higher peak and travels a longer horizontal distance.
+
+
 With Air Resistance (Red Curve)
 
 The trajectory is affected by air drag, reducing both the maximum height and horizontal range.
 The projectile slows down due to resistive forces, causing it to fall earlier.
-Key Observations
-Both curves start at the same initial point (the projectile is launched from the ground).
-The blue curve (no air resistance) follows a perfect parabola, which is the theoretical motion in a vacuum.
-The red curve (with air resistance) is lower and shorter due to energy loss from drag.
-The difference becomes more significant as the projectile moves farther, since air resistance continuously opposes motion.
