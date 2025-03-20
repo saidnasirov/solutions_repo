@@ -94,7 +94,7 @@ The projectile travels about 40.82 meters.
 ![alt text](image-1.png)
 
 
-# 3 Practical Applications:
+# Practical Applications:
 Reflect on how this model can be adapted to describe various real-world situations, such as projectiles launched on uneven terrain or in the presence of air resistance.
 
 
