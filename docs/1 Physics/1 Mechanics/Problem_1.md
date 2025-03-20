@@ -88,6 +88,7 @@ $$
 $$
 R≈40.82
 $$
+
 The projectile travels about 40.82 meters.
 
 ![alt text](image-1.png)
