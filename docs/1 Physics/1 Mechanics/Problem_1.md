@@ -159,3 +159,22 @@ Explanation for My Project:
 
 “This graph compares the trajectory of a projectile under two conditions. The parabolic curve (shorter range, around 100 meters) shows a projectile launched on flat ground, where gravity pulls it down and air resistance slows it, creating a typical curved path. The straight line (longer range, around 250 meters) represents a projectile launched on a downhill slope. The slope extends the range because the projectile follows the terrain, delaying its landing. This shows how uneven terrain adapts the gravitation model in real-world scenarios.”
 
+
+![alt text](image-6.png)
+
+Explanation of the Plot
+This plot represents the effect of air resistance on projectile motion. It compares two scenarios:
+
+No Air Resistance (Blue Curve)
+
+The projectile follows an ideal parabolic trajectory.
+The object reaches a higher peak and travels a longer horizontal distance.
+With Air Resistance (Red Curve)
+
+The trajectory is affected by air drag, reducing both the maximum height and horizontal range.
+The projectile slows down due to resistive forces, causing it to fall earlier.
+Key Observations
+Both curves start at the same initial point (the projectile is launched from the ground).
+The blue curve (no air resistance) follows a perfect parabola, which is the theoretical motion in a vacuum.
+The red curve (with air resistance) is lower and shorter due to energy loss from drag.
+The difference becomes more significant as the projectile moves farther, since air resistance continuously opposes motion.
