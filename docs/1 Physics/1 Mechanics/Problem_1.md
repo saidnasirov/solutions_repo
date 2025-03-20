@@ -1,15 +1,6 @@
 # Problem 1
 
-# EXAMPLE
-
-![alt text](<download (10).png>)
-
-$$
-E=mc^2
-$$
-
 # Mechanics
-# Problem 1
 
 # Task 1
 # Theoretical Foundation:
@@ -52,7 +43,7 @@ Investigate how the horizontal range depends on the angle of projection.
 
 Discuss how changes in other parameters, such as initial velocity and gravitational acceleration, influence the relationship.
 
-## Solution
+## Explanation
 The horizontal range of a projectile depends on the projection angle in a predictable way, governed by the equation:
 
 ![alt text](<Screenshot 2025-03-13 092850.png>)
@@ -99,3 +90,6 @@ $$
 R≈40.82
 $$
 The projectile travels about 40.82 meters.
+
+![alt text](image-1.png)
+
