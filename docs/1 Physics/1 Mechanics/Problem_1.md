@@ -98,8 +98,7 @@ describing the pendulum's motion.
 
 cos(2.21t) shows that the displacement follows a cosine function, indicating simple harmonic motion.
 
-The angular frequency is 
-2.21
+The angular frequency is
 2.21 radians per second, which determines how quickly the pendulum oscillates.
 
 ## Interpreting the Graph:
