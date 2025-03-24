@@ -1,177 +1,224 @@
 # Problem 1
-
+# --------------------------------------
 # Mechanics
 
-# Task 1
-# Theoretical Foundation:
+# Problem 1
+### Investigating the Range as a Function of the Angle of Projection
 
-Begin by deriving the governing equations of motion from fundamental principles. This involves solving a basic differential equation to establish the general form of the motion.
+## 1 Theoretical Foundation:
 
-Highlight how variations in initial conditions lead to a family of solutions.
+Projectile motion is a form of motion where an object moves in a bilaterally symmetrical, parabolic path. The path that the object follows is called its trajectory. Projectile motion only occurs when there is one force applied at the beginning on the trajectory, after which the only interference is from gravity.
 
-## Solution
-Define the Forces Acting on the Projectile
-A projectile is subject to only one force (neglecting air resistance):
+In physics, projectile motion describes the motion of an object that is launched into the air and moves under the influence of gravity alone, with air resistance neglected. In this idealized model, the object follows a parabolic path determined by its initial velocity and the constant acceleration due to gravity.
 
-Gravitational force acting downward:
+## Key Equations to Derive:
 
+1. Horizontal Motion: 
 $$
-F=mg
-$$
-
-$$
-24=m6
+x = v0cos(𝜃)t
 $$
 
+2. Vertical Motion:
 $$
-m=24/6
-$$
-
-$$
-m=4
+𝑦=𝑣0sin(𝜃)𝑡−1/2𝑔𝑡^2
 $$
 
+3. Time of Flight:
 $$
-24=4*6
-$$
-
-
-
-# Analysis of the Range:
-Investigate how the horizontal range depends on the angle of projection.
-
-Discuss how changes in other parameters, such as initial velocity and gravitational acceleration, influence the relationship.
-
-## Explanation
-The horizontal range of a projectile depends on the projection angle in a predictable way, governed by the equation:
-
-![alt text](<Screenshot 2025-03-13 092850.png>)
-
-1. Sinusoidal Relationship:
-
-The range is proportional to sin(2θ), which means it varies in a sinusoidal pattern with the angle.
-
-Sin(2θ) reaches its maximum value of 1 when 2θ = 90°, or θ = 45°
-
-At 45°, the projectile travels the farthest.
-
-As 𝜃 increases beyond 45°, sin(2𝜃) decreases, causing the range to shorten.
-
-2. Symmetry
-The range for angles that add up to 90° is the same. For example:
-
-R(30°) = R(60°)
-
-R(10°) = R(80°)
-
-This is because sin(20) = sin(180° - 2θ)
-
-![alt text](image.png)
-
-Here’s the graph showing the horizontal range as a function of the projection angle! You can see the symmetric curve peaking at 45°, with key points marked at 30°, 45°, and 60° to highlight the symmetry.
-
-
-## Example
-
-$$
-R=(20)^2sin(2*45°) / 9.8
+t=2 v0sin(θ)​/g
 $$
 
+4. Range Formula:
 $$
-R=400 * sin(90°) / 9.8
-$$
-
-$$
-R=400 * 1 / 9.8
+R = v^20sin(2𝜃)/g
 $$
 
+5. Maximum Range Condition:
 $$
-R≈40.82
+𝜃optimum = 45∘
 $$
 
-The projectile travels about 40.82 meters.
+## Finding the Period of Oscillation
+![alt text](image-14.png)
 
-![alt text](image-1.png)
+##  Writing the Equation for Angular Displacement 
+![alt text](image-15.png)
 
+import numpy as np
+import matplotlib.pyplot as plt
 
-# Practical Applications:
-Reflect on how this model can be adapted to describe various real-world situations, such as projectiles launched on uneven terrain or in the presence of air resistance.
+# Given values
+L = 2  # length of the pendulum in meters
+g = 9.8  # acceleration due to gravity in m/s^2
+theta_0 = 0.1  # initial angle in radians
 
+# Calculate the angular frequency
+omega = np.sqrt(g / L)
 
-The "Practical Applications" section is asking you to think about how the basic idea of gravitation (Newton’s law of universal gravitation) applies to real-life situations that are more complicated than the simple examples we often see in textbooks. Let’s break it down:
+# Time array from 0 to 10 seconds
+t = np.linspace(0, 10, 500)
 
-1. What is the Gravitation Model?
+# Angular displacement as a function of time
+theta_t = theta_0 * np.cos(omega * t)
 
-Your project already includes Newton’s law of gravitation: 
+# Plot the graph
+plt.figure(figsize=(8, 6))
+plt.plot(t, theta_t, label=r'$\theta(t) = 0.1 \cos(2.21 t)$', color='b')
+plt.title('Angular Displacement of the Pendulum vs. Time')
+plt.xlabel('Time (seconds)')
+plt.ylabel('Angular Displacement (radians)')
+plt.grid(True)
+plt.axhline(0, color='black',linewidth=0.5)
+plt.axvline(0, color='black',linewidth=0.5)
+plt.legend()
+plt.show()
 
-![alt text](image-2.png)
+![alt text](image-16.png)
 
-This formula tells us the force (𝐹) between two objects (with masses 𝑚1 and 𝑚2) depends on how far apart they are (𝑟) and a constant (𝐺, which is ![alt text](image-3.png) ).
+### This graph shows the angular displacement of a pendulum over time. Let’s break it down step by step:
 
-In simple physics problems, we use this to calculate things like how a ball falls straight down or how planets orbit the Sun, assuming no other forces or complications.
+## Title and Axes:
 
-![alt text](image-4.png)
+The title, "Angular Displacement of the Pendulum vs. Time," tells us that the graph shows how the pendulum's angular displacement changes with time.
 
-Parabolic Curve (Blue, Shorter Range): This represents the trajectory of a projectile (like a ball) launched at an angle, affected by gravity and likely air resistance.
-Straight Line (Blue, Longer Range): This represents a different scenario, possibly a projectile on a sloped terrain (like downhill) or with a different launch condition (e.g., higher velocity or no air resistance).
+The x-axis represents "Time (seconds)" — showing the progression of time from 0 to 10 seconds.
 
+The y-axis represents "Angular Displacement (radians)" — showing the angle by which the pendulum swings back and forth, measured in radians.
 
-Graph Details:
+## The Equation:
 
+The equation in the legend is
+$$
+𝜃(𝑡)=0.1cos(2.21𝑡)
+$$
+describing the pendulum's motion.
 
-X-Axis: Horizontal distance traveled (in meters), ranging from 0 to 250 meters.
+0.1
+0.1 is the amplitude, meaning the maximum angular displacement is ±0.1 radians.
 
+cos(2.21t) shows that the displacement follows a cosine function, indicating simple harmonic motion.
 
-Y-Axis: Height (in meters), ranging from 0 to 35 meters.
+The angular frequency is 
+2.21
+2.21 radians per second, which determines how quickly the pendulum oscillates.
 
+## Interpreting the Graph:
 
-Parabolic Curve: Starts at (0,0), rises to a peak around 10 meters high at about 50 meters horizontally, then falls back to the ground around 100 meters.
+The blue curve represents the pendulum's oscillation, moving back and forth in a regular pattern.
 
+The peaks at ±0.1 radians show the maximum displacement, and the points where the curve crosses the x-axis represent moments when the pendulum passes through its equilibrium position.
 
-Straight Line: Starts at (0,0) and rises steadily, reaching about 35 meters high at 250 meters horizontally.
+The period (time to complete one full oscillation) is about 
+2
+𝜋
+2.21
+≈
+2.84
+ seconds
+2.21
+2π
+​
+ ≈2.84 seconds.
 
+## Conclusion:
 
-Interpretation:
+The pendulum undergoes simple harmonic motion with a constant amplitude of 0.1 radians and oscillates at a frequency dictated by 2.21 radians per second. The graph visualizes the regular back-and-forth motion over time.
 
-Parabolic Curve: This is the typical path of a projectile in a vacuum or with air resistance on flat ground. Gravity pulls the projectile down, creating a curved (parabolic) trajectory. If air resistance is present, the range (horizontal distance) is reduced, which matches the shorter range (around 100 meters) seen here.
+## 2 Analysis of the Range
 
+1. Regular (Periodic) Motion
+In a system exhibiting regular motion, the behavior of the system repeats at regular intervals. For example, a simple harmonic oscillator or a damped pendulum with a weak external force may exhibit periodic motion where the oscillations occur at a constant amplitude and frequency. This type of motion can be easily described by a mathematical model and is typically stable and predictable.
 
-Straight Line: This doesn’t look like a typical projectile trajectory because it doesn’t curve downward. It might represent:
+Physical Interpretation of Regular Motion:
+In energy harvesting systems, periodic motion (such as a resonant vibration) is desirable because it ensures a steady flow of energy.
 
+Mechanical systems like shock absorbers rely on regular oscillations for smooth, controlled motion without excessive damping or instability.
 
-A projectile launched on a downhill slope, where the terrain keeps it moving farther without hitting the ground as quickly.
+For pendulum-based devices, the regular motion might correspond to the pendulum swinging with a fixed frequency, ideal for systems designed to work within a known, controlled environment.
 
+2. Chaotic Motion
+Chaotic motion occurs when a system's behavior becomes highly sensitive to initial conditions. A small change in the system's starting point can lead to vastly different outcomes over time. This type of motion is non-periodic and unpredictable, even though the underlying system is deterministic (meaning the equations governing the system are known).
 
-A simplified model (e.g., ignoring gravity’s downward pull for demonstration) or a different type of motion (like a rocket with constant upward thrust).
+In the context of a forced damped pendulum, chaotic motion can emerge when the system is driven by an external force (like a periodic driving force) with the right combination of amplitude and frequency. Initially, the system may exhibit periodic behavior, but as the driving force's amplitude or frequency increases, the system may transition into chaotic behavior.
 
-The slope extends the range because the projectile doesn’t hit the ground as soon—it keeps traveling downward along the hill.
+Physical Interpretation of Chaotic Motion:
+Energy Harvesting Devices: In chaotic systems, energy extraction can become inefficient or erratic, making it challenging to design energy harvesters that depend on predictable oscillations. Chaotic behavior might be detrimental to systems that require a constant, regular input or output of energy.
 
+Mechanical Systems and Vibration: In structures like bridges, buildings, or mechanical systems, chaotic motion could represent resonance effects caused by external forces (like wind or traffic), leading to dangerous vibrations. For instance, chaotic behavior could result in structural fatigue, as unpredictable oscillations might cause stress beyond safe levels.
 
-Connection to Practical Applications:
-Uneven Terrain: The straight line could show how a downhill slope increases the range of a projectile compared to flat ground (parabolic curve). On a downhill slope, gravity still pulls the projectile down, but the slope allows it to travel farther horizontally before landing.
+Pendulum-Based Systems: In pendulum-based devices, chaotic behavior might arise if the driving force (such as a periodic push) matches the system's natural frequency in a non-linear manner. This could cause the pendulum to swing erratically, making it difficult to predict its behavior, which can be problematic for mechanical applications where precision is needed.
 
+Here are a few steps to visualize this transition:
 
-Air Resistance: The parabolic curve likely includes air resistance (since its range is shorter than expected for a vacuum). Air resistance slows the projectile, reducing its range compared to an ideal scenario.
+Regular Motion: For a small driving force amplitude, the pendulum will show periodic motion.
 
+Chaotic Motion: As the driving force amplitude increases, the pendulum will transition to chaotic motion, showing unpredictable oscillations.
+![alt text](image-13.png)
 
-Explanation for My Project:
+Here is the plot showing the transition from regular to chaotic motion in a forced damped pendulum as we vary the amplitude of the external driving force (F0):
 
+For smaller values of F0 (e.g., 0.5 N), the pendulum exhibits regular, periodic oscillations, with the motion remaining predictable.
 
-“This graph compares the trajectory of a projectile under two conditions. The parabolic curve (shorter range, around 100 meters) shows a projectile launched on flat ground, where gravity pulls it down and air resistance slows it, creating a typical curved path. The straight line (longer range, around 250 meters) represents a projectile launched on a downhill slope. The slope extends the range because the projectile follows the terrain, delaying its landing. This shows how uneven terrain adapts the gravitation model in real-world scenarios.”
+As F0 increases, the pendulum starts to show more complex and irregular oscillations, which can be interpreted as a transition toward chaotic motion.
 
+At larger values of F0 (e.g., 6.0 N), the pendulum displays chaotic behavior, with highly unpredictable and non-repeating oscillations.
 
-![alt text](image-6.png)
+---
+![alt text](image-7.png)
 
-Explanation of the Plot
-This plot represents the effect of air resistance on projectile motion. It compares two scenarios:
+The graph illustrates the relationship between the launch angle (°) of a projectile and its horizontal range (m), assuming ideal projectile motion without air resistance.
 
-No Air Resistance (Blue Curve)
+### Key Observations:
+The range increases as the angle increases from 0° to 45°.
 
-The projectile follows an ideal parabolic trajectory.
-The object reaches a higher peak and travels a longer horizontal distance.
+The maximum range occurs at 45°, which aligns with theoretical predictions that show the optimal angle for maximum distance in a vacuum is 45°.
 
+As the angle exceeds 45°, the range decreases symmetrically, showing that an angle of 60° produces the same range as 30°, and 70° as 20°.
 
-With Air Resistance (Red Curve)
+At 0° and 90°, the range is zero, because:
+At 0°, the projectile moves horizontally and immediately touches the ground.
 
-The trajectory is affected by air drag, reducing both the maximum height and horizontal range.
-The projectile slows down due to resistive forces, causing it to fall earlier.
+At 90°, the projectile moves straight up and falls back down without horizontal displacement.
+
+This analysis is crucial in physics, engineering, and sports, where optimizing the launch angle is essential for applications like ballistics, sports, and space missions.
+
+## 3 Practical Applications:
+
+### Projectile Trajectory for Different Angles.
+
+Graph plots the trajectory of a projectile for three different angles (30°, 45°, and 60°) to show how the launch angle affects the path.
+![alt text](image-10.png)
+This graph illustrates the trajectories of a projectile launched at three different angles: 30°, 45°, and 60°.
+
+### Key Observations:
+
+### 1 Peak Height:
+
+The 60° trajectory reaches the highest peak but has a shorter range.
+The 45° trajectory has a moderate peak and the longest range.
+
+The 30° trajectory has the lowest peak but still a decent range.
+
+### 2 Horizontal Distance (Range):
+
+The 45° trajectory results in the longest range because, in ideal conditions (without air resistance), the maximum range occurs at 45°.
+
+The 30° and 60° trajectories have the same range, but the 60° path stays in the air longer due to its higher vertical component.
+
+### 3 Effect of Angle on Flight Time:
+
+The projectile launched at 60° stays in the air longer than the one launched at 30° because it has a larger vertical component.
+
+The 30° projectile reaches the ground faster because it has a lower initial vertical velocity.
+
+---
+
+![alt text](image-11.png)
+![alt text](image-12.png)
+Here are the graphs for the forced damped pendulum system:
+
+Angular Displacement vs Time: This plot shows how the angular displacement (θ) of the pendulum evolves over time under the influence of an external force and damping. You can see oscillations with decreasing amplitude due to the damping force.
+
+Angular Velocity vs Time: This graph illustrates how the angular velocity (ω) changes over time, showing how the velocity of the pendulum is affected by the external force and the damping.
+
+## 4 Implementation:
