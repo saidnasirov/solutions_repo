@@ -216,7 +216,25 @@ $$</p>
 <p><img alt="alt text" src="../image-14.png"/></p>
 <h2 id="writing-the-equation-for-angular-displacement">Writing the Equation for Angular Displacement</h2>
 <p><img alt="alt text" src="../image-15.png"/></p>
-<p><img alt="alt text" src="image-17.png"/></p>
+<p>import numpy as np
+import matplotlib.pyplot as plt
+Time array from 0 to 10 seconds with small steps for smooth plotting
+t = np.linspace(0, 10, 1000)
+Angular displacement theta(t) = 0.1 * cos(2.1 * t)
+theta = 0.1 * np.cos(2.1 * t)
+Create the plot
+plt.figure(figsize=(8, 6))
+plt.plot(t, theta, label=r'<span class="arithmatex">\(\theta(t) = 0.1\cos(2.1t)\)</span>', color='blue')
+Add labels and title
+plt.xlabel('Time (seconds)')
+plt.ylabel('Angular Displacement (radians)')
+plt.title('Angular Displacement of the Pendulum vs. Time')
+plt.grid(True)
+Add legend
+plt.legend()
+Show the plot
+plt.show()</p>
+<p><img alt="alt text" src="../image-17.png"/></p>
 <h3 id="this-graph-shows-the-angular-displacement-of-a-pendulum-over-time-lets-break-it-down-step-by-step">This graph shows the angular displacement of a pendulum over time. Let’s break it down step by step:</h3>
 <h2 id="title-and-axes">Title and Axes:</h2>
 <p>The title, "Angular Displacement of the Pendulum vs. Time," tells us that the graph shows how the pendulum's angular displacement changes with time.</p>
