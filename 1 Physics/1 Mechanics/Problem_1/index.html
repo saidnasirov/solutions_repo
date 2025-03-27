@@ -216,30 +216,7 @@ $$</p>
 <p><img alt="alt text" src="../image-14.png"/></p>
 <h2 id="writing-the-equation-for-angular-displacement">Writing the Equation for Angular Displacement</h2>
 <p><img alt="alt text" src="../image-15.png"/></p>
-<p>import numpy as np
-import matplotlib.pyplot as plt</p>
-<p>Given values
-L = 2  # length of the pendulum in meters
-g = 9.8  # acceleration due to gravity in m/s^2
-theta_0 = 0.1  # initial angle in radians</p>
-<p>Calculate the angular frequency
-omega = np.sqrt(g / L)</p>
-<p>Time array from 0 to 10 seconds
-t = np.linspace(0, 10, 500)</p>
-<p>Angular displacement as a function of time
-theta_t = theta_0 * np.cos(omega * t)</p>
-<h3 id="plot-the-graph">Plot the graph</h3>
-<p>plt.figure(figsize=(8, 6))
-plt.plot(t, theta_t, label=r'<span class="arithmatex">\(\theta(t) = 0.1 \cos(2.21 t)\)</span>', color='b')
-plt.title('Angular Displacement of the Pendulum vs. Time')
-plt.xlabel('Time (seconds)')
-plt.ylabel('Angular Displacement (radians)')
-plt.grid(True)
-plt.axhline(0, color='black',linewidth=0.5)
-plt.axvline(0, color='black',linewidth=0.5)
-plt.legend()
-plt.show()</p>
-<p><img alt="alt text" src="../image-16.png"/></p>
+<p><img alt="alt text" src="image-17.png"/></p>
 <h3 id="this-graph-shows-the-angular-displacement-of-a-pendulum-over-time-lets-break-it-down-step-by-step">This graph shows the angular displacement of a pendulum over time. Let’s break it down step by step:</h3>
 <h2 id="title-and-axes">Title and Axes:</h2>
 <p>The title, "Angular Displacement of the Pendulum vs. Time," tells us that the graph shows how the pendulum's angular displacement changes with time.</p>
