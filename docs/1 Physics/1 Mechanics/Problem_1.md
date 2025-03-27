@@ -44,36 +44,8 @@ $$
 ##  Writing the Equation for Angular Displacement 
 ![alt text](image-15.png)
 
-import numpy as np
-import matplotlib.pyplot as plt
 
-Given values
-L = 2  # length of the pendulum in meters
-g = 9.8  # acceleration due to gravity in m/s^2
-theta_0 = 0.1  # initial angle in radians
-
-Calculate the angular frequency
-omega = np.sqrt(g / L)
-
-Time array from 0 to 10 seconds
-t = np.linspace(0, 10, 500)
-
-Angular displacement as a function of time
-theta_t = theta_0 * np.cos(omega * t)
-
-### Plot the graph
-plt.figure(figsize=(8, 6))
-plt.plot(t, theta_t, label=r'$\theta(t) = 0.1 \cos(2.21 t)$', color='b')
-plt.title('Angular Displacement of the Pendulum vs. Time')
-plt.xlabel('Time (seconds)')
-plt.ylabel('Angular Displacement (radians)')
-plt.grid(True)
-plt.axhline(0, color='black',linewidth=0.5)
-plt.axvline(0, color='black',linewidth=0.5)
-plt.legend()
-plt.show()
-
-![alt text](image-16.png)
+![alt text](image-17.png)
 
 ### This graph shows the angular displacement of a pendulum over time. Let’s break it down step by step:
 
