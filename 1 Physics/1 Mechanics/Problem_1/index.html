@@ -48,6 +48,54 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#mechanics">Mechanics</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#1-theoretical-foundation">1 Theoretical Foundation:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#key-equations-to-derive">Key Equations to Derive:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#finding-the-period-of-oscillation">Finding the Period of Oscillation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#writing-the-equation-for-angular-displacement">Writing the Equation for Angular Displacement</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#this-graph-shows-the-angular-displacement-of-a-pendulum-over-time-lets-break-it-down-step-by-step">This graph shows the angular displacement of a pendulum over time. Let’s break it down step by step:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#title-and-axes">Title and Axes:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-equation">The Equation:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#interpreting-the-graph">Interpreting the Graph:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#conclusion">Conclusion:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-analysis-of-the-range">2 Analysis of the Range</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#key-observations">Key Observations:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-practical-applications">3 Practical Applications:</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#projectile-trajectory-for-different-angles">Projectile Trajectory for Different Angles.</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#key-observations_1">Key Observations:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#1-peak-height">1 Peak Height:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-horizontal-distance-range">2 Horizontal Distance (Range):</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-effect-of-angle-on-flight-time">3 Effect of Angle on Flight Time:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-implementation">4 Implementation:</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -172,9 +220,7 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<h1 id="-">--------------------------------------</h1>
-<h1 id="mechanics">Mechanics</h1>
-<h1 id="problem-1_1">Problem 1</h1>
+<h2 id="mechanics">Mechanics</h2>
 <h3 id="investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</h3>
 <h2 id="1-theoretical-foundation">1 Theoretical Foundation:</h2>
 <p>Projectile motion is a form of motion where an object moves in a bilaterally symmetrical, parabolic path. The path that the object follows is called its trajectory. Projectile motion only occurs when there is one force applied at the beginning on the trajectory, after which the only interference is from gravity.</p>
@@ -208,7 +254,7 @@ $$</p>
 <li>
 <p>Maximum Range Condition:
 $$
-𝜃optimum = 45∘
+\theta_{optimum} = 45∘
 $$</p>
 </li>
 </ol>
@@ -216,6 +262,31 @@ $$</p>
 <p><img alt="alt text" src="../image-14.png"/></p>
 <h2 id="writing-the-equation-for-angular-displacement">Writing the Equation for Angular Displacement</h2>
 <p><img alt="alt text" src="../image-15.png"/></p>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Time array from 0 to 10 seconds with small steps for smooth plotting
+t = np.linspace(0, 10, 1000)
+
+# Angular displacement theta(t) = 0.1 * cos(2.1 * t)
+theta = 0.1 * np.cos(2.1 * t)
+
+# Create the plot
+plt.figure(figsize=(8, 6))
+plt.plot(t, theta, label=r'$\theta(t) = 0.1\cos(2.1t)$', color='blue')
+
+# Add labels and title
+plt.xlabel('Time (seconds)')
+plt.ylabel('Angular Displacement (radians)')
+plt.title('Angular Displacement of the Pendulum vs. Time')
+plt.grid(True)
+
+# Add legend
+plt.legend()
+
+# Show the plot
+plt.show()
+</code></pre>
 <p><img alt="alt text" src="../image-17.png"/></p>
 <h3 id="this-graph-shows-the-angular-displacement-of-a-pendulum-over-time-lets-break-it-down-step-by-step">This graph shows the angular displacement of a pendulum over time. Let’s break it down step by step:</h3>
 <h2 id="title-and-axes">Title and Axes:</h2>
@@ -300,14 +371,14 @@ The 45° trajectory has a moderate peak and the longest range.</p>
 <p>The 45° trajectory results in the longest range because, in ideal conditions (without air resistance), the maximum range occurs at 45°.</p>
 <p>The 30° and 60° trajectories have the same range, but the 60° path stays in the air longer due to its higher vertical component.</p>
 <h3 id="3-effect-of-angle-on-flight-time">3 Effect of Angle on Flight Time:</h3>
-<p>The projectile launched at 60° stays in the air longer than the one launched at 30° because it has a larger vertical component.</p>
+<p>The projectile launched at 60° stays in the air longer than the one launched at <span class="arithmatex">\(30 \degree\)</span> because it has a larger vertical component.</p>
 <p>The 30° projectile reaches the ground faster because it has a lower initial vertical velocity.</p>
 <hr/>
-<p><img alt="alt text" src="../image-11.png"/>
-<img alt="alt text" src="../image-12.png"/>
-Here are the graphs for the forced damped pendulum system:</p>
+<p><img alt="alt text" src="../image-11.png"/></p>
+<p><img alt="alt text" src="../image-12.png"/></p>
+<p>Here are the graphs for the forced damped pendulum system:</p>
 <p>Angular Displacement vs Time: This plot shows how the angular displacement (θ) of the pendulum evolves over time under the influence of an external force and damping. You can see oscillations with decreasing amplitude due to the damping force.</p>
-<p>Angular Velocity vs Time: This graph illustrates how the angular velocity (ω) changes over time, showing how the velocity of the pendulum is affected by the external force and the damping.</p>
+<p>Angular Velocity vs Time: This graph illustrates how the angular velocity <span class="arithmatex">\(\omega\)</span> changes over time, showing how the velocity of the pendulum is affected by the external force and the damping.</p>
 <h2 id="4-implementation">4 Implementation:</h2>
 </div>
 </div><footer>
