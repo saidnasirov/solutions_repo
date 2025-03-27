@@ -152,6 +152,7 @@ Here are a few steps to visualize this transition:
 Regular Motion: For a small driving force amplitude, the pendulum will show periodic motion.
 
 Chaotic Motion: As the driving force amplitude increases, the pendulum will transition to chaotic motion, showing unpredictable oscillations.
+
 ![alt text](image-13.png)
 
 Here is the plot showing the transition from regular to chaotic motion in a forced damped pendulum as we vary the amplitude of the external driving force (F0):
