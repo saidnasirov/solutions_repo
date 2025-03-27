@@ -44,24 +44,6 @@ $$
 ##  Writing the Equation for Angular Displacement 
 ![alt text](image-15.png)
 
-import numpy as np
-import matplotlib.pyplot as plt
-Time array from 0 to 10 seconds with small steps for smooth plotting
-t = np.linspace(0, 10, 1000)
-Angular displacement theta(t) = 0.1 * cos(2.1 * t)
-theta = 0.1 * np.cos(2.1 * t)
-Create the plot
-plt.figure(figsize=(8, 6))
-plt.plot(t, theta, label=r'$\theta(t) = 0.1\cos(2.1t)$', color='blue')
-Add labels and title
-plt.xlabel('Time (seconds)')
-plt.ylabel('Angular Displacement (radians)')
-plt.title('Angular Displacement of the Pendulum vs. Time')
-plt.grid(True)
-Add legend
-plt.legend()
-Show the plot
-plt.show()
 
 ![alt text](image-17.png)
 
