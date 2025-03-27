@@ -1,8 +1,7 @@
 # Problem 1
-# --------------------------------------
-# Mechanics
 
-# Problem 1
+## Mechanics
+
 ### Investigating the Range as a Function of the Angle of Projection
 
 ## 1 Theoretical Foundation:
@@ -35,15 +34,43 @@ $$
 
 5. Maximum Range Condition:
 $$
-𝜃optimum = 45∘
+\theta_{optimum} = 45∘
 $$
 
 ## Finding the Period of Oscillation
+
 ![alt text](image-14.png)
 
 ##  Writing the Equation for Angular Displacement 
+
 ![alt text](image-15.png)
 
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Time array from 0 to 10 seconds with small steps for smooth plotting
+t = np.linspace(0, 10, 1000)
+
+# Angular displacement theta(t) = 0.1 * cos(2.1 * t)
+theta = 0.1 * np.cos(2.1 * t)
+
+# Create the plot
+plt.figure(figsize=(8, 6))
+plt.plot(t, theta, label=r'$\theta(t) = 0.1\cos(2.1t)$', color='blue')
+
+# Add labels and title
+plt.xlabel('Time (seconds)')
+plt.ylabel('Angular Displacement (radians)')
+plt.title('Angular Displacement of the Pendulum vs. Time')
+plt.grid(True)
+
+# Add legend
+plt.legend()
+
+# Show the plot
+plt.show()
+```
 
 ![alt text](image-17.png)
 
@@ -179,18 +206,20 @@ The 30° and 60° trajectories have the same range, but the 60° path stays in t
 
 ### 3 Effect of Angle on Flight Time:
 
-The projectile launched at 60° stays in the air longer than the one launched at 30° because it has a larger vertical component.
+The projectile launched at 60° stays in the air longer than the one launched at $30 \degree$ because it has a larger vertical component.
 
 The 30° projectile reaches the ground faster because it has a lower initial vertical velocity.
 
 ---
 
 ![alt text](image-11.png)
+
 ![alt text](image-12.png)
+
 Here are the graphs for the forced damped pendulum system:
 
 Angular Displacement vs Time: This plot shows how the angular displacement (θ) of the pendulum evolves over time under the influence of an external force and damping. You can see oscillations with decreasing amplitude due to the damping force.
 
-Angular Velocity vs Time: This graph illustrates how the angular velocity (ω) changes over time, showing how the velocity of the pendulum is affected by the external force and the damping.
+Angular Velocity vs Time: This graph illustrates how the angular velocity $\omega$ changes over time, showing how the velocity of the pendulum is affected by the external force and the damping.
 
 ## 4 Implementation:
