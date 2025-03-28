@@ -34,16 +34,16 @@ $$
 
 5. Maximum Range Condition:
 $$
-\theta_{optimum} = 45∘
+\theta_{optimum} = 45°
 $$
 
 ## Finding the Period of Oscillation
 
-![alt text](image-14.png)
+c 1
 
-##  Writing the Equation for Angular Displacement 
+## Writing the Equation for Angular Displacement
 
-![alt text](image-15.png)
+c 2
 
 ```python
 import numpy as np
@@ -106,17 +106,15 @@ The blue curve represents the pendulum's oscillation, moving back and forth in a
 
 The peaks at ±0.1 radians show the maximum displacement, and the points where the curve crosses the x-axis represent moments when the pendulum passes through its equilibrium position.
 
-The period (time to complete one full oscillation) is about 
+The period (time to complete one full oscillation) is about
+$$ 
 2
 𝜋
 2.21
 ≈
 2.84
  seconds
-2.21
-2π
-​
- ≈2.84 seconds.
+ $$
 
 ## Conclusion:
 
@@ -152,17 +150,6 @@ Regular Motion: For a small driving force amplitude, the pendulum will show peri
 
 Chaotic Motion: As the driving force amplitude increases, the pendulum will transition to chaotic motion, showing unpredictable oscillations.
 
-![alt text](image-13.png)
-
-Here is the plot showing the transition from regular to chaotic motion in a forced damped pendulum as we vary the amplitude of the external driving force (F0):
-
-For smaller values of F0 (e.g., 0.5 N), the pendulum exhibits regular, periodic oscillations, with the motion remaining predictable.
-
-As F0 increases, the pendulum starts to show more complex and irregular oscillations, which can be interpreted as a transition toward chaotic motion.
-
-At larger values of F0 (e.g., 6.0 N), the pendulum displays chaotic behavior, with highly unpredictable and non-repeating oscillations.
-
----
 ![alt text](image-7.png)
 
 The graph illustrates the relationship between the launch angle (°) of a projectile and its horizontal range (m), assuming ideal projectile motion without air resistance.
@@ -186,7 +173,9 @@ This analysis is crucial in physics, engineering, and sports, where optimizing t
 ### Projectile Trajectory for Different Angles.
 
 Graph plots the trajectory of a projectile for three different angles (30°, 45°, and 60°) to show how the launch angle affects the path.
+
 ![alt text](image-10.png)
+
 This graph illustrates the trajectories of a projectile launched at three different angles: 30°, 45°, and 60°.
 
 ### Key Observations:
@@ -210,8 +199,6 @@ The projectile launched at 60° stays in the air longer than the one launched at
 
 The 30° projectile reaches the ground faster because it has a lower initial vertical velocity.
 
----
-
 ![alt text](image-11.png)
 
 ![alt text](image-12.png)
@@ -223,3 +210,5 @@ Angular Displacement vs Time: This plot shows how the angular displacement (θ) 
 Angular Velocity vs Time: This graph illustrates how the angular velocity $\omega$ changes over time, showing how the velocity of the pendulum is affected by the external force and the damping.
 
 ## 4 Implementation:
+
+<video controls src="videoplayback (1).mp4" title="Title"></video>
