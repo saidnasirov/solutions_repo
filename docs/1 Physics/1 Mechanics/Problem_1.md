@@ -211,4 +211,6 @@ Angular Velocity vs Time: This graph illustrates how the angular velocity $\omeg
 
 ## 4 Implementation:
 
+<video controls src="videoplayback (1)-1.mp4" title="Title"></video>
+
 <video controls src="videoplayback (1).mp4" title="Title"></video>
