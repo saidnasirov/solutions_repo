@@ -205,3 +205,41 @@ Angular Velocity vs Time: This graph illustrates how the angular velocity $\omeg
 ## 4 Implementation:
 
 <video controls src="videoplayback (1).mp4" title="Title"></video>
+
+
+## 1. Horizontal Motion (x-axis)  
+- The object moves with **constant velocity** since no external force (ignoring air resistance) acts in the horizontal direction.  
+- The horizontal displacement is given by:  
+
+  $$ x = v_0 \cos(\theta) \cdot t $$  
+
+## 2. Vertical Motion (y-axis)  
+- The object moves under the influence of **gravity**, experiencing **acceleration downward**.  
+- The vertical position is given by:  
+
+  $$ y = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2 $$  
+
+## 3. Key Equations in Projectile Motion  
+
+- **Time of Flight:**  
+
+  $$ T = \frac{2 v_0 \sin(\theta)}{g} $$  
+
+- **Maximum Height:**  
+
+  $$ H = \frac{v_0^2 \sin^2(\theta)}{2g} $$  
+
+- **Range (Maximum Horizontal Distance):**  
+
+  $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$  
+
+## 4. Understanding the Parabolic Path  
+The projectile follows a **parabolic trajectory** because:  
+- The **horizontal component** remains constant.  
+- The **vertical component** is affected by gravity, making the object accelerate downward.
+
+## 5. Real-World Applications  
+Projectile motion is commonly observed in:  
+- **Sports** (basketball, football, archery)  
+- **Engineering** (missile trajectories, ballistics)  
+- **Space Science** (rocket launches, satellite motion)
