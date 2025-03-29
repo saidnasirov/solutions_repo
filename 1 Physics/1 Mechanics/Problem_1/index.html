@@ -92,6 +92,16 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#4-implementation">4 Implementation:</a>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#1-horizontal-motion-x-axis">1. Horizontal Motion (x-axis)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-vertical-motion-y-axis">2. Vertical Motion (y-axis)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-key-equations-in-projectile-motion">3. Key Equations in Projectile Motion</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-understanding-the-parabolic-path">4. Understanding the Parabolic Path</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#5-real-world-applications">5. Real-World Applications</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -364,6 +374,40 @@ The 45° trajectory has a moderate peak and the longest range.</p>
 <p>Angular Velocity vs Time: This graph illustrates how the angular velocity <span class="arithmatex">\(\omega\)</span> changes over time, showing how the velocity of the pendulum is affected by the external force and the damping.</p>
 <h2 id="4-implementation">4 Implementation:</h2>
 <video controls="" src="videoplayback (1).mp4" title="Title"></video>
+<h2 id="1-horizontal-motion-x-axis">1. Horizontal Motion (x-axis)</h2>
+<ul>
+<li>The object moves with <strong>constant velocity</strong> since no external force (ignoring air resistance) acts in the horizontal direction.  </li>
+<li>The horizontal displacement is given by:  </li>
+</ul>
+<p>$$ x = v_0 \cos(\theta) \cdot t $$  </p>
+<h2 id="2-vertical-motion-y-axis">2. Vertical Motion (y-axis)</h2>
+<ul>
+<li>The object moves under the influence of <strong>gravity</strong>, experiencing <strong>acceleration downward</strong>.  </li>
+<li>The vertical position is given by:  </li>
+</ul>
+<p>$$ y = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2 $$  </p>
+<h2 id="3-key-equations-in-projectile-motion">3. Key Equations in Projectile Motion</h2>
+<ul>
+<li><strong>Time of Flight:</strong> </li>
+</ul>
+<p>$$ T = \frac{2 v_0 \sin(\theta)}{g} $$  </p>
+<ul>
+<li><strong>Maximum Height:</strong> </li>
+</ul>
+<p>$$ H = \frac{v_0^2 \sin^2(\theta)}{2g} $$  </p>
+<ul>
+<li><strong>Range (Maximum Horizontal Distance):</strong> </li>
+</ul>
+<p>$$ R = \frac{v_0^2 \sin(2\theta)}{g} $$  </p>
+<h2 id="4-understanding-the-parabolic-path">4. Understanding the Parabolic Path</h2>
+<p>The projectile follows a <strong>parabolic trajectory</strong> because:<br/>
+- The <strong>horizontal component</strong> remains constant.<br/>
+- The <strong>vertical component</strong> is affected by gravity, making the object accelerate downward.</p>
+<h2 id="5-real-world-applications">5. Real-World Applications</h2>
+<p>Projectile motion is commonly observed in:<br/>
+- <strong>Sports</strong> (basketball, football, archery)<br/>
+- <strong>Engineering</strong> (missile trajectories, ballistics)<br/>
+- <strong>Space Science</strong> (rocket launches, satellite motion)</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
