@@ -243,6 +243,3 @@ Projectile motion is commonly observed in:
 - **Sports** (basketball, football, archery)  
 - **Engineering** (missile trajectories, ballistics)  
 - **Space Science** (rocket launches, satellite motion)
-
-Link of the video:
-https://www.youtube.com/watch?v=hlW6hZkgmkA&pp=ygURcHJvamVjdGlsZSBtb3Rpb24%3D
