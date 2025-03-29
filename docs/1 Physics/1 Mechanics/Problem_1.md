@@ -37,13 +37,6 @@ $$
 \theta_{optimum} = 45°
 $$
 
-## Finding the Period of Oscillation
-
-c 1
-
-## Writing the Equation for Angular Displacement
-
-c 2
 
 ```python
 import numpy as np
