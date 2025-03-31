@@ -12,30 +12,21 @@ In physics, projectile motion describes the motion of an object that is launched
 
 ## Key Equations to Derive:
 
-1. Horizontal Motion: 
-$$
-x = v0cos(𝜃)t
-$$
+1. **Horizontal Motion:**  
+   $$ x = v_0 \cos(\theta) t $$  
 
-2. Vertical Motion:
-$$
-𝑦=𝑣0sin(𝜃)𝑡−1/2𝑔𝑡^2
-$$
+2. **Vertical Motion:**  
+   $$ y = v_0 \sin(\theta) t - \frac{1}{2} g t^2 $$  
 
-3. Time of Flight:
-$$
-t=2 v0sin(θ)​/g
-$$
+3. **Time of Flight:**  
+   $$ t = \frac{2 v_0 \sin(\theta)}{g} $$  
 
-4. Range Formula:
-$$
-R = v^20sin(2𝜃)/g
-$$
+4. **Range Formula:**  
+   $$ R = \frac{v_0^2 \sin(2\theta)}{g} $$  
 
-5. Maximum Range Condition:
-$$
-\theta_{optimum} = 45°
-$$
+5. **Maximum Range Condition:**  
+   $$ \theta_{\text{optimum}} = 45^\circ $$  
+
 
 
 ```python
