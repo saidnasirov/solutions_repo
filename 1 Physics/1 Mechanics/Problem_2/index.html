@@ -50,6 +50,44 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#investigating-the-dynamics-of-a-forced-damped-pendulum">Investigating the Dynamics of a Forced Damped Pendulum</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#1-theoretical-foundation">1. Theoretical Foundation:</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#11-governing-equation">1.1 Governing Equation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#12-example-solving-for-small-angle-oscillations">1.2 Example: Solving for Small-Angle Oscillations</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#13-resonance-conditions-and-energy-implications">1.3 Resonance Conditions and Energy Implications</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#effects-of-resonance-on-energy">Effects of Resonance on Energy:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#14-conclusion">1.4 Conclusion</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-analysis-of-dynamics">2. Analysis of Dynamics</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#2-investigation-of-key-parameters-in-forced-damped-pendulum-motion">2. Investigation of Key Parameters in Forced Damped Pendulum Motion</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#21-influence-of-damping-coefficient-b">2.1 Influence of Damping Coefficient $$ b $$</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#22-influence-of-driving-amplitude-a">2.2 Influence of Driving Amplitude $$ A $$</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#23-influence-of-driving-frequency-omega">2.3 Influence of Driving Frequency $$ \omega $$</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#24-transition-between-regular-and-chaotic-motion">2.4 Transition Between Regular and Chaotic Motion</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#physical-interpretation-of-chaos">Physical Interpretation of Chaos</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#25-conclusion">2.5 Conclusion</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#forced-damped-pendulum-motion">Forced Damped Pendulum Motion</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -172,6 +210,156 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h2 id="investigating-the-dynamics-of-a-forced-damped-pendulum">Investigating the Dynamics of a Forced Damped Pendulum</h2>
+<h2 id="1-theoretical-foundation">1. Theoretical Foundation:</h2>
+<h3 id="11-governing-equation">1.1 Governing Equation</h3>
+<p>The motion of a <strong>forced damped pendulum</strong> is governed by the following second-order differential equation:</p>
+<div class="arithmatex">\[ 
+\frac{d^2 \theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \sin \theta = A \cos(\omega t) 
+\]</div>
+<p>where:
+- $ \theta $ is the angular displacement,
+- $ \ b $ is the damping coefficient,
+- $ \ g $ is the gravitational acceleration,
+- $ \ L  $ is the length of the pendulum,
+- $ \ A $ is the amplitude of the external forcing,
+- $ \omega $ is the driving frequency,
+- $ \frac{d^2 \theta}{dt^2} $ represents the angular acceleration,
+- $ b \frac{d\theta}{dt} $ is the damping term (proportional to velocity),
+- $ \frac{g}{L} \sin \theta $ represents the restoring force due to gravity,
+- $ A \cos(\omega t) $ is the external periodic driving force.</p>
+<p>For small-angle approximations $$ \theta \approx \sin\theta $$the equation simplifies to:</p>
+<div class="arithmatex">\[ 
+\frac{d^2 \theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \theta = A \cos(\omega t) 
+\]</div>
+<p>This is a <strong>linear non-homogeneous differential equation</strong> that describes <strong>oscillatory motion with damping and external forcing</strong>.</p>
+<hr/>
+<h3 id="12-example-solving-for-small-angle-oscillations"><strong>1.2 Example: Solving for Small-Angle Oscillations</strong></h3>
+<p>The equation simplifies to:</p>
+<div class="arithmatex">\[ 
+\frac{d^2 \theta}{dt^2} + 0.2 \frac{d\theta}{dt} + 9.8 \theta = \cos(2t) 
+\]</div>
+<p>A trial solution for the steady-state response is:</p>
+<div class="arithmatex">\[ 
+\theta(t) = C \cos(2t) + D \sin(2t) 
+\]</div>
+<p>Using the method of <strong>undetermined coefficients</strong>, we find:</p>
+<div class="arithmatex">\[ 
+C = \frac{A}{\sqrt{(g/L - \omega^2)^2 + b^2 \omega^2}} 
+\]</div>
+<div class="arithmatex">\[ 
+D = \frac{b \omega A}{\sqrt{(g/L - \omega^2)^2 + b^2 \omega^2}} 
+\]</div>
+<p>Substituting the given values, we can compute $$ C $$ and $$ D $$ obtaining the particular solution.</p>
+<hr/>
+<h3 id="13-resonance-conditions-and-energy-implications"><strong>1.3 Resonance Conditions and Energy Implications</strong></h3>
+<p><strong>Resonance</strong> occurs when the <strong>driving frequency</strong> $$ \omega $$ is close to the <strong>natural frequency</strong> $$ \omega_0 $$, given by:</p>
+<div class="arithmatex">\[ 
+\omega_0 = \sqrt{\frac{g}{L}} 
+\]</div>
+<p>For our example:</p>
+<div class="arithmatex">\[ 
+\omega_0 = \sqrt{\frac{9.8}{1}} = 3.13 \text{ rad/s} 
+\]</div>
+<p>When $$ \omega \approx \omega_0 $$, the amplitude of oscillations increases significantly, leading to <strong>resonance</strong>. </p>
+<h3 id="effects-of-resonance-on-energy"><strong>Effects of Resonance on Energy:</strong></h3>
+<ul>
+<li>When <strong>damping is low</strong>, resonance can cause large oscillations, leading to <strong>mechanical failure</strong>.</li>
+<li>The <strong>total energy</strong> of the system is given by:</li>
+</ul>
+<p>$$ 
+  E = \frac{1}{2} I \left( \frac{d\theta}{dt} \right)^2 + mgL(1 - \cos\theta) 
+  $$</p>
+<p>where $$ I = mL^2 $$ is the moment of inertia.
+- In the presence of <strong>resonance</strong>, the system absorbs <strong>maximum energy</strong> from the external force, increasing <strong>kinetic and potential energy</strong>.
+- If <strong>damping is large</strong>, energy dissipation occurs, preventing excessive oscillations.</p>
+<hr/>
+<h3 id="14-conclusion"><strong>1.4 Conclusion</strong></h3>
+<ul>
+<li>The forced damped pendulum exhibits <strong>complex dynamics</strong> depending on damping and external forcing.</li>
+<li><strong>Resonance</strong> plays a crucial role in energy transfer, influencing oscillation amplitude.</li>
+<li>Understanding these principles helps in <strong>engineering applications</strong>, such as <strong>seismic design</strong>, <strong>vehicle suspension systems</strong>, and <strong>wave energy harvesting</strong>.</li>
+</ul>
+<h2 id="2-analysis-of-dynamics">2. Analysis of Dynamics</h2>
+<h3 id="2-investigation-of-key-parameters-in-forced-damped-pendulum-motion"><strong>2. Investigation of Key Parameters in Forced Damped Pendulum Motion</strong></h3>
+<h3 id="21-influence-of-damping-coefficient-b"><strong>2.1 Influence of Damping Coefficient $$ b $$</strong></h3>
+<p>The damping coefficient affects the system's energy dissipation. The equation of motion is:</p>
+<div class="arithmatex">\[ 
+\frac{d^2 \theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \sin \theta = A \cos(\omega t) 
+\]</div>
+<p>where $$ b \frac{d\theta}{dt} $$ represents the <strong>damping force</strong>. Different values of $$ b $$ lead to different behaviors:</p>
+<ul>
+<li><strong>Small $$ b $$ (Underdamping):</strong> The pendulum oscillates with a slow decrease in amplitude.</li>
+<li>Critical Damping $$ b = 2\sqrt{g/L} $$
+The system returns to equilibrium <strong>without oscillating</strong>.</li>
+<li><strong>Large $$ b $$ (Overdamping):</strong> Motion is slow, and the system returns to equilibrium <strong>without oscillations</strong>.</li>
+</ul>
+<p>For <strong>small damping</strong>, under external forcing, the system may exhibit <strong>chaotic behavior</strong>.</p>
+<hr/>
+<h3 id="22-influence-of-driving-amplitude-a"><strong>2.2 Influence of Driving Amplitude $$ A $$</strong></h3>
+<p>The term $$ A \cos(\omega t) $$ introduces an external force into the system. The response of the pendulum depends on $$ A $$</p>
+<ul>
+<li><strong>Small $$ A $$</strong> The system oscillates with small, periodic motion.</li>
+<li><strong>Intermediate $$ A $$</strong> The oscillation amplitude increases, and <strong>resonance</strong> effects appear if $$ \omega \approx \omega_0 $$</li>
+<li><strong>Large $$ A $$</strong> The pendulum enters a <strong>nonlinear regime</strong>, possibly flipping over and displaying <strong>chaotic motion</strong>.</li>
+</ul>
+<p>At <strong>high amplitudes</strong>, energy input overcomes damping, leading to <strong>unpredictable trajectories</strong>.</p>
+<hr/>
+<h2 id="23-influence-of-driving-frequency-omega"><strong>2.3 Influence of Driving Frequency $$ \omega $$</strong></h2>
+<p>The <strong>driving frequency</strong> $$ \omega $$ determines the system’s response relative to its <strong>natural frequency</strong> $$ \omega_0 $$:</p>
+<div class="arithmatex">\[ 
+\omega_0 = \sqrt{\frac{g}{L}} 
+\]</div>
+<ul>
+<li><strong>If $$ \omega \ll \omega_0 $$</strong> The system does not respond effectively.</li>
+<li><strong>If $$ \omega \approx \omega_0 $$</strong> <strong>Resonance</strong> occurs, causing large oscillations.</li>
+<li><strong>If $$ \omega \gg \omega_0 $$</strong> The system cannot follow the rapid forcing, and oscillations remain small.</li>
+</ul>
+<p>For certain values of $$ \omega $$ the system transitions from <strong>periodic</strong> to <strong>chaotic motion</strong>.</p>
+<hr/>
+<h2 id="24-transition-between-regular-and-chaotic-motion"><strong>2.4 Transition Between Regular and Chaotic Motion</strong></h2>
+<p>The pendulum's motion shifts from <strong>regular (periodic) motion</strong> to <strong>chaos</strong> as system parameters change.</p>
+<ul>
+<li><strong>Regular (Periodic) Motion:</strong> The pendulum follows a repeating trajectory.</li>
+<li><strong>Quasi-Periodic Motion:</strong> The system remains structured but does not repeat exactly.</li>
+<li><strong>Chaotic Motion:</strong> Small initial differences lead to drastically different results (<strong>sensitive dependence on initial conditions</strong>).</li>
+</ul>
+<h3 id="physical-interpretation-of-chaos"><strong>Physical Interpretation of Chaos</strong></h3>
+<ul>
+<li>Chaos emerges due to <strong>nonlinearity</strong> in the system.</li>
+<li>The <strong>phase space trajectory</strong> forms fractal-like structures.</li>
+<li>The system exhibits <strong>aperiodic oscillations</strong>, where no two cycles are identical.</li>
+<li>Chaotic dynamics are observed in <strong>weather systems, celestial mechanics, and turbulence</strong>.</li>
+</ul>
+<hr/>
+<h2 id="25-conclusion"><strong>2.5 Conclusion</strong></h2>
+<ul>
+<li>The damping coefficient $$ b $$ driving amplitude $$ A $$ and frequency $$ \omega $$ dictate whether the system remains <strong>periodic or enters chaos</strong>.</li>
+<li><strong>Resonance</strong> occurs when $$ \omega \approx \omega_0 $$ amplifying oscillations.</li>
+<li>The transition to <strong>chaotic motion</strong> occurs at certain parameter values, with <strong>important implications</strong> in engineering and physics.</li>
+</ul>
+<p><img alt="alt text" src="../image.png"/></p>
+<h2 id="forced-damped-pendulum-motion">Forced Damped Pendulum Motion</h2>
+<p>The equation governing the motion of a forced damped pendulum is:</p>
+<div class="arithmatex">\[ \frac{d^2\theta}{dt^2} + b \frac{d\theta}{dt} + \sin\theta = A \cos(\omega t) \]</div>
+<p>where:
+- $ \theta(t) $ is the angular displacement,
+- $ b $ is the damping coefficient,
+- $ A $ is the amplitude of the external forcing,
+- $ \omega $ is the frequency of the external forcing.</p>
+<p>The plot shows the angular displacement $$ \theta(t) $$ over time for given parameters:</p>
+<ul>
+<li>
+<div class="arithmatex">\[ b = 0.2 \]</div>
+</li>
+<li>
+<div class="arithmatex">\[ A = 1.0 \]</div>
+</li>
+<li>
+<div class="arithmatex">\[ \omega = 2.0 \]</div>
+</li>
+</ul>
+<p>The oscillations exhibit a transient phase followed by steady-state behavior due to the external forcing.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
