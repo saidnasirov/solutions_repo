@@ -179,7 +179,7 @@ The 30° and 60° trajectories have the same range, but the 60° path stays in t
 
 ### 3 Effect of Angle on Flight Time:
 
-The projectile launched at 60° stays in the air longer than the one launched at 30 $\degree$ because it has a larger vertical component.
+The projectile launched at 60° stays in the air longer than the one launched at 30° because it has a larger vertical component.
 
 The 30° projectile reaches the ground faster because it has a lower initial vertical velocity.
 
