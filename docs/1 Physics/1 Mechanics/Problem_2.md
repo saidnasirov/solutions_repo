@@ -12,17 +12,6 @@ $$
 \frac{d^2 \theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \sin \theta = A \cos(\omega t) 
 $$
 
-where:
-- $ \theta\ $ is the angular displacement,
-- $ \ b $ is the damping coefficient,
-- $ \ g $ is the gravitational acceleration,
-- $ \ L  $ is the length of the pendulum,
-- $ \ A $ is the amplitude of the external forcing,
-- $ \omega $ is the driving frequency,
-- $ \frac{d^2 \theta}{dt^2} $ represents the angular acceleration,
-- $ b \frac{d\theta}{dt} $ is the damping term (proportional to velocity),
-- $ \frac{g}{L} \sin \theta $ represents the restoring force due to gravity,
-- $ A \cos(\omega t) $ is the external periodic driving force.
 
 For small-angle approximations $$ \theta \approx \sin\theta $$the equation simplifies to:
 
@@ -180,11 +169,6 @@ The equation governing the motion of a forced damped pendulum is:
 
 $$ \frac{d^2\theta}{dt^2} + b \frac{d\theta}{dt} + \sin\theta = A \cos(\omega t) $$
 
-where:
-- $ \theta(t) $ is the angular displacement,
-- $ b $ is the damping coefficient,
-- $ A $ is the amplitude of the external forcing,
-- $ \omega $ is the frequency of the external forcing.
 
 The plot shows the angular displacement $$ \theta(t) $$ over time for given parameters:
 
