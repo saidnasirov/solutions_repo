@@ -163,6 +163,8 @@ The pendulum's motion shifts from **regular (periodic) motion** to **chaos** as 
 
 ![alt text](image.png)
 
+<video controls src="Motion animation using Matlab_ Damped vs underdamped vs critically damped vs overdamped free vib (1).mp4" title="Title"></video>
+
 ## Forced Damped Pendulum Motion
 
 The equation governing the motion of a forced damped pendulum is:
@@ -177,3 +179,11 @@ The plot shows the angular displacement $$ \theta(t) $$ over time for given para
 - $$ \omega = 2.0 $$
 
 The oscillations exhibit a transient phase followed by steady-state behavior due to the external forcing.
+
+## Practical Applications:
+
+
+
+## Implemention
+
+<video controls src="Animated Poincare section for the damped driven pendulum.mp4" title="Title"></video>
