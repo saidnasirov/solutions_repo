@@ -46,25 +46,7 @@ cos(2.21t) shows that the displacement follows a cosine function, indicating sim
 The angular frequency is
 2.21 radians per second, which determines how quickly the pendulum oscillates.
 
-## Interpreting the Graph:
 
-The blue curve represents the pendulum's oscillation, moving back and forth in a regular pattern.
-
-The peaks at ±0.1 radians show the maximum displacement, and the points where the curve crosses the x-axis represent moments when the pendulum passes through its equilibrium position.
-
-The period (time to complete one full oscillation) is about
-$$ 
-2
-𝜋
-2.21
-≈
-2.84
- seconds
- $$
-
-## Conclusion:
-
-The pendulum undergoes simple harmonic motion with a constant amplitude of 0.1 radians and oscillates at a frequency dictated by 2.21 radians per second. The graph visualizes the regular back-and-forth motion over time.
 
 ## 2 Analysis of the Range
 
