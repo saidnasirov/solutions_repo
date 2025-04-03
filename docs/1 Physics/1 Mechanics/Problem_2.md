@@ -167,6 +167,28 @@ The pendulum's motion shifts from **regular (periodic) motion** to **chaos** as 
 
 <video controls src="Motion animation using Matlab_ Damped vs underdamped vs critically damped vs overdamped free vib (1).mp4" title="Title"></video>
 
+# Meaning of Terms
+
+## 1. Under-dumped  
+- Something that hasn't been discarded or removed enough.  
+- **Example (Waste Management):** Not enough waste has been dumped.  
+- **Example (Relationships):** Someone hasn't fully "moved on" after a breakup.  
+
+## 2. Undumped  
+- Something that hasn't been dumped or discarded at all.  
+- **Example (Relationships):** Someone who hasn't been broken up with.  
+
+## 3. Critically Dumbed  
+- Likely derived from **"critically dumb"**, meaning extremely foolish.  
+- If referring to **"dumbed down"**, it means oversimplified to an extreme level.  
+- **Example:** A complex topic explained in a way that removes important details.  
+
+## 4. Over-dumped  
+- Something has been discarded or removed too much.  
+- **Example (Waste Management):** Excessive material dumped in one place.  
+- **Example (Relationships):** Someone who has been broken up with too many times.  
+
+
 ## Forced Damped Pendulum Motion
 
 The equation governing the motion of a forced damped pendulum is:
