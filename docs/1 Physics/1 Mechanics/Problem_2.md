@@ -89,7 +89,7 @@ When $$ \omega \approx \omega_0 $$, the amplitude of oscillations increases sign
 - Understanding these principles helps in **engineering applications**, such as **seismic design**, **vehicle suspension systems**, and **wave energy harvesting**.
 
 
-## 2. Analysis of Dynamics
+## 2. Analysis of Dynamics:
 
 ### **2. Investigation of Key Parameters in Forced Damped Pendulum Motion**
 
@@ -161,6 +161,8 @@ The pendulum's motion shifts from **regular (periodic) motion** to **chaos** as 
 - **Resonance** occurs when $$ \omega \approx \omega_0 $$ amplifying oscillations.
 - The transition to **chaotic motion** occurs at certain parameter values, with **important implications** in engineering and physics.
 
+## Practical Applications:
+
 ![alt text](image.png)
 
 <video controls src="Motion animation using Matlab_ Damped vs underdamped vs critically damped vs overdamped free vib (1).mp4" title="Title"></video>
@@ -180,10 +182,8 @@ The plot shows the angular displacement $$ \theta(t) $$ over time for given para
 
 The oscillations exhibit a transient phase followed by steady-state behavior due to the external forcing.
 
-## Practical Applications:
 
 
-
-## Implemention
+## Implemention / Bonus:
 
 <video controls src="Animated Poincare section for the damped driven pendulum.mp4" title="Title"></video>
