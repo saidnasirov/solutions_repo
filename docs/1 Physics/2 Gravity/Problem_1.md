@@ -214,6 +214,8 @@ Kepler’s Third Law is a bridge between observation and mass/distance estimatio
 
 <video controls src="Untitled video - Made with Clipchamp.mp4" title="Title"></video>
 
+![alt text](Untitledvideo-MadewithClipchamp-ezgif.com-video-to-gif-converter.gif)
+
 Using real data for the month of April 2020 I'm showing the exact rotations, tilts, inclination, orbital velocity, sunlight angles & views of our Earth-Moon system. Earth-Moon distance is not to scale, but Earth and Moon sizes are (in the middle row).
 
 1. The green caps on the Moon are to indicate the position of the poles
@@ -282,6 +284,4 @@ Through this simulation, we’ve computationally verified Kepler’s Third Law. 
 
 ## The Sun, the Moon and the Earth rotation 
 
-<video controls src="Screen Recording 2025-04-07 105446.mp4" title="Title"></video>
-
-![alt text](ezgif.com-video-to-gif-converter.gif)
+![alt text](ScreenRecording2025-04-07105446-ezgif.com-video-to-gif-converter.gif)
