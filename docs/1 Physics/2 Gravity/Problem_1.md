@@ -214,6 +214,7 @@ Kepler’s Third Law is a bridge between observation and mass/distance estimatio
 
 <video controls src="Untitled video - Made with Clipchamp.mp4" title="Title"></video>
 
+![alt text](Untitledvideo-MadewithClipchamp-ezgif.com-video-to-gif-converter-1.gif)
 
 Using real data for the month of April 2020 I'm showing the exact rotations, tilts, inclination, orbital velocity, sunlight angles & views of our Earth-Moon system. Earth-Moon distance is not to scale, but Earth and Moon sizes are (in the middle row).
 
