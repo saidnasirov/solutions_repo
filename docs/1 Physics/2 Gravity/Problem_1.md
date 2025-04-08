@@ -212,6 +212,10 @@ Kepler’s Third Law is a bridge between observation and mass/distance estimatio
 
 ## Animation How the Moon orbits Earth
 
+<video controls src="Untitled video - Made with Clipchamp.mp4" title=""></video>
+
+![alt text](Untitledvideo-MadewithClipchamp-ezgif.com-video-to-gif-converter.gif)
+
 
 
 Using real data for the month of April 2020 I'm showing the exact rotations, tilts, inclination, orbital velocity, sunlight angles & views of our Earth-Moon system. Earth-Moon distance is not to scale, but Earth and Moon sizes are (in the middle row).
@@ -282,3 +286,4 @@ Through this simulation, we’ve computationally verified Kepler’s Third Law. 
 
 ## The Sun, the Moon and the Earth rotation 
 
+![alt text](Untitledvideo-MadewithClipchamp1-ezgif.com-video-to-gif-converter.gif)
