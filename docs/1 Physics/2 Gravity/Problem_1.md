@@ -212,7 +212,7 @@ Kepler’s Third Law is a bridge between observation and mass/distance estimatio
 
 ## Animation How the Moon orbits Earth
 
-
+<video controls src="Untitled video - Made with Clipchamp.mp4" title="Title"></video>
 
 
 Using real data for the month of April 2020 I'm showing the exact rotations, tilts, inclination, orbital velocity, sunlight angles & views of our Earth-Moon system. Earth-Moon distance is not to scale, but Earth and Moon sizes are (in the middle row).
