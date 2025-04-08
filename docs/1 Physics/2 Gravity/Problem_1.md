@@ -212,9 +212,6 @@ Kepler’s Third Law is a bridge between observation and mass/distance estimatio
 
 ## Animation How the Moon orbits Earth
 
-<video controls src="Untitled video - Made with Clipchamp.mp4" title=""></video>
-
-![alt text](Untitledvideo-MadewithClipchamp-ezgif.com-video-to-gif-converter.gif)
 
 
 
@@ -286,4 +283,3 @@ Through this simulation, we’ve computationally verified Kepler’s Third Law. 
 
 ## The Sun, the Moon and the Earth rotation 
 
-![alt text](Untitledvideo-MadewithClipchamp1-ezgif.com-video-to-gif-converter.gif)
