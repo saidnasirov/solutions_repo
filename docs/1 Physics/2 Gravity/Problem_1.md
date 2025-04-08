@@ -283,3 +283,4 @@ Through this simulation, we’ve computationally verified Kepler’s Third Law. 
 
 ## The Sun, the Moon and the Earth rotation 
 
+![alt text](Untitledvideo-MadewithClipchamp1-ezgif.com-gif-maker.gif)
