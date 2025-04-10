@@ -111,23 +111,6 @@ For **small damping**, under external forcing, the system may exhibit **chaotic 
 
 ---
 
-## Influence of Driving Frequency $\omega$
-
-The **driving frequency** $\omega$ determines the system’s response relative to its **natural frequency** $\omega_0$:
-
-$$
-\omega_0 = \sqrt{\frac{g}{L}} 
-$$
-
-If $$ \omega \ll \omega_0 $$ The system does not respond effectively.
-
-If $$ \omega \approx \omega_0 $$ **Resonance** occurs, causing large oscillations. 
-
-If $$ \omega \gg \omega_0 $$ The system cannot follow the rapid forcing, and oscillations remain small.
-For certain values of $\omega$ the system transitions from **periodic** to **chaotic motion**.
-
----
-
 ## **Transition Between Regular and Chaotic Motion**
 
 The pendulum's motion shifts from **regular (periodic) motion** to **chaos** as system parameters change.
