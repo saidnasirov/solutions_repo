@@ -193,91 +193,15 @@ $$
 \frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L} \sin(\theta) = 0
 $$
 
-Where:
+
 
 $$
 \begin{aligned}
+Where: 
 \theta(t) &: \text{Angular displacement (radians)} \\
 b &: \text{Damping coefficient} \\
 g &= 9.81 \, \text{m/s}^2 \quad \text{(acceleration due to gravity)} \\
 L &= 1.0 \, \text{m} \quad \text{(length of the pendulum)}
-\end{aligned}
-$$
-
----
-
-## Undamped Case
-
-$$
-b = 0
-$$
-
-Equation becomes:
-
-$$
-\frac{d^2\theta}{dt^2} + \frac{g}{L} \sin(\theta) = 0
-$$
-
-Characteristics:
-
-$$
-\begin{aligned}
-\text{• No energy loss} \\
-\text{• Constant amplitude oscillations} \\
-\text{• Pure sinusoidal behavior}
-\end{aligned}
-$$
----
-
-## Under-damped Case
-
-$$
-0 < b < 2\sqrt{\frac{g}{L}}
-$$
-
-Characteristics:
-
-$$
-\begin{aligned}
-\text{• Oscillatory motion with exponential decay} \\
-\text{• Energy dissipates slowly over time} \\
-\text{• Amplitude decreases continuously}
-\end{aligned}
-$$
-
----
-
-## Critically Damped Case
-
-$$
-b = 2\sqrt{\frac{g}{L}} \approx 6.26
-$$
-
-Characteristics:
-
-$$
-\begin{aligned}
-\text{• No oscillations} \\
-\text{• Fastest possible return to equilibrium} \\
-\text{• System stabilizes without overshooting}
-\end{aligned}
-$$
-
----
-
-## Over-damped Case
-
-$$
-b > 2\sqrt{\frac{g}{L}}
-$$
-
-Characteristics:
-
-$$
-\begin{aligned}
-\text{• No oscillations} \\
-\text{• Very slow return to equilibrium} \\
-\text{• Heavily damped system}
 \end{aligned}
 $$
 
