@@ -357,69 +357,13 @@ display(interactive_plot)
 <div class="arithmatex">\[
 \frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L} \sin(\theta) = 0
 \]</div>
-<p>Where:</p>
 <div class="arithmatex">\[
 \begin{aligned}
+Where: 
 \theta(t) &amp;: \text{Angular displacement (radians)} \\
 b &amp;: \text{Damping coefficient} \\
 g &amp;= 9.81 \, \text{m/s}^2 \quad \text{(acceleration due to gravity)} \\
 L &amp;= 1.0 \, \text{m} \quad \text{(length of the pendulum)}
-\end{aligned}
-\]</div>
-<hr/>
-<h2 id="undamped-case">Undamped Case</h2>
-<div class="arithmatex">\[
-b = 0
-\]</div>
-<p>Equation becomes:</p>
-<div class="arithmatex">\[
-\frac{d^2\theta}{dt^2} + \frac{g}{L} \sin(\theta) = 0
-\]</div>
-<p>Characteristics:</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\text{• No energy loss} \\
-\text{• Constant amplitude oscillations} \\
-\text{• Pure sinusoidal behavior}
-\end{aligned}
-\]</div>
-<hr/>
-<h2 id="under-damped-case">Under-damped Case</h2>
-<div class="arithmatex">\[
-0 &lt; b &lt; 2\sqrt{\frac{g}{L}}
-\]</div>
-<p>Characteristics:</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\text{• Oscillatory motion with exponential decay} \\
-\text{• Energy dissipates slowly over time} \\
-\text{• Amplitude decreases continuously}
-\end{aligned}
-\]</div>
-<hr/>
-<h2 id="critically-damped-case">Critically Damped Case</h2>
-<div class="arithmatex">\[
-b = 2\sqrt{\frac{g}{L}} \approx 6.26
-\]</div>
-<p>Characteristics:</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\text{• No oscillations} \\
-\text{• Fastest possible return to equilibrium} \\
-\text{• System stabilizes without overshooting}
-\end{aligned}
-\]</div>
-<hr/>
-<h2 id="over-damped-case">Over-damped Case</h2>
-<div class="arithmatex">\[
-b &gt; 2\sqrt{\frac{g}{L}}
-\]</div>
-<p>Characteristics:</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\text{• No oscillations} \\
-\text{• Very slow return to equilibrium} \\
-\text{• Heavily damped system}
 \end{aligned}
 \]</div>
 <hr/>
