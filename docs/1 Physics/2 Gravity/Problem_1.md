@@ -112,7 +112,7 @@ plt.show()
 ```
 ![alt text](image.png)
 
-## Kepler’s Third Law: Relationship Between T and r
+## Kepler’s Third Law: Relationship Between T^2 and r^3
 
 The graph visually represents **Kepler’s Third Law**, which states that the square of the orbital period \( T \) of a planet is proportional to the cube of the semi-major axis \( r \) of its orbit.
 
