@@ -92,22 +92,13 @@ When $ \omega \approx \omega_0 $, the amplitude of oscillations increases signif
 
 ### **Investigation of Key Parameters in Forced Damped Pendulum Motion**
 
-### Influence of Damping Coefficient $ b $
+### Influence of Damping Coefficient $$ b $$
 
 The damping coefficient affects the system's energy dissipation. The equation of motion is:
 
 $$ 
 \frac{d^2 \theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \sin \theta = A \cos(\omega t) 
 $$
-
-where $ b \frac{d\theta}{dt} $ represents the **damping force**. Different values of $ b $ lead to different behaviors:
-
-- Small $ b $ (Underdamping): The pendulum oscillates with a slow decrease in amplitude.
-- Critical Damping $ b = 2\sqrt{g/L} $
-The system returns to equilibrium **without oscillating**.
-- Large $ b $ (Overdamping): Motion is slow, and the system returns to equilibrium **without oscillations**.
-
-For **small damping**, under external forcing, the system may exhibit **chaotic behavior**.
 
 ---
 
