@@ -175,7 +175,11 @@ The equation governing the motion of a forced damped pendulum is:
 $$ \frac{d^2\theta}{dt^2} + b \frac{d\theta}{dt} + \sin\theta = A \cos(\omega t) $$
 
 
-The plot shows the angular displacement $$ \theta(t) $$ over time for given parameters:
+The plot shows the angular displacement 
+$ 
+\theta(t)
+$
+ over time for given parameters:
 
 - $$ b = 0.2 $$
 - $$ A = 1.0 $$
