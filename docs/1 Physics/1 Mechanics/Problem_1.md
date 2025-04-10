@@ -40,8 +40,6 @@ In energy harvesting systems, periodic motion (such as a resonant vibration) is 
 
 Mechanical systems like shock absorbers rely on regular oscillations for smooth, controlled motion without excessive damping or instability.
 
-For pendulum-based devices, the regular motion might correspond to the pendulum swinging with a fixed frequency, ideal for systems designed to work within a known, controlled environment.
-
 2. Chaotic Motion
 Chaotic motion occurs when a system's behavior becomes highly sensitive to initial conditions. A small change in the system's starting point can lead to vastly different outcomes over time. This type of motion is non-periodic and unpredictable, even though the underlying system is deterministic (meaning the equations governing the system are known).
 
