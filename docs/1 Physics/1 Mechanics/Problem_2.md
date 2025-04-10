@@ -4,7 +4,7 @@
 
 ## 1. Theoretical Foundation: 
 
-### 1.1 Governing Equation
+### Governing Equation
 
 The motion of a **forced damped pendulum** is governed by the following second-order differential equation:
 
@@ -23,7 +23,7 @@ This is a **linear non-homogeneous differential equation** that describes **osci
 
 ---
 
-### **1.2 Example: Solving for Small-Angle Oscillations**
+### **Example: Solving for Small-Angle Oscillations**
 
 
 
@@ -49,17 +49,16 @@ $$
 D = \frac{b \omega A}{\sqrt{(g/L - \omega^2)^2 + b^2 \omega^2}} 
 $$
 
-Substituting the given values, we can compute $$ C $$ and $$ D $$ obtaining the particular solution.
+Substituting the given values, we can compute $ C $ and $ D $ obtaining the particular solution.
 
 ---
 
-### **1.3 Resonance Conditions and Energy Implications**
+### **Resonance Conditions and Energy Implications**
 
-**Resonance** occurs when the **driving frequency** $$ \omega $$ is close to the **natural frequency** $$ \omega_0 $$, given by:
-
-$$ 
+**Resonance** occurs when the **driving frequency** $ \omega $ is close to the **natural frequency** $ \omega_0 $, given by:
+$ 
 \omega_0 = \sqrt{\frac{g}{L}} 
-$$
+$
 
 For our example:
 
@@ -67,7 +66,7 @@ $$
 \omega_0 = \sqrt{\frac{9.8}{1}} = 3.13 \text{ rad/s} 
 $$
 
-When $$ \omega \approx \omega_0 $$, the amplitude of oscillations increases significantly, leading to **resonance**. 
+When $ \omega \approx \omega_0 $, the amplitude of oscillations increases significantly, leading to **resonance**. 
 
 ### **Effects of Resonance on Energy:**
 - When **damping is low**, resonance can cause large oscillations, leading to **mechanical failure**.
@@ -77,13 +76,13 @@ When $$ \omega \approx \omega_0 $$, the amplitude of oscillations increases sign
   E = \frac{1}{2} I \left( \frac{d\theta}{dt} \right)^2 + mgL(1 - \cos\theta) 
   $$
 
-  where $$ I = mL^2 $$ is the moment of inertia.
+  where $ I = mL^2 $ is the moment of inertia.
 - In the presence of **resonance**, the system absorbs **maximum energy** from the external force, increasing **kinetic and potential energy**.
 - If **damping is large**, energy dissipation occurs, preventing excessive oscillations.
 
 ---
 
-### **1.4 Conclusion**
+### **Conclusion**
 - The forced damped pendulum exhibits **complex dynamics** depending on damping and external forcing.
 - **Resonance** plays a crucial role in energy transfer, influencing oscillation amplitude.
 - Understanding these principles helps in **engineering applications**, such as **seismic design**, **vehicle suspension systems**, and **wave energy harvesting**.
@@ -91,9 +90,9 @@ When $$ \omega \approx \omega_0 $$, the amplitude of oscillations increases sign
 
 ## 2. Analysis of Dynamics:
 
-### **2. Investigation of Key Parameters in Forced Damped Pendulum Motion**
+### **Investigation of Key Parameters in Forced Damped Pendulum Motion**
 
-### **2.1 Influence of Damping Coefficient $$ b $$**
+### Influence of Damping Coefficient $ b $
 
 The damping coefficient affects the system's energy dissipation. The equation of motion is:
 
@@ -101,46 +100,36 @@ $$
 \frac{d^2 \theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \sin \theta = A \cos(\omega t) 
 $$
 
-where $$ b \frac{d\theta}{dt} $$ represents the **damping force**. Different values of $$ b $$ lead to different behaviors:
+where $ b \frac{d\theta}{dt} $ represents the **damping force**. Different values of $ b $ lead to different behaviors:
 
-- **Small $$ b $$ (Underdamping):** The pendulum oscillates with a slow decrease in amplitude.
-- Critical Damping $$ b = 2\sqrt{g/L} $$
+- **Small $ b $ (Underdamping):** The pendulum oscillates with a slow decrease in amplitude.
+- Critical Damping $ b = 2\sqrt{g/L} $
 The system returns to equilibrium **without oscillating**.
-- **Large $$ b $$ (Overdamping):** Motion is slow, and the system returns to equilibrium **without oscillations**.
+- **Large $ b $ (Overdamping):** Motion is slow, and the system returns to equilibrium **without oscillations**.
 
 For **small damping**, under external forcing, the system may exhibit **chaotic behavior**.
 
 ---
 
-### **2.2 Influence of Driving Amplitude $$ A $$**
+## **Influence of Driving Frequency $ \omega $**
 
-The term $$ A \cos(\omega t) $$ introduces an external force into the system. The response of the pendulum depends on $$ A $$
+The **driving frequency** $ \omega $ determines the system’s response relative to its **natural frequency** $ \omega_0 $:
 
-- **Small $$ A $$** The system oscillates with small, periodic motion.
-- **Intermediate $$ A $$** The oscillation amplitude increases, and **resonance** effects appear if $$ \omega \approx \omega_0 $$
-- **Large $$ A $$** The pendulum enters a **nonlinear regime**, possibly flipping over and displaying **chaotic motion**.
-
-At **high amplitudes**, energy input overcomes damping, leading to **unpredictable trajectories**.
-
----
-
-## **2.3 Influence of Driving Frequency $$ \omega $$**
-
-The **driving frequency** $$ \omega $$ determines the system’s response relative to its **natural frequency** $$ \omega_0 $$:
-
-$$ 
+$$
 \omega_0 = \sqrt{\frac{g}{L}} 
 $$
 
-- **If $$ \omega \ll \omega_0 $$** The system does not respond effectively.
-- **If $$ \omega \approx \omega_0 $$** **Resonance** occurs, causing large oscillations.
-- **If $$ \omega \gg \omega_0 $$** The system cannot follow the rapid forcing, and oscillations remain small.
+**If $ \omega \ll \omega_0 $** The system does not respond effectively.
 
-For certain values of $$ \omega $$ the system transitions from **periodic** to **chaotic motion**.
+**If $ \omega \approx \omega_0 $** **Resonance** occurs, causing large oscillations.
+
+**If $ \omega \gg \omega_0 $** The system cannot follow the rapid forcing, and oscillations remain small.
+
+For certain values of $ \omega $ the system transitions from **periodic** to **chaotic motion**.
 
 ---
 
-## **2.4 Transition Between Regular and Chaotic Motion**
+## **Transition Between Regular and Chaotic Motion**
 
 The pendulum's motion shifts from **regular (periodic) motion** to **chaos** as system parameters change.
 
@@ -155,11 +144,6 @@ The pendulum's motion shifts from **regular (periodic) motion** to **chaos** as 
 - Chaotic dynamics are observed in **weather systems, celestial mechanics, and turbulence**.
 
 ---
-
-## **2.5 Conclusion**
-- The damping coefficient $$ b $$ driving amplitude $$ A $$ and frequency $$ \omega $$ dictate whether the system remains **periodic or enters chaos**.
-- **Resonance** occurs when $$ \omega \approx \omega_0 $$ amplifying oscillations.
-- The transition to **chaotic motion** occurs at certain parameter values, with **important implications** in engineering and physics.
 
 ## Practical Applications:
 

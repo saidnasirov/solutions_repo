@@ -30,24 +30,6 @@ In physics, projectile motion describes the motion of an object that is launched
 
 
 
-## The Equation:
-
-The equation in the legend is
-$$
-𝜃(𝑡)=0.1cos(2.21𝑡)
-$$
-describing the pendulum's motion.
-
-0.1
-0.1 is the amplitude, meaning the maximum angular displacement is ±0.1 radians.
-
-cos(2.21t) shows that the displacement follows a cosine function, indicating simple harmonic motion.
-
-The angular frequency is
-2.21 radians per second, which determines how quickly the pendulum oscillates.
-
-
-
 ## 2 Analysis of the Range
 
 1. Regular (Periodic) Motion
@@ -69,8 +51,6 @@ Physical Interpretation of Chaotic Motion:
 Energy Harvesting Devices: In chaotic systems, energy extraction can become inefficient or erratic, making it challenging to design energy harvesters that depend on predictable oscillations. Chaotic behavior might be detrimental to systems that require a constant, regular input or output of energy.
 
 Mechanical Systems and Vibration: In structures like bridges, buildings, or mechanical systems, chaotic motion could represent resonance effects caused by external forces (like wind or traffic), leading to dangerous vibrations. For instance, chaotic behavior could result in structural fatigue, as unpredictable oscillations might cause stress beyond safe levels.
-
-Pendulum-Based Systems: In pendulum-based devices, chaotic behavior might arise if the driving force (such as a periodic push) matches the system's natural frequency in a non-linear manner. This could cause the pendulum to swing erratically, making it difficult to predict its behavior, which can be problematic for mechanical applications where precision is needed.
 
 Here are a few steps to visualize this transition:
 
