@@ -102,16 +102,16 @@ $$
 
 where $ b \frac{d\theta}{dt} $ represents the **damping force**. Different values of $ b $ lead to different behaviors:
 
-- **Small $ b $ (Underdamping):** The pendulum oscillates with a slow decrease in amplitude.
+- Small $ b $ (Underdamping): The pendulum oscillates with a slow decrease in amplitude.
 - Critical Damping $ b = 2\sqrt{g/L} $
 The system returns to equilibrium **without oscillating**.
-- **Large $ b $ (Overdamping):** Motion is slow, and the system returns to equilibrium **without oscillations**.
+- Large $ b $ (Overdamping): Motion is slow, and the system returns to equilibrium **without oscillations**.
 
 For **small damping**, under external forcing, the system may exhibit **chaotic behavior**.
 
 ---
 
-## **Influence of Driving Frequency $ \omega $**
+## Influence of Driving Frequency $ \omega $
 
 The **driving frequency** $ \omega $ determines the system’s response relative to its **natural frequency** $ \omega_0 $:
 
@@ -119,11 +119,11 @@ $$
 \omega_0 = \sqrt{\frac{g}{L}} 
 $$
 
-**If $ \omega \ll \omega_0 $** The system does not respond effectively.
+If $ \omega \ll \omega_0 $ The system does not respond effectively.
 
-**If $ \omega \approx \omega_0 $** **Resonance** occurs, causing large oscillations.
+If $ \omega \approx \omega_0 $ **Resonance** occurs, causing large oscillations.
 
-**If $ \omega \gg \omega_0 $** The system cannot follow the rapid forcing, and oscillations remain small.
+If $ \omega \gg \omega_0 $ The system cannot follow the rapid forcing, and oscillations remain small.
 
 For certain values of $ \omega $ the system transitions from **periodic** to **chaotic motion**.
 
