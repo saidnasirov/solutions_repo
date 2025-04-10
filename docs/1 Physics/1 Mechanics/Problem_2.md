@@ -49,44 +49,7 @@ $$
 D = \frac{b \omega A}{\sqrt{(g/L - \omega^2)^2 + b^2 \omega^2}} 
 $$
 
-Substituting the given values, we can compute $ C $ and $ D $ obtaining the particular solution.
-
 ---
-
-### **Resonance Conditions and Energy Implications**
-
-**Resonance** occurs when the **driving frequency** $ \omega $ is close to the **natural frequency** $ \omega_0 $, given by:
-$ 
-\omega_0 = \sqrt{\frac{g}{L}} 
-$
-
-For our example:
-
-$$ 
-\omega_0 = \sqrt{\frac{9.8}{1}} = 3.13 \text{ rad/s} 
-$$
-
-When $ \omega \approx \omega_0 $, the amplitude of oscillations increases significantly, leading to **resonance**. 
-
-### **Effects of Resonance on Energy:**
-- When **damping is low**, resonance can cause large oscillations, leading to **mechanical failure**.
-- The **total energy** of the system is given by:
-
-  $$ 
-  E = \frac{1}{2} I \left( \frac{d\theta}{dt} \right)^2 + mgL(1 - \cos\theta) 
-  $$
-
-  where $ I = mL^2 $ is the moment of inertia.
-- In the presence of **resonance**, the system absorbs **maximum energy** from the external force, increasing **kinetic and potential energy**.
-- If **damping is large**, energy dissipation occurs, preventing excessive oscillations.
-
----
-
-### **Conclusion**
-- The forced damped pendulum exhibits **complex dynamics** depending on damping and external forcing.
-- **Resonance** plays a crucial role in energy transfer, influencing oscillation amplitude.
-- Understanding these principles helps in **engineering applications**, such as **seismic design**, **vehicle suspension systems**, and **wave energy harvesting**.
-
 
 ## 2. Analysis of Dynamics:
 
