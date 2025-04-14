@@ -33,8 +33,6 @@ In physics, projectile motion describes the motion of an object that is launched
 ## 2 Analysis of the Range
 
 ### Regular (Periodic) Motion
-In a system exhibiting regular motion, the behavior of the system repeats at regular intervals. For example, a simple harmonic oscillator or a damped pendulum with a weak external force may exhibit periodic motion where the oscillations occur at a constant amplitude and frequency. This type of motion can be easily described by a mathematical model and is typically stable and predictable.
-
 Physical Interpretation of Regular Motion:
 In energy harvesting systems, periodic motion (such as a resonant vibration) is desirable because it ensures a steady flow of energy.
 
@@ -43,18 +41,14 @@ Mechanical systems like shock absorbers rely on regular oscillations for smooth,
 ### Chaotic Motion
 Chaotic motion occurs when a system's behavior becomes highly sensitive to initial conditions. A small change in the system's starting point can lead to vastly different outcomes over time. This type of motion is non-periodic and unpredictable, even though the underlying system is deterministic (meaning the equations governing the system are known).
 
-In the context of a forced damped pendulum, chaotic motion can emerge when the system is driven by an external force (like a periodic driving force) with the right combination of amplitude and frequency. Initially, the system may exhibit periodic behavior, but as the driving force's amplitude or frequency increases, the system may transition into chaotic behavior.
-
 Physical Interpretation of Chaotic Motion:
 Energy Harvesting Devices: In chaotic systems, energy extraction can become inefficient or erratic, making it challenging to design energy harvesters that depend on predictable oscillations. Chaotic behavior might be detrimental to systems that require a constant, regular input or output of energy.
 
-Mechanical Systems and Vibration: In structures like bridges, buildings, or mechanical systems, chaotic motion could represent resonance effects caused by external forces (like wind or traffic), leading to dangerous vibrations. For instance, chaotic behavior could result in structural fatigue, as unpredictable oscillations might cause stress beyond safe levels.
-
 Here are a few steps to visualize this transition:
 
-Regular Motion: For a small driving force amplitude, the pendulum will show periodic motion.
+Regular Motion: For a small driving force amplitude.
 
-Chaotic Motion: As the driving force amplitude increases, the pendulum will transition to chaotic motion, showing unpredictable oscillations.
+Chaotic Motion: As the driving force amplitude increases, showing unpredictable oscillations.
 
 ![alt text](image-7.png)
 
@@ -78,6 +72,41 @@ This analysis is crucial in physics, engineering, and sports, where optimizing t
 
 ### Projectile Trajectory for Different Angles.
 
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+v0 = 25  # initial velocity in m/s
+g = 9.81  # acceleration due to gravity in m/s^2
+angles = [30, 45, 60]  # launch angles in degrees
+
+# Time array for simulation
+t = np.linspace(0, 5, num=500)
+
+# Create plot
+plt.figure(figsize=(8, 6))
+
+for angle in angles:
+    theta = np.radians(angle)
+    # Calculate x and y components
+    x = v0 * np.cos(theta) * t
+    y = v0 * np.sin(theta) * t - 0.5 * g * t**2
+    # Filter out the parts where y is negative (below ground)
+    valid_indices = y >= 0
+    x = x[valid_indices]
+    y = y[valid_indices]
+    # Plot trajectory
+    plt.plot(x, y, label=f"{angle}°")
+
+# Add labels, title, legend, and grid
+plt.title("Projectile Motion for Different Angles")
+plt.xlabel("Distance (m)")
+plt.ylabel("Height (m)")
+plt.legend()
+plt.grid(True)
+plt.show()
+```
 Graph plots the trajectory of a projectile for three different angles (30°, 45°, and 60°) to show how the launch angle affects the path.
 
 ![alt text](image-10.png)
@@ -125,8 +154,6 @@ This animation demonstrates the motion of a projectile under the influence of **
 ### Equations of Motion
 
 For projectile motion with **linear air drag** coefficient \( K \), the equations are more complex than the simple case.
-
-Assuming motion starts at the origin with initial velocity \( v_0 \) and angle \( \theta \):
 
 ### Without Air Drag (\( K = 0 \)):
 
