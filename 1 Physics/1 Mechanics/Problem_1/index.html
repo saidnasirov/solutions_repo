@@ -60,6 +60,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#2-analysis-of-the-range">2 Analysis of the Range</a>
 <ul>
+<li class="toctree-l4"><a class="reference internal" href="#regular-periodic-motion">Regular (Periodic) Motion</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#chaotic-motion">Chaotic Motion</a>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="#key-observations">Key Observations:</a>
 </li>
 </ul>
@@ -78,7 +82,21 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#4-implementation">4 Implementation:</a>
+<li class="toctree-l3"><a class="reference internal" href="#animation-1">Animation 1</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#key-concepts">Key Concepts</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#equations-of-motion">Equations of Motion</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#without-air-drag-k-0">Without Air Drag (\( K = 0 \)):</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#with-linear-air-drag-k-0">With Linear Air Drag (\( K &gt; 0 \)):</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#visualization">Visualization</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-implementation-animation-2">4 Implementation: Animation 2</a>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#1-horizontal-motion-x-axis">1. Horizontal Motion (x-axis)</a>
 </li>
@@ -243,17 +261,13 @@
 </li>
 </ol>
 <h2 id="2-analysis-of-the-range">2 Analysis of the Range</h2>
-<ol>
-<li>Regular (Periodic) Motion
-In a system exhibiting regular motion, the behavior of the system repeats at regular intervals. For example, a simple harmonic oscillator or a damped pendulum with a weak external force may exhibit periodic motion where the oscillations occur at a constant amplitude and frequency. This type of motion can be easily described by a mathematical model and is typically stable and predictable.</li>
-</ol>
+<h3 id="regular-periodic-motion">Regular (Periodic) Motion</h3>
+<p>In a system exhibiting regular motion, the behavior of the system repeats at regular intervals. For example, a simple harmonic oscillator or a damped pendulum with a weak external force may exhibit periodic motion where the oscillations occur at a constant amplitude and frequency. This type of motion can be easily described by a mathematical model and is typically stable and predictable.</p>
 <p>Physical Interpretation of Regular Motion:
 In energy harvesting systems, periodic motion (such as a resonant vibration) is desirable because it ensures a steady flow of energy.</p>
 <p>Mechanical systems like shock absorbers rely on regular oscillations for smooth, controlled motion without excessive damping or instability.</p>
-<ol>
-<li>Chaotic Motion
-Chaotic motion occurs when a system's behavior becomes highly sensitive to initial conditions. A small change in the system's starting point can lead to vastly different outcomes over time. This type of motion is non-periodic and unpredictable, even though the underlying system is deterministic (meaning the equations governing the system are known).</li>
-</ol>
+<h3 id="chaotic-motion">Chaotic Motion</h3>
+<p>Chaotic motion occurs when a system's behavior becomes highly sensitive to initial conditions. A small change in the system's starting point can lead to vastly different outcomes over time. This type of motion is non-periodic and unpredictable, even though the underlying system is deterministic (meaning the equations governing the system are known).</p>
 <p>In the context of a forced damped pendulum, chaotic motion can emerge when the system is driven by an external force (like a periodic driving force) with the right combination of amplitude and frequency. Initially, the system may exhibit periodic behavior, but as the driving force's amplitude or frequency increases, the system may transition into chaotic behavior.</p>
 <p>Physical Interpretation of Chaotic Motion:
 Energy Harvesting Devices: In chaotic systems, energy extraction can become inefficient or erratic, making it challenging to design energy harvesters that depend on predictable oscillations. Chaotic behavior might be detrimental to systems that require a constant, regular input or output of energy.</p>
@@ -287,12 +301,54 @@ The 45° trajectory has a moderate peak and the longest range.</p>
 <h3 id="3-effect-of-angle-on-flight-time">3 Effect of Angle on Flight Time:</h3>
 <p>The projectile launched at 60° stays in the air longer than the one launched at 30° because it has a larger vertical component.</p>
 <p>The 30° projectile reaches the ground faster because it has a lower initial vertical velocity.</p>
-<p><img alt="alt text" src="../image-11.png"/></p>
-<p><img alt="alt text" src="../image-12.png"/></p>
-<p>Here are the graphs for the forced damped pendulum system:</p>
-<p>Angular Displacement vs Time: This plot shows how the angular displacement (θ) of the pendulum evolves over time under the influence of an external force and damping. You can see oscillations with decreasing amplitude due to the damping force.</p>
-<p>Angular Velocity vs Time: This graph illustrates how the angular velocity <span class="arithmatex">\(\omega\)</span> changes over time, showing how the velocity of the pendulum is affected by the external force and the damping.</p>
-<h2 id="4-implementation">4 Implementation:</h2>
+<h2 id="animation-1">Animation 1</h2>
+<p><img alt="alt text" src="../Untitledvideo-MadewithClipchamp3-ezgif.com-video-to-gif-converter-1.gif"/></p>
+<p>This animation demonstrates the motion of a projectile under the influence of <strong>linear air drag</strong>, comparing two scenarios:</p>
+<ul>
+<li><strong>Blue</strong>: No air resistance, <span class="arithmatex">\( K = 0 \)</span></li>
+<li><strong>Red</strong>: With linear air drag, <span class="arithmatex">\( K = 0.2 \)</span></li>
+</ul>
+<h3 id="key-concepts">Key Concepts</h3>
+<ul>
+<li>The motion follows a <strong>parabolic trajectory</strong> in the absence of air drag.</li>
+<li>When linear air drag is introduced, the projectile:</li>
+<li>Travels <strong>a shorter horizontal distance</strong></li>
+<li>Reaches a <strong>lower maximum height</strong></li>
+<li>Returns to the ground <strong>sooner</strong></li>
+</ul>
+<h3 id="equations-of-motion">Equations of Motion</h3>
+<p>For projectile motion with <strong>linear air drag</strong> coefficient <span class="arithmatex">\( K \)</span>, the equations are more complex than the simple case.</p>
+<p>Assuming motion starts at the origin with initial velocity <span class="arithmatex">\( v_0 \)</span> and angle <span class="arithmatex">\( \theta \)</span>:</p>
+<h3 id="without-air-drag-k-0">Without Air Drag (<span class="arithmatex">\( K = 0 \)</span>):</h3>
+<ul>
+<li>Horizontal motion:
+  $$
+  x(t) = v_0 \cos(\theta) t
+  $$</li>
+<li>Vertical motion:
+  $$
+  y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2
+  $$</li>
+</ul>
+<h3 id="with-linear-air-drag-k-0">With Linear Air Drag (<span class="arithmatex">\( K &gt; 0 \)</span>):</h3>
+<ul>
+<li>The drag force is proportional to velocity:
+  $$
+  \vec{F}_\text{drag} = -K \vec{v}
+  $$</li>
+<li>The differential equations become:
+  $$
+  m \frac{d\vec{v}}{dt} = -K \vec{v} + \vec{F}_\text{gravity}
+  $$
+  which leads to exponential decay in both velocity components.</li>
+</ul>
+<p>As a result, the path deviates significantly from the ideal parabolic curve, showing reduced <strong>range</strong> and <strong>height</strong>.</p>
+<h2 id="visualization">Visualization</h2>
+<ul>
+<li>The <strong>blue trajectory</strong> (<span class="arithmatex">\( K = 0 \)</span>) follows a longer, symmetric arc.</li>
+<li>The <strong>red trajectory</strong> (<span class="arithmatex">\( K = 0.2 \)</span>) is dampened, demonstrating the real-world effect of air resistance on projectile motion.</li>
+</ul>
+<h2 id="4-implementation-animation-2">4 Implementation: Animation 2</h2>
 <video controls="" src="videoplayback (1).mp4" title="Title"></video>
 <h2 id="1-horizontal-motion-x-axis">1. Horizontal Motion (x-axis)</h2>
 <ul>
