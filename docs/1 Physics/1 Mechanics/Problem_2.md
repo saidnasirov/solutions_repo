@@ -144,7 +144,7 @@ display(interactive_plot)
 
 ![alt text](image.png)
 
-<video controls src="Motion animation using Matlab_ Damped vs underdamped vs critically damped vs overdamped free vib (1).mp4" title="Title"></video>
+![alt text](MotionanimationusingMatlab_Dampedvsunderdampedvscriticallydampedvsoverdampedfreevib-ezgif.com-video-to-gif-converter.gif)
 
 # Meaning of Terms
 
@@ -228,6 +228,6 @@ $$
 ---
 
 
-## Implemention / Bonus:
+## Implemention / Bonus Video
 
 <video controls src="Animated Poincare section for the damped driven pendulum.mp4" title="Title"></video>
