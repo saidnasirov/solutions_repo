@@ -32,7 +32,7 @@ In physics, projectile motion describes the motion of an object that is launched
 
 ## 2 Analysis of the Range
 
-1. Regular (Periodic) Motion
+### Regular (Periodic) Motion
 In a system exhibiting regular motion, the behavior of the system repeats at regular intervals. For example, a simple harmonic oscillator or a damped pendulum with a weak external force may exhibit periodic motion where the oscillations occur at a constant amplitude and frequency. This type of motion can be easily described by a mathematical model and is typically stable and predictable.
 
 Physical Interpretation of Regular Motion:
@@ -40,7 +40,7 @@ In energy harvesting systems, periodic motion (such as a resonant vibration) is 
 
 Mechanical systems like shock absorbers rely on regular oscillations for smooth, controlled motion without excessive damping or instability.
 
-2. Chaotic Motion
+### Chaotic Motion
 Chaotic motion occurs when a system's behavior becomes highly sensitive to initial conditions. A small change in the system's starting point can lead to vastly different outcomes over time. This type of motion is non-periodic and unpredictable, even though the underlying system is deterministic (meaning the equations governing the system are known).
 
 In the context of a forced damped pendulum, chaotic motion can emerge when the system is driven by an external force (like a periodic driving force) with the right combination of amplitude and frequency. Initially, the system may exhibit periodic behavior, but as the driving force's amplitude or frequency increases, the system may transition into chaotic behavior.
@@ -105,17 +105,63 @@ The projectile launched at 60° stays in the air longer than the one launched at
 
 The 30° projectile reaches the ground faster because it has a lower initial vertical velocity.
 
-![alt text](image-11.png)
+## Animation 1
 
-![alt text](image-12.png)
+![alt text](Untitledvideo-MadewithClipchamp3-ezgif.com-video-to-gif-converter-1.gif)
 
-Here are the graphs for the forced damped pendulum system:
+This animation demonstrates the motion of a projectile under the influence of **linear air drag**, comparing two scenarios:
 
-Angular Displacement vs Time: This plot shows how the angular displacement (θ) of the pendulum evolves over time under the influence of an external force and damping. You can see oscillations with decreasing amplitude due to the damping force.
+- **Blue**: No air resistance, \( K = 0 \)
+- **Red**: With linear air drag, \( K = 0.2 \)
 
-Angular Velocity vs Time: This graph illustrates how the angular velocity $\omega$ changes over time, showing how the velocity of the pendulum is affected by the external force and the damping.
+### Key Concepts
 
-## 4 Implementation:
+- The motion follows a **parabolic trajectory** in the absence of air drag.
+- When linear air drag is introduced, the projectile:
+  - Travels **a shorter horizontal distance**
+  - Reaches a **lower maximum height**
+  - Returns to the ground **sooner**
+
+### Equations of Motion
+
+For projectile motion with **linear air drag** coefficient \( K \), the equations are more complex than the simple case.
+
+Assuming motion starts at the origin with initial velocity \( v_0 \) and angle \( \theta \):
+
+### Without Air Drag (\( K = 0 \)):
+
+- Horizontal motion:
+  $$
+  x(t) = v_0 \cos(\theta) t
+  $$
+- Vertical motion:
+  $$
+  y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2
+  $$
+
+### With Linear Air Drag (\( K > 0 \)):
+
+- The drag force is proportional to velocity:
+  $$
+  \vec{F}_\text{drag} = -K \vec{v}
+  $$
+- The differential equations become:
+  $$
+  m \frac{d\vec{v}}{dt} = -K \vec{v} + \vec{F}_\text{gravity}
+  $$
+  which leads to exponential decay in both velocity components.
+
+As a result, the path deviates significantly from the ideal parabolic curve, showing reduced **range** and **height**.
+
+## Visualization
+
+- The **blue trajectory** (\( K = 0 \)) follows a longer, symmetric arc.
+- The **red trajectory** (\( K = 0.2 \)) is dampened, demonstrating the real-world effect of air resistance on projectile motion.
+
+
+
+
+## 4 Implementation: Animation 2
 
 <video controls src="videoplayback (1).mp4" title="Title"></video>
 
