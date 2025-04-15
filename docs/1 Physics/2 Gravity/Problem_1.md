@@ -138,10 +138,19 @@ Where:
   - It's a straight line through the origin, indicating direct proportionality.
 
 ---
+![alt text](image-1.png)
 
 
 
-# Implications of Kepler’s Third Law in Astronomy
+![alt text](image-2.png)
+
+
+
+![alt text](image-3.png)
+
+
+
+## Implications of Kepler’s Third Law in Astronomy
 
 Kepler’s Third Law is more than just a neat mathematical relationship it’s a powerful tool in astronomy that helps us understand and measure the universe.
 
@@ -211,8 +220,6 @@ Kepler’s Third Law is a bridge between observation and mass/distance estimatio
 > “By knowing how long something takes to orbit, we can know how far it is and how massive the thing it orbits must be.”
 
 ## Animation How the Moon orbits Earth
-
-<video controls src="Untitled video - Made with Clipchamp.mp4" title="Title"></video>
 
 ![alt text](Untitledvideo-MadewithClipchamp-ezgif.com-video-to-gif-converter-1.gif)
 
@@ -285,3 +292,58 @@ Through this simulation, we’ve computationally verified Kepler’s Third Law. 
 ## The Sun, the Moon and the Earth rotation 
 
 ![alt text](Untitledvideo-MadewithClipchamp1-ezgif.com-gif-maker.gif)
+
+
+## Earth
+
+- **Rotation period (sidereal day):**  
+  $$ T_{\text{rotation, Earth}} = 23.934 \ \text{hours} $$
+
+- **Orbital period around the Sun (sidereal year):**  
+  $$ T_{\text{orbit, Earth}} = 365.256 \ \text{days} $$
+
+- **Orbital radius (average distance to Sun):**  
+  $$ r_{\text{Earth-Sun}} \approx 1.496 \times 10^8 \ \text{km} $$
+
+- **Orbital speed:**  
+  $$ v = \frac{2\pi r}{T} \approx 29.78 \ \text{km/s} $$
+
+---
+
+## Moon
+
+- **Rotation period (synchronous rotation):**  
+  $$ T_{\text{rotation, Moon}} = 27.32 \ \text{days} $$
+
+- **Orbital period around Earth:**  
+  $$ T_{\text{orbit, Moon}} = 27.32 \ \text{days} $$
+
+- **Average distance to Earth:**  
+  $$ r_{\text{Moon-Earth}} \approx 384,400 \ \text{km} $$
+
+- **Orbital speed:**  
+  $$ v = \frac{2\pi r}{T} \approx 1.022 \ \text{km/s} $$
+
+> The Moon is tidally locked with Earth:  
+> **Its rotation period equals its orbital period**, which is why we always see the same side of the Moon.
+
+---
+
+## Sun
+
+- **Rotation period (equator):**  
+  $$ T_{\text{rotation, Sun}} \approx 24.47 \ \text{days} $$
+
+- **Rotation period (poles):**  
+  $$ T_{\text{rotation, Sun}} \approx 35 \ \text{days} $$
+
+- **Differential Rotation:**  
+  The Sun rotates **faster at the equator** than at the poles due to its gaseous nature.
+
+---
+
+## Kepler’s Third Law (for orbiting bodies):
+
+$$
+T^2 = \frac{4\pi^2 r^3}{G M}
+$$
