@@ -141,12 +141,123 @@ Where:
 ![alt text](image-1.png)
 
 
-
+## Circular Orbits Around a Central Body
 ![alt text](image-2.png)
 
+The plot shows a schematic representation of **circular orbits** around a **central body** (e.g., a planet orbiting the Sun or a satellite orbiting a planet).
+
+Each colored circle represents an orbit with a different radius:
+
+- Red: Orbit with radius 1  
+- Orange: Orbit with radius 2  
+- Yellow: Orbit with radius 3  
+- Green: Orbit with radius 4  
+- Blue: Orbit with radius 5  
+
+The **black dot at the center** represents the **central massive body**, such as a star, planet, or celestial object that creates a gravitational field.
+
+---
+
+### Mathematical Background
+
+The **gravitational force** provides the necessary **centripetal force** for an object to maintain a circular orbit. According to Newton's law of gravitation:
+
+$$
+F = \frac{G M m}{r^2}
+$$
+
+And the required centripetal force for circular motion is:
+
+$$
+F = \frac{m v^2}{r}
+$$
+
+Equating the two forces:
+
+$$
+\frac{G M m}{r^2} = \frac{m v^2}{r}
+$$
+
+Solving for orbital velocity \(v\):
+
+$$
+v = \sqrt{\frac{G M}{r}}
+$$
+
+---
+
+### Orbital Period and Radius Relationship
+
+The **orbital period** \(T\) is the time an object takes to complete one full revolution. It is related to the radius of the orbit by:
+
+$$
+T = \frac{2\pi r}{v} = 2\pi r \sqrt{\frac{r}{G M}} = 2\pi \sqrt{\frac{r^3}{G M}}
+$$
+
+So:
+
+$$
+T^2 \propto r^3
+$$
+
+This is known as **Kepler's Third Law** for circular orbits.
+
+---
+
+### Summary
+
+- Larger orbits have larger radii and longer orbital periods.
+- The central black dot is the source of gravity.
+- Orbits farther from the center take more time to complete.
+- This concept is fundamental in celestial mechanics and satellite dynamics.
 
 
+## Orbital Period vs Orbital Radius (Log-Log Plot)
 ![alt text](image-3.png)
+
+The graph shows a **log-log plot** of the relationship between the **orbital period** and the **orbital radius** of various orbit types around Earth:
+
+- **LEO** (Low Earth Orbit) ~2,000 km
+- **MEO** (Medium Earth Orbit) ~20,000 km
+- **GEO** (Geostationary Earth Orbit) ~35,786 km
+- **Moon** ~384,400 km
+
+The **x-axis** represents the orbital radius (in kilometers) from the Earth's center on a **logarithmic scale**, and the **y-axis** represents the orbital period (in hours), also on a **logarithmic scale**.
+
+---
+
+## Mathematical Relationship
+
+This plot visualizes **Kepler’s Third Law**, which describes the relationship between the orbital radius \( r \) and the orbital period \( T \):
+
+$$
+T^2 \propto r^3
+$$
+
+Or equivalently:
+
+$$
+T \propto r^{3/2}
+$$
+
+Taking the logarithm of both sides:
+
+$$
+\log(T) = \frac{3}{2} \log(r) + \log(k)
+$$
+
+## Key Observations
+
+- As the orbital radius increases, the orbital period increases rapidly.
+- The Moon has the largest radius and the longest period (~27.3 days or ~655 hours).
+- Satellites in **LEO** orbit Earth quickly (~90 minutes).
+- **GEO** satellites take exactly **24 hours**, matching Earth's rotation period, which is why they appear stationary from the ground.
+
+---
+
+## Summary
+
+This plot confirms Kepler’s Third Law and shows the exponential relationship between orbital radius and period. The use of a **log-log scale** linearizes the power-law relationship, making it easier to interpret.
 
 
 
