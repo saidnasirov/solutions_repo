@@ -313,6 +313,49 @@ plt.grid(True)
 plt.show()
 </code></pre>
 <p><img alt="alt text" src="../image-4.png"/></p>
+<h2 id="3-mass-of-the-earth-from-satellite-motion">3. Mass of the Earth from Satellite Motion</h2>
+<p>We start from the Newtonian form of Kepler’s Third Law:</p>
+<div class="arithmatex">\[
+T^2 = \frac{4\pi^2 r^3}{G M}
+\]</div>
+<p>Rearranging to solve for the mass <span class="arithmatex">\( M \)</span>:</p>
+<div class="arithmatex">\[
+M = \frac{4\pi^2 r^3}{G T^2}
+\]</div>
+<p>Let’s use this to estimate the <strong>mass of the Earth</strong> using a satellite in <strong>low Earth orbit</strong>.</p>
+<h3 id="given">Given:</h3>
+<ul>
+<li>Radius of Earth:<br/>
+  $$
+  R_E = 6.371 \times 10^6 \, \text{m}
+  $$</li>
+<li>Altitude of satellite:<br/>
+  $$
+  h = 0 \, \text{m} \quad \text{(approx. negligible for low orbit)}
+  $$</li>
+<li>Total distance from Earth's center:<br/>
+  $$
+  r = R_E = 6.371 \times 10^6 \, \text{m}
+  $$</li>
+<li>Orbital period:<br/>
+  $$
+  T = 90 \, \text{minutes} = 5400 \, \text{seconds}
+  $$</li>
+<li>Gravitational constant:<br/>
+  $$
+  G = 6.67430 \times 10^{-11} \, \text{m}^3/\text{kg}/\text{s}^2
+  $$</li>
+</ul>
+<h3 id="plug-into-the-formula">Plug into the formula:</h3>
+<div class="arithmatex">\[
+M_E = \frac{4\pi^2 (6.371 \times 10^6)^3}{(6.67430 \times 10^{-11}) \cdot (5400)^2}
+\]</div>
+<h3 id="result">Result:</h3>
+<p>After evaluating the expression:</p>
+<div class="arithmatex">\[
+M_E \approx 5.97 \times 10^{24} \, \text{kg}
+\]</div>
+<p>This matches the known mass of the Earth, confirming the validity of the approach.</p>
 <hr/>
 <h2 id="derivation-of-the-relationship">Derivation of the Relationship</h2>
 <p>Consider a body of mass <span class="arithmatex">\(m\)</span> orbiting a much larger mass <span class="arithmatex">\(M\)</span> (such as a planet orbiting a star) in a <strong>circular orbit</strong>. The gravitational force provides the necessary <strong>centripetal force</strong> to maintain the circular motion.</p>
