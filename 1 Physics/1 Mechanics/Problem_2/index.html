@@ -252,6 +252,78 @@ D = \frac{b \omega A}{\sqrt{(g/L - \omega^2)^2 + b^2 \omega^2}}
 </ul>
 <hr/>
 <h2 id="practical-applications">Practical Applications:</h2>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<h1 id="simulated-viscous-damping-explanation">Simulated Viscous Damping – Explanation</h1>
+<p>This graph represents the <strong>simulated behavior of a viscously damped oscillator</strong>, such as a <strong>damped pendulum</strong> or a <strong>mass-spring system with friction</strong>.</p>
+<h2 id="axes">Axes</h2>
+<ul>
+<li><strong>Horizontal axis (x-axis):</strong> Time in seconds  </li>
+<li><strong>Vertical axis (y-axis):</strong> Angular displacement  in radians</li>
+</ul>
+<h2 id="graph-components">Graph Components</h2>
+<ul>
+<li><strong>Green curve:</strong> The actual oscillatory motion over time  </li>
+<li><strong>Red dots (Amp):</strong> The amplitudes (peak values) of the oscillations  </li>
+<li><strong>Black curve (Exponential fit):</strong> An exponential function fitted to show how the peak amplitudes decay over time  </li>
+</ul>
+<h2 id="exponential-decay">Exponential Decay</h2>
+<p>The black curve represents the exponential envelope of the oscillation:</p>
+<div class="arithmatex">\[
+y = 1.509 \cdot e^{-0.152x}
+\]</div>
+<p>This equation tells us:</p>
+<ul>
+<li>The initial amplitude is approximately 1.509 radians.</li>
+</ul>
+<h2 id="physical-interpretation">Physical Interpretation</h2>
+<p>This is typical of a <strong>damped harmonic oscillator</strong>, where:</p>
+<ul>
+<li>Energy is lost over time (due to friction or resistance).</li>
+<li>The system continues to oscillate, but with <strong>decreasing amplitude</strong>.</li>
+<li>The damping is <strong>underdamped</strong>, since oscillations still occur (i.e., it's not overdamped or critically damped).</li>
+</ul>
+<p>The motion is governed by the damped harmonic oscillator differential equation:</p>
+<div class="arithmatex">\[
+\frac{d^2\phi}{dt^2} + 2\beta \frac{d\phi}{dt} + \omega_0^2 \phi = 0
+\]</div>
+<hr/>
+<h2 id="damped-pendulum-simulation-and-dynamics">Damped Pendulum – Simulation and Dynamics</h2>
+<p><img alt="alt text" src="../Animation-Pendulummotion-Damped-2ndorderODE-ezgif.com-video-to-gif-converter.gif"/></p>
+<h2 id="pendulum-animation">Pendulum Animation</h2>
+<ul>
+<li>A simple pendulum is shown as a red bob attached to a rod.</li>
+<li>The rod pivots from a fixed horizontal black bar.</li>
+<li>The blue line represents the rod, which oscillates and gradually returns to equilibrium due to damping.</li>
+</ul>
+<p>This visually represents how the pendulum swings back and forth with <strong>decreasing amplitude</strong>, eventually coming to rest due to damping forces (like air resistance or internal friction).</p>
+<hr/>
+<h2 id="angular-dynamics">Angular Dynamics</h2>
+<p>The lower plot shows two quantities over time:</p>
+<ul>
+<li><strong>Red Line:</strong> Angular displacement <span class="arithmatex">\( \theta(t) \)</span></li>
+<li><strong>Blue Line:</strong> Angular velocity <span class="arithmatex">\( \omega(t) = \frac{d\theta}{dt} \)</span></li>
+</ul>
+<h3 id="observations">Observations:</h3>
+<ul>
+<li>The red curve oscillates around zero, gradually decreasing in amplitude – this is the angular position of the pendulum.</li>
+<li>The blue curve shows angular velocity, which is out of phase with displacement and also decays over time.</li>
+<li>Both curves exhibit <strong>damped harmonic motion</strong>.</li>
+</ul>
+<hr/>
+<h2 id="governing-equation_1">Governing Equation</h2>
+<p>This damped pendulum system is typically modeled using the nonlinear differential equation:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + 2\beta \frac{d\theta}{dt} + \frac{g}{L} \sin\theta = 0
+\]</div>
+<hr/>
+<h2 id="summary">Summary</h2>
+<p>This simulation clearly demonstrates <strong>underdamped motion</strong>:</p>
+<ul>
+<li>The system oscillates.</li>
+<li>Energy dissipates over time.</li>
+<li>Eventually, the pendulum settles at the equilibrium position.</li>
+</ul>
+<p>Such behavior is common in real-world systems where resistance prevents perpetual motion.</p>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
