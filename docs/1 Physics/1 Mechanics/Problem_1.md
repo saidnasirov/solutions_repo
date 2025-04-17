@@ -70,6 +70,79 @@ This analysis is crucial in physics, engineering, and sports, where optimizing t
 
 ## 3 Practical Applications:
 
+![alt text](image-3.png)
+
+# 📈 Projectile Motion Trajectory Analysis
+
+This graph shows multiple projectile motion trajectories under varying conditions, most likely changing **initial speed** and/or **launch angle**. The motion of a projectile under uniform gravity (ignoring air resistance) is governed by the following equations:
+
+$$
+x(t) = v_0 \cos(\theta) \cdot t
+$$
+
+$$
+y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+$$
+
+---
+
+## Panel-by-Panel Breakdown
+
+### Top Left Panel
+
+- Very short and low arcs
+- Indicates **low initial velocity** for all angles
+- Parabolic motion is barely visible due to small scale
+
+---
+
+### Top Right Panel
+
+- Higher and longer arcs
+- Shows **moderate initial velocities**
+- Trajectories start showing ideal parabolic shapes
+- Launch angles likely vary from small up to ~60°
+
+---
+
+### Bottom Left Panel
+
+- Higher range and height
+- Strong color gradient indicates **increasing launch angles** (e.g., 0° to 90°)
+- Arcs peak near 45°, the optimal angle for **maximum horizontal range**
+
+Recall:  
+Maximum range (ignoring air resistance) occurs when:
+
+$$
+\theta = 45^\circ
+$$
+
+---
+
+### Bottom Right Panel
+
+- Launch angles vary from 0° to near 90°
+- Projectiles launched more vertically have greater height but **less horizontal distance**
+- Redder curves = steeper launch angles  
+- Bluer curves = lower launch angles
+
+---
+
+## Summary
+
+This figure demonstrates how both **initial speed** and **launch angle** affect the **trajectory** of a projectile:
+
+- Low leads to short, low trajectories.
+- Higher extends both range and height.
+- Optimal angle for max range (no air resistance):  
+  $$
+  \theta = 45^\circ
+  $$
+- Vertical shots yield high arcs but low horizontal range.
+
+
+
 ### Projectile Trajectory for Different Angles.
 
 ```python
