@@ -83,6 +83,100 @@ The pendulum's motion shifts from **regular (periodic) motion** to **chaos** as 
 
 ## Practical Applications:
 
+![alt text](image-2.png)
+
+# Simulated Viscous Damping – Explanation
+
+This graph represents the **simulated behavior of a viscously damped oscillator**, such as a **damped pendulum** or a **mass-spring system with friction**.
+
+## Axes
+
+- **Horizontal axis (x-axis):** Time in seconds  
+- **Vertical axis (y-axis):** Angular displacement  in radians
+
+## Graph Components
+
+- **Green curve:** The actual oscillatory motion over time  
+- **Red dots (Amp):** The amplitudes (peak values) of the oscillations  
+- **Black curve (Exponential fit):** An exponential function fitted to show how the peak amplitudes decay over time  
+
+## Exponential Decay
+
+The black curve represents the exponential envelope of the oscillation:
+
+$$
+y = 1.509 \cdot e^{-0.152x}
+$$
+
+This equation tells us:
+
+- The initial amplitude is approximately 1.509 radians.
+
+## Physical Interpretation
+
+This is typical of a **damped harmonic oscillator**, where:
+
+- Energy is lost over time (due to friction or resistance).
+- The system continues to oscillate, but with **decreasing amplitude**.
+- The damping is **underdamped**, since oscillations still occur (i.e., it's not overdamped or critically damped).
+
+The motion is governed by the damped harmonic oscillator differential equation:
+
+$$
+\frac{d^2\phi}{dt^2} + 2\beta \frac{d\phi}{dt} + \omega_0^2 \phi = 0
+$$
+
+---
+
+## Damped Pendulum – Simulation and Dynamics
+
+![alt text](Animation-Pendulummotion-Damped-2ndorderODE-ezgif.com-video-to-gif-converter.gif)
+
+## Pendulum Animation
+
+- A simple pendulum is shown as a red bob attached to a rod.
+- The rod pivots from a fixed horizontal black bar.
+- The blue line represents the rod, which oscillates and gradually returns to equilibrium due to damping.
+
+This visually represents how the pendulum swings back and forth with **decreasing amplitude**, eventually coming to rest due to damping forces (like air resistance or internal friction).
+
+---
+
+## Angular Dynamics
+
+The lower plot shows two quantities over time:
+
+- **Red Line:** Angular displacement \( \theta(t) \)
+- **Blue Line:** Angular velocity \( \omega(t) = \frac{d\theta}{dt} \)
+
+### Observations:
+
+- The red curve oscillates around zero, gradually decreasing in amplitude – this is the angular position of the pendulum.
+- The blue curve shows angular velocity, which is out of phase with displacement and also decays over time.
+- Both curves exhibit **damped harmonic motion**.
+
+---
+
+## Governing Equation
+
+This damped pendulum system is typically modeled using the nonlinear differential equation:
+
+$$
+\frac{d^2\theta}{dt^2} + 2\beta \frac{d\theta}{dt} + \frac{g}{L} \sin\theta = 0
+$$
+
+---
+
+## Summary
+
+This simulation clearly demonstrates **underdamped motion**:
+
+- The system oscillates.
+- Energy dissipates over time.
+- Eventually, the pendulum settles at the equilibrium position.
+
+Such behavior is common in real-world systems where resistance prevents perpetual motion.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
