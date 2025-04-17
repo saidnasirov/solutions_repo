@@ -126,6 +126,61 @@ plt.show()
 ```
 ![alt text](image-4.png)
 
+## 3. Mass of the Earth from Satellite Motion
+
+We start from the Newtonian form of Kepler’s Third Law:
+
+$$
+T^2 = \frac{4\pi^2 r^3}{G M}
+$$
+
+Rearranging to solve for the mass \( M \):
+
+$$
+M = \frac{4\pi^2 r^3}{G T^2}
+$$
+
+Let’s use this to estimate the **mass of the Earth** using a satellite in **low Earth orbit**.
+
+### Given:
+- Radius of Earth:  
+  $$
+  R_E = 6.371 \times 10^6 \, \text{m}
+  $$
+- Altitude of satellite:  
+  $$
+  h = 0 \, \text{m} \quad \text{(approx. negligible for low orbit)}
+  $$
+- Total distance from Earth's center:  
+  $$
+  r = R_E = 6.371 \times 10^6 \, \text{m}
+  $$
+- Orbital period:  
+  $$
+  T = 90 \, \text{minutes} = 5400 \, \text{seconds}
+  $$
+- Gravitational constant:  
+  $$
+  G = 6.67430 \times 10^{-11} \, \text{m}^3/\text{kg}/\text{s}^2
+  $$
+
+### Plug into the formula:
+
+$$
+M_E = \frac{4\pi^2 (6.371 \times 10^6)^3}{(6.67430 \times 10^{-11}) \cdot (5400)^2}
+$$
+
+### Result:
+
+After evaluating the expression:
+
+$$
+M_E \approx 5.97 \times 10^{24} \, \text{kg}
+$$
+
+This matches the known mass of the Earth, confirming the validity of the approach.
+
+
 ---
 
 ## Derivation of the Relationship
