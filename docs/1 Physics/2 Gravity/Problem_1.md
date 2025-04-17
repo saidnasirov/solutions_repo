@@ -98,7 +98,10 @@ Now calculate \( T^2 \) and \( r^3 \):
 | Saturn | \( 867.3 \)      | \( 879.5 \)   |
 
 ### Correct Plot: \(T^2\)  vs \( r^3 \)
+
 ![alt text](image-4.png)
+
+![alt text](image-5.png)
 
 ## 3. Mass of the Earth from Satellite Motion
 
