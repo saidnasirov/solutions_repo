@@ -69,44 +69,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#3-practical-applications">3 Practical Applications:</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#projectile-trajectory-for-different-angles">Projectile Trajectory for Different Angles.</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#key-observations_1">Key Observations:</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#1-peak-height">1 Peak Height:</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#2-horizontal-distance-range">2 Horizontal Distance (Range):</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#3-effect-of-angle-on-flight-time">3 Effect of Angle on Flight Time:</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#animation-1">Animation 1</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#key-concepts">Key Concepts</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#equations-of-motion">Equations of Motion</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#without-air-drag-k-0">Without Air Drag (\( K = 0 \)):</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#with-linear-air-drag-k-0">With Linear Air Drag (\( K &gt; 0 \)):</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#visualization">Visualization</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#4-implementation-animation-2">4 Implementation: Animation 2</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#1-horizontal-motion-x-axis">1. Horizontal Motion (x-axis)</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#2-vertical-motion-y-axis">2. Vertical Motion (y-axis)</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#3-key-equations-in-projectile-motion">3. Key Equations in Projectile Motion</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#4-understanding-the-parabolic-path">4. Understanding the Parabolic Path</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#5-real-world-applications">5. Real-World Applications</a>
 </li>
 </ul>
 </li>
@@ -283,6 +245,63 @@ At 0°, the projectile moves horizontally and immediately touches the ground.</p
 <p>At 90°, the projectile moves straight up and falls back down without horizontal displacement.</p>
 <p>This analysis is crucial in physics, engineering, and sports, where optimizing the launch angle is essential for applications like ballistics, sports, and space missions.</p>
 <h2 id="3-practical-applications">3 Practical Applications:</h2>
+<p><img alt="alt text" src="../image-3.png"/></p>
+<h1 id="projectile-motion-trajectory-analysis">📈 Projectile Motion Trajectory Analysis</h1>
+<p>This graph shows multiple projectile motion trajectories under varying conditions, most likely changing <strong>initial speed</strong> and/or <strong>launch angle</strong>. The motion of a projectile under uniform gravity (ignoring air resistance) is governed by the following equations:</p>
+<div class="arithmatex">\[
+x(t) = v_0 \cos(\theta) \cdot t
+\]</div>
+<div class="arithmatex">\[
+y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+\]</div>
+<hr/>
+<h2 id="panel-by-panel-breakdown">Panel-by-Panel Breakdown</h2>
+<h3 id="top-left-panel">Top Left Panel</h3>
+<ul>
+<li>Very short and low arcs</li>
+<li>Indicates <strong>low initial velocity</strong> for all angles</li>
+<li>Parabolic motion is barely visible due to small scale</li>
+</ul>
+<hr/>
+<h3 id="top-right-panel">Top Right Panel</h3>
+<ul>
+<li>Higher and longer arcs</li>
+<li>Shows <strong>moderate initial velocities</strong></li>
+<li>Trajectories start showing ideal parabolic shapes</li>
+<li>Launch angles likely vary from small up to ~60°</li>
+</ul>
+<hr/>
+<h3 id="bottom-left-panel">Bottom Left Panel</h3>
+<ul>
+<li>Higher range and height</li>
+<li>Strong color gradient indicates <strong>increasing launch angles</strong> (e.g., 0° to 90°)</li>
+<li>Arcs peak near 45°, the optimal angle for <strong>maximum horizontal range</strong></li>
+</ul>
+<p>Recall:<br/>
+Maximum range (ignoring air resistance) occurs when:</p>
+<div class="arithmatex">\[
+\theta = 45^\circ
+\]</div>
+<hr/>
+<h3 id="bottom-right-panel">Bottom Right Panel</h3>
+<ul>
+<li>Launch angles vary from 0° to near 90°</li>
+<li>Projectiles launched more vertically have greater height but <strong>less horizontal distance</strong></li>
+<li>Redder curves = steeper launch angles  </li>
+<li>Bluer curves = lower launch angles</li>
+</ul>
+<hr/>
+<h2 id="summary">Summary</h2>
+<p>This figure demonstrates how both <strong>initial speed</strong> and <strong>launch angle</strong> affect the <strong>trajectory</strong> of a projectile:</p>
+<ul>
+<li>Low leads to short, low trajectories.</li>
+<li>Higher extends both range and height.</li>
+<li>Optimal angle for max range (no air resistance):<br/>
+  $$
+  \theta = 45^\circ
+  $$</li>
+<li>Vertical shots yield high arcs but low horizontal range.</li>
+</ul>
 <h3 id="projectile-trajectory-for-different-angles">Projectile Trajectory for Different Angles.</h3>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
