@@ -17,6 +17,117 @@ Let's derive this relationship using Newtonian mechanics.
 
 ---
 
+# Kepler's Third Law & Gravitational Analysis
+
+## 1. Derivation of Kepler's Third Law in Newtonian Form
+
+We begin with **Newton's Law of Universal Gravitation**:
+
+$$
+F = \frac{G M m}{r^2}
+$$
+
+And equate it with the **centripetal force** required to keep a planet in circular orbit:
+
+$$
+F = \frac{m v^2}{r}
+$$
+
+Equating both forces:
+
+$$
+\frac{G M m}{r^2} = \frac{m v^2}{r}
+$$
+
+Cancel \( m \), multiply both sides by \( r \):
+
+$$
+\frac{G M}{r} = v^2
+$$
+
+Now, using the orbital velocity formula \( v = \frac{2\pi r}{T} \), substitute into the equation:
+
+$$
+\frac{G M}{r} = \left(\frac{2\pi r}{T}\right)^2
+$$
+
+Expanding the right side:
+
+$$
+\frac{G M}{r} = \frac{4\pi^2 r^2}{T^2}
+$$
+
+Multiply both sides by (T^2):
+
+$$
+G M T^2 = 4\pi^2 r^3
+$$
+
+Solve for \( T^2 \):
+
+$$
+T^2 = \frac{4\pi^2}{G M} r^3
+$$
+
+This is **Kepler’s Third Law** in Newtonian form:
+- \( T \) is the orbital period,
+- \( r \) is the semi-major axis (orbital radius),
+- \( G \) is the gravitational constant,
+- \( M \) is the mass of the central body.
+
+---
+
+## 2. Plot of \( T^2 \) vs \( r^3 \) for Some Planets
+
+We use orbital data for 4 planets:
+
+| Planet  | \( T \) [years] | \( r \) [AU] |
+|--------|------------------|--------------|
+| Earth  | 1.0              | 1.0          |
+| Mars   | 1.88             | 1.52         |
+| Jupiter| 11.86            | 5.20         |
+| Saturn | 29.46            | 9.58         |
+
+Now calculate \( T^2 \) and \( r^3 \):
+
+| Planet  | \( T^2 \)       | \( r^3 \)     |
+|--------|------------------|--------------|
+| Earth  | \( 1.0 \)        | \( 1.0 \)     |
+| Mars   | \( 3.53 \)       | \( 3.51 \)    |
+| Jupiter| \( 140.7 \)      | \( 140.6 \)   |
+| Saturn | \( 867.3 \)      | \( 879.5 \)   |
+
+### Correct Plot: \(T^2\)  vs \( r^3 \)
+
+```python
+import matplotlib.pyplot as plt
+
+# Data
+planets = ["Earth", "Mars", "Jupiter", "Saturn"]
+T = [1.0, 1.88, 11.86, 29.46]
+r = [1.0, 1.52, 5.20, 9.58]
+
+# Calculate T^2 and r^3
+T_squared = [t**2 for t in T]
+r_cubed = [ri**3 for ri in r]
+
+# Plot
+plt.figure(figsize=(8, 5))
+plt.plot(r_cubed, T_squared, 'o-', color='blue')
+
+for i, planet in enumerate(planets):
+    plt.text(r_cubed[i], T_squared[i], planet)
+
+plt.xlabel('$r^3$ (AU³)')
+plt.ylabel('$T^2$ (yr²)')
+plt.title('$T^2$ vs $r^3$ for Selected Planets')
+plt.grid(True)
+plt.show()
+```
+![alt text](image-4.png)
+
+---
+
 ## Derivation of the Relationship
 Consider a body of mass \(m\) orbiting a much larger mass \(M\) (such as a planet orbiting a star) in a **circular orbit**. The gravitational force provides the necessary **centripetal force** to maintain the circular motion.
 
@@ -112,7 +223,7 @@ plt.show()
 ```
 ![alt text](image.png)
 
-## Kepler’s Third Law: Relationship Between T^2 and r^3
+## Kepler’s Third Law
 
 The graph visually represents **Kepler’s Third Law**, which states that the square of the orbital period \( T \) of a planet is proportional to the cube of the semi-major axis \( r \) of its orbit.
 
@@ -134,7 +245,7 @@ Where:
 
 - **X-axis:** \(r3\) (Orbital Radius Cubed)  
 - **Y-axis:** \(T^2\) (Orbital Period Squared)  
-- **Blue Line:** Represents the equation \( T^2 = k r^3 \)  
+- **Blue Line:** Represents the equation   
   - It's a straight line through the origin, indicating direct proportionality.
 
 ## Orbital Period vs Orbital Radius
