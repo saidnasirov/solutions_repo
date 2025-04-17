@@ -325,3 +325,7 @@ $$
 ## Implemention / Bonus Video
 
 <video controls src="Animated Poincare section for the damped driven pendulum.mp4" title="Title"></video>
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
