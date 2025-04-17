@@ -137,8 +137,41 @@ Where:
 - **Blue Line:** Represents the equation \( T^2 = k r^3 \)  
   - It's a straight line through the origin, indicating direct proportionality.
 
----
+## Orbital Period vs Orbital Radius
+
 ![alt text](image-1.png)
+
+This graph shows the relationship between a satellite's **orbital radius** and its **orbital period** around Earth.
+
+## Axes:
+- **X-axis**: Orbital Radius (km) — the distance from the center of the Earth.
+- **Y-axis**: Orbital Period (hours) — the time it takes for the satellite to complete one orbit.
+
+---
+
+## Observations:
+- The curve **increases non-linearly**, meaning the further a satellite is from Earth, the **longer** it takes to complete an orbit.
+- The relationship follows **Kepler's Third Law**, which can be expressed as:
+
+$$
+T^2 \propto r^3
+$$
+
+Where:
+- \( T \) is the orbital period.
+- \( r \) is the orbital radius.
+
+---
+
+## Interpretation:
+- Satellites in **Low Earth Orbit (LEO)** (e.g. ~2000 km) have **short periods**, orbiting the Earth in a few hours.
+- **Geostationary satellites** (~35,786 km) have a period of about **24 hours**, matching Earth's rotation.
+- As the orbital radius increases, the **period grows rapidly** due to the cube-square relationship in Kepler's law.
+
+---
+
+## Conclusion:
+This graph visually demonstrates how satellite speed decreases with distance  satellites farther from Earth orbit more slowly. This principle is critical in satellite positioning, communication systems, and space mission planning.
 
 
 ## Circular Orbits Around a Central Body
