@@ -326,6 +326,10 @@ $$
 
 <video controls src="Animated Poincare section for the damped driven pendulum.mp4" title="Title"></video>
 
+# First
+
 ![alt text](image-4.png)
+
+# Second
 
 ![alt text](image-5.png)
