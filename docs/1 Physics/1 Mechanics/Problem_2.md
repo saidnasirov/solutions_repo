@@ -336,4 +336,4 @@ $$
 
 # Third - Animation
 
-![alt text](Simplependulumanimation__directionofvelocityandaccelerationofsimplependulumexecutingSHM-ezgif.com-crop.gif)
+![alt text](Simplependulumanimation__directionofvelocityandaccelerationofsimplependulumexecutingSHM-ezgif.com-crop-1.gif)
