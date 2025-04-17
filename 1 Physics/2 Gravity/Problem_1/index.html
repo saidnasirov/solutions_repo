@@ -288,30 +288,6 @@ T^2 = \frac{4\pi^2}{G M} r^3
 </tbody>
 </table>
 <h3 id="correct-plot-t2-vs-r3">Correct Plot: <span class="arithmatex">\(T^2\)</span>  vs <span class="arithmatex">\( r^3 \)</span></h3>
-<pre><code class="language-python">import matplotlib.pyplot as plt
-
-# Data
-planets = ["Earth", "Mars", "Jupiter", "Saturn"]
-T = [1.0, 1.88, 11.86, 29.46]
-r = [1.0, 1.52, 5.20, 9.58]
-
-# Calculate T^2 and r^3
-T_squared = [t**2 for t in T]
-r_cubed = [ri**3 for ri in r]
-
-# Plot
-plt.figure(figsize=(8, 5))
-plt.plot(r_cubed, T_squared, 'o-', color='blue')
-
-for i, planet in enumerate(planets):
-    plt.text(r_cubed[i], T_squared[i], planet)
-
-plt.xlabel('$r^3$ (AU³)')
-plt.ylabel('$T^2$ (yr²)')
-plt.title('$T^2$ vs $r^3$ for Selected Planets')
-plt.grid(True)
-plt.show()
-</code></pre>
 <p><img alt="alt text" src="../image-4.png"/></p>
 <h2 id="3-mass-of-the-earth-from-satellite-motion">3. Mass of the Earth from Satellite Motion</h2>
 <p>We start from the Newtonian form of Kepler’s Third Law:</p>
@@ -356,6 +332,44 @@ M_E = \frac{4\pi^2 (6.371 \times 10^6)^3}{(6.67430 \times 10^{-11}) \cdot (5400)
 M_E \approx 5.97 \times 10^{24} \, \text{kg}
 \]</div>
 <p>This matches the known mass of the Earth, confirming the validity of the approach.</p>
+<h2 id="4-mass-of-the-sun-using-earths-orbit">4. Mass of the Sun Using Earth's Orbit</h2>
+<p>We use Kepler’s Third Law in Newtonian form:</p>
+<div class="arithmatex">\[
+T^2 = \frac{4\pi^2 r^3}{G M}
+\]</div>
+<p>Rearranging for the mass <span class="arithmatex">\( M \)</span>:</p>
+<div class="arithmatex">\[
+M = \frac{4\pi^2 r^3}{G T^2}
+\]</div>
+<p>We’ll use Earth’s orbit around the Sun since the Sun is the central body.</p>
+<h3 id="given_1">Given:</h3>
+<ul>
+<li>Distance from Earth to Sun (1 AU):<br/>
+  $$
+  r = 1.496 \times 10^{11} \, \text{m}
+  $$</li>
+<li>Orbital period of Earth:<br/>
+  $$
+  T = 1 \, \text{year} = 365.25 \times 86400 = 31,557,600 \, \text{seconds}
+  $$</li>
+<li>Gravitational constant:<br/>
+  $$
+  G = 6.67430 \times 10^{-11} \, \text{m}^3/\text{kg}/\text{s}^2
+  $$</li>
+</ul>
+<h3 id="plug-into-the-formula_1">Plug into the formula:</h3>
+<div class="arithmatex">\[
+M_\odot = \frac{4\pi^2 (1.496 \times 10^{11})^3}{(6.67430 \times 10^{-11}) \cdot (31,557,600)^2}
+\]</div>
+<h3 id="result_1">Result:</h3>
+<p>Evaluating the expression:</p>
+<div class="arithmatex">\[
+M_\odot \approx 1.99 \times 10^{30} \, \text{kg}
+\]</div>
+<p>This matches the known mass of the Sun.</p>
+<hr/>
+<p><strong>Conclusion:</strong><br/>
+Kepler’s Third Law, when combined with Newton’s Law of Gravitation, allows us to accurately estimate the mass of the Sun using just Earth’s orbital parameters!</p>
 <hr/>
 <h2 id="derivation-of-the-relationship">Derivation of the Relationship</h2>
 <p>Consider a body of mass <span class="arithmatex">\(m\)</span> orbiting a much larger mass <span class="arithmatex">\(M\)</span> (such as a planet orbiting a star) in a <strong>circular orbit</strong>. The gravitational force provides the necessary <strong>centripetal force</strong> to maintain the circular motion.</p>
