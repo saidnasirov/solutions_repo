@@ -182,6 +182,138 @@
 <div class="arithmatex">\[T^2 \propto r^3\]</div>
 <p>Let's derive this relationship using Newtonian mechanics.</p>
 <hr/>
+<h1 id="keplers-third-law-gravitational-analysis">Kepler's Third Law &amp; Gravitational Analysis</h1>
+<h2 id="1-derivation-of-keplers-third-law-in-newtonian-form">1. Derivation of Kepler's Third Law in Newtonian Form</h2>
+<p>We begin with <strong>Newton's Law of Universal Gravitation</strong>:</p>
+<div class="arithmatex">\[
+F = \frac{G M m}{r^2}
+\]</div>
+<p>And equate it with the <strong>centripetal force</strong> required to keep a planet in circular orbit:</p>
+<div class="arithmatex">\[
+F = \frac{m v^2}{r}
+\]</div>
+<p>Equating both forces:</p>
+<div class="arithmatex">\[
+\frac{G M m}{r^2} = \frac{m v^2}{r}
+\]</div>
+<p>Cancel <span class="arithmatex">\( m \)</span>, multiply both sides by <span class="arithmatex">\( r \)</span>:</p>
+<div class="arithmatex">\[
+\frac{G M}{r} = v^2
+\]</div>
+<p>Now, using the orbital velocity formula <span class="arithmatex">\( v = \frac{2\pi r}{T} \)</span>, substitute into the equation:</p>
+<div class="arithmatex">\[
+\frac{G M}{r} = \left(\frac{2\pi r}{T}\right)^2
+\]</div>
+<p>Expanding the right side:</p>
+<div class="arithmatex">\[
+\frac{G M}{r} = \frac{4\pi^2 r^2}{T^2}
+\]</div>
+<p>Multiply both sides by (T^2):</p>
+<div class="arithmatex">\[
+G M T^2 = 4\pi^2 r^3
+\]</div>
+<p>Solve for <span class="arithmatex">\( T^2 \)</span>:</p>
+<div class="arithmatex">\[
+T^2 = \frac{4\pi^2}{G M} r^3
+\]</div>
+<p>This is <strong>Kepler’s Third Law</strong> in Newtonian form:
+- <span class="arithmatex">\( T \)</span> is the orbital period,
+- <span class="arithmatex">\( r \)</span> is the semi-major axis (orbital radius),
+- <span class="arithmatex">\( G \)</span> is the gravitational constant,
+- <span class="arithmatex">\( M \)</span> is the mass of the central body.</p>
+<hr/>
+<h2 id="2-plot-of-t2-vs-r3-for-some-planets">2. Plot of <span class="arithmatex">\( T^2 \)</span> vs <span class="arithmatex">\( r^3 \)</span> for Some Planets</h2>
+<p>We use orbital data for 4 planets:</p>
+<table>
+<thead>
+<tr>
+<th>Planet</th>
+<th><span class="arithmatex">\( T \)</span> [years]</th>
+<th><span class="arithmatex">\( r \)</span> [AU]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Earth</td>
+<td>1.0</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>1.88</td>
+<td>1.52</td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td>11.86</td>
+<td>5.20</td>
+</tr>
+<tr>
+<td>Saturn</td>
+<td>29.46</td>
+<td>9.58</td>
+</tr>
+</tbody>
+</table>
+<p>Now calculate <span class="arithmatex">\( T^2 \)</span> and <span class="arithmatex">\( r^3 \)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Planet</th>
+<th><span class="arithmatex">\( T^2 \)</span></th>
+<th><span class="arithmatex">\( r^3 \)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Earth</td>
+<td><span class="arithmatex">\( 1.0 \)</span></td>
+<td><span class="arithmatex">\( 1.0 \)</span></td>
+</tr>
+<tr>
+<td>Mars</td>
+<td><span class="arithmatex">\( 3.53 \)</span></td>
+<td><span class="arithmatex">\( 3.51 \)</span></td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td><span class="arithmatex">\( 140.7 \)</span></td>
+<td><span class="arithmatex">\( 140.6 \)</span></td>
+</tr>
+<tr>
+<td>Saturn</td>
+<td><span class="arithmatex">\( 867.3 \)</span></td>
+<td><span class="arithmatex">\( 879.5 \)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="correct-plot-t2-vs-r3">Correct Plot: <span class="arithmatex">\(T^2\)</span>  vs <span class="arithmatex">\( r^3 \)</span></h3>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+# Data
+planets = ["Earth", "Mars", "Jupiter", "Saturn"]
+T = [1.0, 1.88, 11.86, 29.46]
+r = [1.0, 1.52, 5.20, 9.58]
+
+# Calculate T^2 and r^3
+T_squared = [t**2 for t in T]
+r_cubed = [ri**3 for ri in r]
+
+# Plot
+plt.figure(figsize=(8, 5))
+plt.plot(r_cubed, T_squared, 'o-', color='blue')
+
+for i, planet in enumerate(planets):
+    plt.text(r_cubed[i], T_squared[i], planet)
+
+plt.xlabel('$r^3$ (AU³)')
+plt.ylabel('$T^2$ (yr²)')
+plt.title('$T^2$ vs $r^3$ for Selected Planets')
+plt.grid(True)
+plt.show()
+</code></pre>
+<p><img alt="alt text" src="../image-4.png"/></p>
+<hr/>
 <h2 id="derivation-of-the-relationship">Derivation of the Relationship</h2>
 <p>Consider a body of mass <span class="arithmatex">\(m\)</span> orbiting a much larger mass <span class="arithmatex">\(M\)</span> (such as a planet orbiting a star) in a <strong>circular orbit</strong>. The gravitational force provides the necessary <strong>centripetal force</strong> to maintain the circular motion.</p>
 <h3 id="step-1-equating-gravitational-force-and-centripetal-force"><strong>Step 1: Equating Gravitational Force and Centripetal Force</strong></h3>
@@ -242,7 +374,7 @@ plt.legend(fontsize=12)
 plt.show()
 </code></pre>
 <p><img alt="alt text" src="../image.png"/></p>
-<h2 id="keplers-third-law-relationship-between-t2-and-r3">Kepler’s Third Law: Relationship Between T^2 and r^3</h2>
+<h2 id="keplers-third-law">Kepler’s Third Law</h2>
 <p>The graph visually represents <strong>Kepler’s Third Law</strong>, which states that the square of the orbital period <span class="arithmatex">\( T \)</span> of a planet is proportional to the cube of the semi-major axis <span class="arithmatex">\( r \)</span> of its orbit.</p>
 <h2 id="mathematical-form">Mathematical Form:</h2>
 <div class="arithmatex">\[
@@ -259,7 +391,7 @@ T^2 = k r^3
 <ul>
 <li><strong>X-axis:</strong> <span class="arithmatex">\(r3\)</span> (Orbital Radius Cubed)  </li>
 <li><strong>Y-axis:</strong> <span class="arithmatex">\(T^2\)</span> (Orbital Period Squared)  </li>
-<li><strong>Blue Line:</strong> Represents the equation <span class="arithmatex">\( T^2 = k r^3 \)</span> </li>
+<li><strong>Blue Line:</strong> Represents the equation   </li>
 <li>It's a straight line through the origin, indicating direct proportionality.</li>
 </ul>
 <h2 id="orbital-period-vs-orbital-radius">Orbital Period vs Orbital Radius</h2>
