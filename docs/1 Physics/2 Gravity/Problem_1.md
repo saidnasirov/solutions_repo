@@ -98,32 +98,6 @@ Now calculate \( T^2 \) and \( r^3 \):
 | Saturn | \( 867.3 \)      | \( 879.5 \)   |
 
 ### Correct Plot: \(T^2\)  vs \( r^3 \)
-
-```python
-import matplotlib.pyplot as plt
-
-# Data
-planets = ["Earth", "Mars", "Jupiter", "Saturn"]
-T = [1.0, 1.88, 11.86, 29.46]
-r = [1.0, 1.52, 5.20, 9.58]
-
-# Calculate T^2 and r^3
-T_squared = [t**2 for t in T]
-r_cubed = [ri**3 for ri in r]
-
-# Plot
-plt.figure(figsize=(8, 5))
-plt.plot(r_cubed, T_squared, 'o-', color='blue')
-
-for i, planet in enumerate(planets):
-    plt.text(r_cubed[i], T_squared[i], planet)
-
-plt.xlabel('$r^3$ (AU³)')
-plt.ylabel('$T^2$ (yr²)')
-plt.title('$T^2$ vs $r^3$ for Selected Planets')
-plt.grid(True)
-plt.show()
-```
 ![alt text](image-4.png)
 
 ## 3. Mass of the Earth from Satellite Motion
@@ -179,6 +153,57 @@ M_E \approx 5.97 \times 10^{24} \, \text{kg}
 $$
 
 This matches the known mass of the Earth, confirming the validity of the approach.
+
+## 4. Mass of the Sun Using Earth's Orbit
+
+We use Kepler’s Third Law in Newtonian form:
+
+$$
+T^2 = \frac{4\pi^2 r^3}{G M}
+$$
+
+Rearranging for the mass \( M \):
+
+$$
+M = \frac{4\pi^2 r^3}{G T^2}
+$$
+
+We’ll use Earth’s orbit around the Sun since the Sun is the central body.
+
+### Given:
+- Distance from Earth to Sun (1 AU):  
+  $$
+  r = 1.496 \times 10^{11} \, \text{m}
+  $$
+- Orbital period of Earth:  
+  $$
+  T = 1 \, \text{year} = 365.25 \times 86400 = 31,557,600 \, \text{seconds}
+  $$
+- Gravitational constant:  
+  $$
+  G = 6.67430 \times 10^{-11} \, \text{m}^3/\text{kg}/\text{s}^2
+  $$
+
+### Plug into the formula:
+
+$$
+M_\odot = \frac{4\pi^2 (1.496 \times 10^{11})^3}{(6.67430 \times 10^{-11}) \cdot (31,557,600)^2}
+$$
+
+### Result:
+
+Evaluating the expression:
+
+$$
+M_\odot \approx 1.99 \times 10^{30} \, \text{kg}
+$$
+
+This matches the known mass of the Sun.
+
+---
+
+**Conclusion:**  
+Kepler’s Third Law, when combined with Newton’s Law of Gravitation, allows us to accurately estimate the mass of the Sun using just Earth’s orbital parameters!
 
 
 ---
