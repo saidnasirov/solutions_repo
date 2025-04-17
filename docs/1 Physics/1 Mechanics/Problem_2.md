@@ -330,10 +330,6 @@ $$
 
 ![alt text](image-4.png)
 
-# Second
-
-![alt text](image-5.png)
-
 # Third - Animation
 
 ![alt text](Simplependulumanimation__directionofvelocityandaccelerationofsimplependulumexecutingSHM-ezgif.com-crop-1.gif)
