@@ -130,7 +130,8 @@ The graph compares the **First Cosmic Velocity** (orbital) and **Second Cosmic V
    - **Y-axis**: Velocity in km/s (likely ranging from **0 to 60 km/s**).  
 
 2. **Dominance of Jupiter**:  
-$$v_{\text{orb}}^{\text{Jupiter}} \approx 42.1 \, \text{km/s}$$  
+$$v_{\text{orb}}^{\text{Jupiter}} \approx 42.1 \, \text{km/s}$$
+
 $$v_{\text{esc}}^{\text{Jupiter}} \approx 59.5 \, \text{km/s}$$  
    *(Requires ~7.5× Earth's escape velocity!)*  
 
