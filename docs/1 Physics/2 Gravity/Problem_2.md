@@ -408,13 +408,11 @@ plt.show()
 **Visual Annotations**
 
 **Bar Chart**:  
-   - **Blue Bars**: Orbital velocities $v_{\text{orb}}$
-
-   - **Red Bars**: Escape velocities $v_{\text{esc}}$  
+  - **Blue Bars**: Orbital velocities $v_{\text{orb}}$
+  - **Red Bars**: Escape velocities $v_{\text{esc}}$ 
 
 **Critical Observations**:  
    - Mars has the smallest $\Delta v$ (1.48 km/s), making return trips feasible.  
-   
    - Jupiter’s $v_{\text{esc}}$ (59.50 km/s) is impractical for current propulsion.  
 
 ---
