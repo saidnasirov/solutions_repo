@@ -272,7 +272,7 @@ Moon : Mars : Jupiter  ≈ $1 : 585 : 2{,}026$
 
 # Cosmic Velocities Comparison 
 
-![alt text](Untitledvideo-MadewithClipchamp4-ezgif.com-video-to-gif-converter.gif)
+![alt text](Untitledvideo-MadewithClipchamp5-ezgif.com-video-to-gif-converter.gif)
 
 ## 1. Bar Chart Race  
 Visualizes the **1st** (orbital) and **2nd** (escape) cosmic velocities for celestial bodies.  
