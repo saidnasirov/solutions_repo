@@ -59,10 +59,10 @@ These speeds illustrate the incredible energy requirements of each successive st
 
 | Celestial Body | Mass ($kg$) | Radius ($m$) | $v_1$ (km/s) | $v_2$ (km/s) |
 |----------------|----------------|----------------|----------------|----------------|
-| Earth          | $$5.97 \times 10^{24}$$ | $$6.37 \times 10^6$$  | 7.9            | 11.2           |
-| Moon           | $$7.35 \times 10^{22}$$ | $$1.74 \times 10^6$$  | 1.7            | 2.4            |
-| Mars           | $$6.42 \times 10^{23}$$ | $$3.39 \times 10^6$$  | 3.6            | 5.0            |
-| Jupiter        | $$1.90 \times 10^{27}$$ | $$7.14 \times 10^7$$  | 42.1           | 59.5           |
+| Earth          | $5.97 \times 10^{24}$ | $6.37 \times 10^6$  | 7.9            | 11.2           |
+| Moon           | $7.35 \times 10^{22}$ | $1.74 \times 10^6$  | 1.7            | 2.4            |
+| Mars           | $6.42 \times 10^{23}$ | $3.39 \times 10^6$  | 3.6            | 5.0            |
+| Jupiter        | $1.90 \times 10^{27}$ | $7.14 \times 10^7$  | 42.1           | 59.5           |
 
 ---
 
