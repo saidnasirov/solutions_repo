@@ -47,9 +47,9 @@ $$
 ---
 
 ## **Cosmic Velocities for Earth**
-- $$v_1 \approx 7.9 \text{ km/s}$$
-- $$v_2 \approx 11.2 \text{ km/s}$$
-- $$v_3 \approx 42.1 \text{ km/s}$$
+- $v_1 \approx 7.9 \text{ km/s}$
+- $v_2 \approx 11.2 \text{ km/s}$
+- $v_3 \approx 42.1 \text{ km/s}$
 
 These speeds illustrate the incredible energy requirements of each successive step toward leaving Earth and its neighborhood.
 
@@ -127,15 +127,9 @@ The graph compares the **First Cosmic Velocity** (orbital) and **Second Cosmic V
    - Each body has two bars:  
      - **Blue**: First Cosmic Velocity ($v_{\text{orb}}$).  
      - **Red**: Second Cosmic Velocity ($v_{\text{esc}}$).  
-   - **Y-axis**: Velocity in km/s (likely ranging from **0 to 60 km/s**).  
+   - **Y-axis**: Velocity in km/s (likely ranging from **0 to 60 km/s**).  *  
 
-2. **Dominance of Jupiter**:  
-$$v_{\text{orb}}^{\text{Jupiter}} \approx 42.1 \, \text{km/s}$$
-
-$$v_{\text{esc}}^{\text{Jupiter}} \approx 59.5 \, \text{km/s}$$  
-   *(Requires ~7.5× Earth's escape velocity!)*  
-
-3. **Earth vs. Mars/Moon**:  
+2. **Earth vs. Mars/Moon**:  
    - **Earth**: $v_{\text{orb}} = 7.91 \, \text{km/s}, \quad v_{\text{esc}} = 11.19 \, \text{km/s}$
    - **Moon**:  $v_{\text{orb}} = 1.68 \, \text{km/s}, \quad v_{\text{esc}} = 2.38 \, \text{km/s}$ 
    
@@ -279,15 +273,17 @@ Moon : Mars : Jupiter  ≈ $1 : 585 : 2{,}026$
 Visualizes the **1st** (orbital) and **2nd** (escape) cosmic velocities for celestial bodies.  
 
 ### Key Observations:  
-- **Jupiter** dominates with:  
-  - **1st Cosmic (Orbital):** $$v_{\text{orb}} \approx 42.1 \, \text{km/s}$$  
-  - **2nd Cosmic (Escape):** $$v_{\text{esc}} \approx 59.5 \, \text{km/s}$$  
-- **Earth** requires:  
-  - $$v_{\text{orb}} = 7.91 \, \text{km/s}$$  
-  - $$v_{\text{esc}} = 11.19 \, \text{km/s}$$  
-- **Moon** has the lowest velocities:  
-  - $$v_{\text{orb}} = 1.68 \, \text{km/s}$$  
-  - $$v_{\text{esc}} = 2.38 \, \text{km/s}$$  
+**Jupiter** dominates with:  
+  - **1st Cosmic (Orbital):** $v_{\text{orb}} \approx 42.1 \, \text{km/s}$  
+  - **2nd Cosmic (Escape):** $v_{\text{esc}} \approx 59.5 \, \text{km/s}$  
+
+**Earth** requires:  
+- $v_{\text{orb}} = 7.91 \, \text{km/s}$  
+- $v_{\text{esc}} = 11.19 \, \text{km/s}$ 
+
+**Moon** has the lowest velocities:  
+- $v_{\text{orb}} = 1.68 \, \text{km/s}$ 
+- $v_{\text{esc}} = 2.38 \, \text{km/s}$ 
 
 ### Mathematical Context:  
 - **Orbital Velocity (1st Cosmic):**  
@@ -298,7 +294,7 @@ Visualizes the **1st** (orbital) and **2nd** (escape) cosmic velocities for cele
   - $R$ = Orbital radius  
 
 - **Escape Velocity (2nd Cosmic):**  
-  $ v_{\text{esc}} = \sqrt{\frac{2GM}{R}} $ 
+  $v_{\text{esc}} = \sqrt{\frac{2GM}{R}}$ 
 
 ---
 
