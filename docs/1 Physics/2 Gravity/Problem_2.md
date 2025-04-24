@@ -423,7 +423,7 @@ plt.show()
 ### Energy Requirements
 Fuel mass scales with the square of velocity:  
 $$ E \propto v^2 $$  
-- **Jupiter Mission**: Needs ~$ (59.5/11.2)^2 \approx 28× $ more energy than Earth escape.
+- **Jupiter Mission**: Needs ~ $(59.5/11.2)^2 \approx 28×$ more energy than Earth escape.
 
 ### Gravity Assist
 Probes leverage Jupiter’s gravity to achieve solar escape velocity:  
