@@ -377,8 +377,7 @@ plt.show()
 | **Jupiter** | 317.8              | 69,911      | 42.1                      | 59.5                      |  
 
 ---
-
-![alt text](<newplot (3).png>)
+![alt text](image-9.png)
 
 # Cosmic Velocities: Orbital vs Escape
 
