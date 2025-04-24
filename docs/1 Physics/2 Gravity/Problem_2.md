@@ -406,7 +406,8 @@ plt.show()
 ---
 
 **Visual Annotations**
-1. **Bar Chart**:  
+
+**Bar Chart**:  
    - **Blue Bars**: Orbital velocities ($v_{\text{orb}} $).  
    - **Red Bars**: Escape velocities ($v_{\text{esc}}$).  
 
