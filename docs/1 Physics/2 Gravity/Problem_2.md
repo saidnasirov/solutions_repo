@@ -130,8 +130,8 @@ The graph compares the **First Cosmic Velocity** (orbital) and **Second Cosmic V
    - **Y-axis**: Velocity in km/s (likely ranging from **0 to 60 km/s**).  
 
 2. **Dominance of Jupiter**:  
-   - $$v_{\text{orb}}^{\text{Jupiter}} \approx 42.1 \, \text{km/s}$$  
-   - $$v_{\text{esc}}^{\text{Jupiter}} \approx 59.5 \, \text{km/s}$$  
+$$v_{\text{orb}}^{\text{Jupiter}} \approx 42.1 \, \text{km/s}$$  
+$$v_{\text{esc}}^{\text{Jupiter}} \approx 59.5 \, \text{km/s}$$  
    *(Requires ~7.5× Earth's escape velocity!)*  
 
 3. **Earth vs. Mars/Moon**:  
@@ -297,7 +297,7 @@ Visualizes the **1st** (orbital) and **2nd** (escape) cosmic velocities for cele
   - $R$ = Orbital radius  
 
 - **Escape Velocity (2nd Cosmic):**  
-  $ v_{\text{esc}} = \sqrt{\frac{2GM}{R}} $$ 
+  $ v_{\text{esc}} = \sqrt{\frac{2GM}{R}} $ 
 
 ---
 
@@ -313,7 +313,7 @@ Shows how velocities scale with planetary mass and radius.
 
 3. **Practical Implications:**  
    - **Fuel Requirements:**  
-     $ \text{Fuel} \propto v^2 $ → Jupiter missions need **~25×** more fuel than Earth’s!  
+     $\text{Fuel} \propto v^2$ → Jupiter missions need **~25×** more fuel than Earth’s!  
 
 ---
 
@@ -394,7 +394,7 @@ plt.show()
 
 ## 2. Data Interpretation
 ### Jupiter
-- **Escape Velocity**: Dominates at $ 59.50 \, \text{km/s} $ Requires ~5.3× Earth's escape velocity!
+- **Escape Velocity**: Dominates at $59.50 \, \text{km/s}$ Requires ~5.3× Earth's escape velocity!
 
 ### Comparative Δv (Delta-V)
 | Body  | Orbital (km/s) | Escape (km/s) | $$ \Delta v $$ (km/s) |  
@@ -403,19 +403,19 @@ plt.show()
 | Earth | $$ 7.91 $$     | $$ 11.19 $$    | $$ \Delta v = 3.28 $$ |  
 
 **Notes**:  
-- $ \Delta v $ = Difference between escape and orbital velocities.  
+- $\Delta v$ = Difference between escape and orbital velocities.  
 - Jupiter’s values imply extreme energy requirements for missions.
 
 ---
 
 ## 3. Visual Annotations
 1. **Bar Chart**:  
-   - **Blue Bars**: Orbital velocities ($ v_{\text{orb}} $).  
-   - **Red Bars**: Escape velocities ($ v_{\text{esc}} $).  
+   - **Blue Bars**: Orbital velocities ($v_{\text{orb}} $).  
+   - **Red Bars**: Escape velocities ($v_{\text{esc}}$).  
 
 2. **Critical Observations**:  
-   - Mars has the smallest $ \Delta v $ (1.48 km/s), making return trips feasible.  
-   - Jupiter’s $ v_{\text{esc}} $ (59.50 km/s) is impractical for current propulsion.  
+   - Mars has the smallest $\Delta v$ (1.48 km/s), making return trips feasible.  
+   - Jupiter’s $v_{\text{esc}}$ (59.50 km/s) is impractical for current propulsion.  
 
 ---
 
