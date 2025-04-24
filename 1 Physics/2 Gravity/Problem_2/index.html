@@ -172,6 +172,616 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="escape-velocities-and-cosmic-velocities">Escape Velocities and Cosmic Velocities</h1>
+<p>Understanding how fast we need to travel to orbit the Earth, leave it, or even escape the entire Solar System is not just an academic curiosity—it's at the heart of space exploration. In this detailed guide, we’ll explore <strong>cosmic velocities</strong>—their derivations, values for different celestial bodies, and what they mean for our journey into the stars. We'll also animate and compare these speeds for different planets using Python in Google Colab!</p>
+<hr/>
+<h2 id="what-are-cosmic-velocities"><strong>What Are Cosmic Velocities?</strong></h2>
+<h3 id="first-cosmic-velocity-v_1">First Cosmic Velocity (<span class="arithmatex">\(v_1\)</span>)</h3>
+<ul>
+<li><strong>Definition</strong>: The minimum speed an object must have to achieve a stable, circular orbit just above the surface of a celestial body without any additional propulsion.</li>
+<li><strong>Physical Meaning</strong>: This is the orbital speed satellites require to remain in orbit around a planet.</li>
+</ul>
+<h3 id="second-cosmic-velocity-v_2">Second Cosmic Velocity (<span class="arithmatex">\(v_2\)</span>)</h3>
+<ul>
+<li><strong>Definition</strong>: The escape velocity—minimum speed needed to break free from the gravitational field of a planet or moon.</li>
+<li><strong>Physical Meaning</strong>: Used in deep space missions like lunar or Mars travel. Beyond this speed, no further propulsion is needed to leave the planet.</li>
+</ul>
+<h3 id="third-cosmic-velocity-v_3">Third Cosmic Velocity (<span class="arithmatex">\(v_3\)</span>)</h3>
+<ul>
+<li><strong>Definition</strong>: The speed required to escape the Solar System’s gravitational pull, taking into account the Earth’s velocity around the Sun.</li>
+<li><strong>Physical Meaning</strong>: This is the minimum speed necessary for interstellar travel. Think <em>Voyager</em> missions.</li>
+</ul>
+<hr/>
+<h2 id="mathematical-derivations"><strong>Mathematical Derivations</strong></h2>
+<h3 id="deriving-the-first-cosmic-velocity-v_1">Deriving the First Cosmic Velocity (<span class="arithmatex">\(v_1\)</span>)</h3>
+<p>The centripetal force needed for circular motion is provided by the gravitational force:
+$$
+\frac{mv^2}{r} = \frac{GMm}{r^2} \
+\Rightarrow v_1 = \sqrt{\frac{GM}{r}}
+$$</p>
+<h3 id="deriving-the-second-cosmic-velocity-v_2">Deriving the Second Cosmic Velocity (<span class="arithmatex">\(v_2\)</span>)</h3>
+<p>We equate kinetic energy to gravitational potential energy:
+$$
+\frac{1}{2}mv^2 = \frac{GMm}{r} \
+\Rightarrow v_2 = \sqrt{\frac{2GM}{r}} = \sqrt{2}v_1
+$$</p>
+<h3 id="deriving-the-third-cosmic-velocity-v_3">Deriving the Third Cosmic Velocity (<span class="arithmatex">\(v_3\)</span>)</h3>
+<p>Escaping the Solar System requires escaping Earth’s gravity and also overcoming the Sun’s pull:
+$$
+v_3 = \sqrt{v_e^2 + v_{orb}^2}
+$$</p>
+<hr/>
+<h2 id="cosmic-velocities-for-earth"><strong>Cosmic Velocities for Earth</strong></h2>
+<ul>
+<li>
+<div class="arithmatex">\[v_1 \approx 7.9 \text{ km/s}\]</div>
+</li>
+<li>
+<div class="arithmatex">\[v_2 \approx 11.2 \text{ km/s}\]</div>
+</li>
+<li>
+<div class="arithmatex">\[v_3 \approx 42.1 \text{ km/s}\]</div>
+</li>
+</ul>
+<p>These speeds illustrate the incredible energy requirements of each successive step toward leaving Earth and its neighborhood.</p>
+<hr/>
+<h2 id="comparison-table-earth-moon-mars-jupiter"><strong>Comparison Table: Earth, Moon, Mars, Jupiter</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Celestial Body</th>
+<th>Mass (<span class="arithmatex">\(kg\)</span>)</th>
+<th>Radius (<span class="arithmatex">\(m\)</span>)</th>
+<th><span class="arithmatex">\(v_1\)</span> (km/s)</th>
+<th><span class="arithmatex">\(v_2\)</span> (km/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Earth</td>
+<td><span class="arithmatex">\(<span class="arithmatex">\(5.97 \times 10^{24}\)</span>\)</span></td>
+<td><span class="arithmatex">\(<span class="arithmatex">\(6.37 \times 10^6\)</span>\)</span></td>
+<td>7.9</td>
+<td>11.2</td>
+</tr>
+<tr>
+<td>Moon</td>
+<td><span class="arithmatex">\(<span class="arithmatex">\(7.35 \times 10^{22}\)</span>\)</span></td>
+<td><span class="arithmatex">\(<span class="arithmatex">\(1.74 \times 10^6\)</span>\)</span></td>
+<td>1.7</td>
+<td>2.4</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td><span class="arithmatex">\(<span class="arithmatex">\(6.42 \times 10^{23}\)</span>\)</span></td>
+<td><span class="arithmatex">\(<span class="arithmatex">\(3.39 \times 10^6\)</span>\)</span></td>
+<td>3.6</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td><span class="arithmatex">\(<span class="arithmatex">\(1.90 \times 10^{27}\)</span>\)</span></td>
+<td><span class="arithmatex">\(<span class="arithmatex">\(7.14 \times 10^7\)</span>\)</span></td>
+<td>42.1</td>
+<td>59.5</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="visualizing-animating-in-google-colab"><strong>Visualizing &amp; Animating in Google Colab</strong></h2>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+
+G = 6.67430e-11
+
+bodies = {
+    'Earth': {'M': 5.97e24, 'r': 6.37e6},
+    'Moon': {'M': 7.35e22, 'r': 1.74e6},
+    'Mars': {'M': 6.42e23, 'r': 3.39e6},
+    'Jupiter': {'M': 1.90e27, 'r': 7.14e7},
+}
+
+def velocities(M, r):
+    v1 = np.sqrt(G * M / r)
+    v2 = np.sqrt(2) * v1
+    return v1 / 1000, v2 / 1000  # Convert to km/s
+
+names, v1s, v2s = [], [], []
+for name, data in bodies.items():
+    v1, v2 = velocities(data['M'], data['r'])
+    names.append(name)
+    v1s.append(v1)
+    v2s.append(v2)
+
+fig, ax = plt.subplots()
+x = np.arange(len(names))
+bar_width = 0.35
+bars1 = ax.bar(x - bar_width/2, v1s, bar_width, label='First Cosmic Velocity')
+bars2 = ax.bar(x + bar_width/2, v2s, bar_width, label='Second Cosmic Velocity')
+
+ax.set_xlabel('Celestial Body')
+ax.set_ylabel('Velocity (km/s)')
+ax.set_title('Cosmic Velocities by Celestial Body')
+ax.set_xticks(x)
+ax.set_xticklabels(names)
+ax.legend()
+
+ani = animation.FuncAnimation(fig, lambda i: None, frames=10, interval=500, repeat=True)
+plt.show()
+</code></pre>
+<p><img alt="alt text" src="../image-6.png"/></p>
+<h2 id="cosmic-velocities-by-celestial-body">Cosmic Velocities by Celestial Body</h2>
+<h2 id="graph-description">Graph Description</h2>
+<p>The graph compares the <strong>First Cosmic Velocity</strong> (orbital) and <strong>Second Cosmic Velocity</strong> (escape) across four celestial bodies:<br/>
+- <strong>Earth</strong><br/>
+- <strong>Moon</strong><br/>
+- <strong>Mars</strong><br/>
+- <strong>Jupiter</strong> </p>
+<h3 id="key-features">Key Features:</h3>
+<ol>
+<li><strong>Double-Bar Representation</strong>:  </li>
+<li>Each body has two bars:  <ul>
+<li><strong>Blue</strong>: First Cosmic Velocity (<span class="arithmatex">\(v_{\text{orb}}\)</span>).  </li>
+<li><strong>Red</strong>: Second Cosmic Velocity (<span class="arithmatex">\(v_{\text{esc}}\)</span>).  </li>
+</ul>
+</li>
+<li>
+<p><strong>Y-axis</strong>: Velocity in km/s (likely ranging from <strong>0 to 60 km/s</strong>).  </p>
+</li>
+<li>
+<p><strong>Dominance of Jupiter</strong>:  </p>
+</li>
+<li>
+<div class="arithmatex">\[v_{\text{orb}}^{\text{Jupiter}} \approx 42.1 \, \text{km/s}\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(<span class="arithmatex">\(v_{\text{esc}}^{\text{Jupiter}} \approx 59.5 \, \text{km/s}\)</span>\)</span><br/>
+<em>(Requires ~7.5× Earth's escape velocity!)</em> </p>
+</li>
+<li>
+<p><strong>Earth vs. Mars/Moon</strong>:  </p>
+</li>
+<li><strong>Earth</strong>: <span class="arithmatex">\(v_{\text{orb}} = 7.91 \, \text{km/s}, \quad v_{\text{esc}} = 11.19 \, \text{km/s}\)</span></li>
+<li><strong>Moon</strong>:  <span class="arithmatex">\(v_{\text{orb}} = 1.68 \, \text{km/s}, \quad v_{\text{esc}} = 2.38 \, \text{km/s}\)</span> </li>
+</ol>
+<p><em>(Moon's weak gravity enables easier lunar missions.)</em> </p>
+<hr/>
+<h2 id="physics-formulas">Physics Formulas</h2>
+<h3 id="1-first-cosmic-velocity-orbital">1. First Cosmic Velocity (Orbital)</h3>
+<p>Minimum speed to orbit a body:<br/>
+$$<br/>
+v_{\text{orb}} = \sqrt{\frac{GM}{R}}<br/>
+$$<br/>
+- <span class="arithmatex">\(G\)</span>: Gravitational constant (<span class="arithmatex">\(6.674 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}\)</span>)<br/>
+- <span class="arithmatex">\(M\)</span>: Mass of the celestial body.<br/>
+- <span class="arithmatex">\(R\)</span>: Radius of the orbit (surface for minimal orbit).  </p>
+<h3 id="2-second-cosmic-velocity-escape">2. Second Cosmic Velocity (Escape)</h3>
+<p>Minimum speed to escape gravitational pull:<br/>
+$$<br/>
+v_{\text{esc}} = \sqrt{\frac{2GM}{R}} = \sqrt{2} \cdot v_{\text{orb}}<br/>
+$$<br/>
+<em>(Escape velocity is always <span class="arithmatex">\(\sqrt{2} \approx 1.414×\)</span> orbital velocity.)</em> </p>
+<hr/>
+<h2 id="data-table">Data Table</h2>
+<table>
+<thead>
+<tr>
+<th>Body</th>
+<th><span class="arithmatex">\(<span class="arithmatex">\(v_{\text{orb}}\)</span>\)</span> (km/s)</th>
+<th><span class="arithmatex">\(<span class="arithmatex">\(v_{\text{esc}}\)</span>\)</span> (km/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moon</td>
+<td>1.68</td>
+<td>2.38</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>3.55</td>
+<td>5.03</td>
+</tr>
+<tr>
+<td>Earth</td>
+<td>7.91</td>
+<td>11.19</td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td>42.1</td>
+<td>59.5</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="insights">Insights</h2>
+<ol>
+<li><strong>Mission Design</strong>:  </li>
+<li>Fuel needed scales with <span class="arithmatex">\(v^2\)</span> → Jupiter missions require <strong>~28×</strong> more fuel than Moon missions.  </li>
+<li><strong>Gravity Assist</strong>:  </li>
+<li>Probes use Jupiter’s gravity to reach <span class="arithmatex">\(v_{\text{esc}}^{\text{Solar}}\)</span> (3rd cosmic velocity).  </li>
+<li><strong>Human Exploration</strong>:  </li>
+<li>Mars’ <span class="arithmatex">\(v_{\text{esc}} = 5.03 \, \text{km/s}\)</span> makes return trips feasible.  </li>
+</ol>
+<h2 id="why-these-velocities-matter"><strong>Why These Velocities Matter</strong></h2>
+<ul>
+<li>
+<p><strong>First Cosmic Velocity (<span class="arithmatex">\(v_1\)</span>)</strong>: Crucial for launching satellites and space stations. Without reaching this speed, orbit isn't possible.</p>
+</li>
+<li>
+<p><strong>Second Cosmic Velocity (<span class="arithmatex">\(v_2\)</span>)</strong>: Essential for deep space missions. Rockets must reach this to send payloads to the Moon, Mars, or beyond.</p>
+</li>
+<li>
+<p><strong>Third Cosmic Velocity (<span class="arithmatex">\(v_3\)</span>)</strong>: Needed for missions escaping the entire Solar System (e.g., <em>Voyager 1</em>).</p>
+</li>
+</ul>
+<p>These velocities are not just theory—they're the <em>reality</em> that governs the logistics, cost, and feasibility of space travel.</p>
+<h2 id="space-comparison-moon-vs-mars-vs-jupiter">Space Comparison: Moon vs Mars vs Jupiter</h2>
+<h2 id="1-diameter">1. Diameter</h2>
+<div class="arithmatex">\[
+\begin{align*}
+\text{Moon} &amp;= 3{,}474\ \text{km} \\
+\text{Mars} &amp;= 6{,}779\ \text{km} \\
+\text{Jupiter} &amp;= 139{,}820\ \text{km}
+\end{align*}
+\]</div>
+<p><strong>Relative Size Comparison</strong><br/>
+Moon : Mars : Jupiter  ≈ <span class="arithmatex">\(1 : 2 : 40\)</span></p>
+<hr/>
+<h2 id="2-average-surface-temperature">2. Average Surface Temperature</h2>
+<div class="arithmatex">\[
+\begin{align*}
+\text{Moon} &amp;\approx -20^\circ \text{C} \\
+\text{Mars} &amp;\approx -63^\circ \text{C} \\
+\text{Jupiter} &amp;\approx -110^\circ \text{C}
+\end{align*}
+\]</div>
+<blockquote>
+<div class="arithmatex">\[\text{Moon is the warmest (on average)}\]</div>
+</blockquote>
+<hr/>
+<h2 id="3-gravity-relative-to-earth">3. Gravity (Relative to Earth)</h2>
+<div class="arithmatex">\[
+\begin{align*}
+\text{Moon} &amp;= 0.165g \\
+\text{Mars} &amp;= 0.38g \\
+\text{Jupiter} &amp;= 2.53g
+\end{align*}
+\]</div>
+<p><strong>Relative Gravity</strong><br/>
+Moon : Mars : Jupiter ≈ <span class="arithmatex">\(1 : 2.3 : 15.3\)</span></p>
+<hr/>
+<h2 id="4-distance-from-earth-average">4. Distance from Earth (Average)</h2>
+<div class="arithmatex">\[
+\begin{align*}
+\text{Moon} &amp;\approx 384{,}000\ \text{km} \\
+\text{Mars} &amp;\approx 225 \times 10^6\ \text{km} \\
+\text{Jupiter} &amp;\approx 778 \times 10^6\ \text{km}
+\end{align*}
+\]</div>
+<p><strong>Distance Ratios</strong><br/>
+Moon : Mars : Jupiter  ≈ <span class="arithmatex">\(1 : 585 : 2{,}026\)</span></p>
+<hr/>
+<h2 id="5-atmosphere">5. Atmosphere</h2>
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>Composition</th>
+<th>Pressure (Earth = 1 atm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moon</td>
+<td>None</td>
+<td><span class="arithmatex">\(&lt; 10^{-14} \ \text{atm}\)</span></td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>CO₂ (thin)</td>
+<td><span class="arithmatex">\(\approx 0.006 \ \text{atm}\)</span></td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td>H₂ + He (thick)</td>
+<td><span class="arithmatex">\(&gt; 100 \ \text{atm}\)</span> (deep layers)</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="summary-table">Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Moon</th>
+<th>Mars</th>
+<th>Jupiter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diameter (km)</td>
+<td><span class="arithmatex">\(3{,}474\)</span></td>
+<td><span class="arithmatex">\(6{,}779\)</span></td>
+<td><span class="arithmatex">\(139{,}820\)</span></td>
+</tr>
+<tr>
+<td>Temp (°C)</td>
+<td><span class="arithmatex">\(-20\)</span></td>
+<td><span class="arithmatex">\(-63\)</span></td>
+<td><span class="arithmatex">\(-110\)</span></td>
+</tr>
+<tr>
+<td>Gravity (g)</td>
+<td><span class="arithmatex">\(0.165\)</span></td>
+<td><span class="arithmatex">\(0.38\)</span></td>
+<td><span class="arithmatex">\(2.53\)</span></td>
+</tr>
+<tr>
+<td>Distance (km)</td>
+<td><span class="arithmatex">\(384{,}000\)</span></td>
+<td><span class="arithmatex">\(225 \times 10^6\)</span></td>
+<td><span class="arithmatex">\(778 \times 10^6\)</span></td>
+</tr>
+<tr>
+<td>Atmosphere</td>
+<td>None</td>
+<td>Thin CO₂</td>
+<td>Thick H/He</td>
+</tr>
+</tbody>
+</table>
+<h1 id="cosmic-velocities-comparison">Cosmic Velocities Comparison</h1>
+<p><img alt="alt text" src="../Untitledvideo-MadewithClipchamp4-ezgif.com-video-to-gif-converter.gif"/></p>
+<h2 id="1-bar-chart-race">1. Bar Chart Race</h2>
+<p>Visualizes the <strong>1st</strong> (orbital) and <strong>2nd</strong> (escape) cosmic velocities for celestial bodies.  </p>
+<h3 id="key-observations">Key Observations:</h3>
+<ul>
+<li><strong>Jupiter</strong> dominates with:  </li>
+<li><strong>1st Cosmic (Orbital):</strong> <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{orb}} \approx 42.1 \, \text{km/s}\)</span>\)</span> </li>
+<li><strong>2nd Cosmic (Escape):</strong> <span class="arithmatex">\(<span class="arithmatex">\(v_{\text{esc}} \approx 59.5 \, \text{km/s}\)</span>\)</span> </li>
+<li><strong>Earth</strong> requires:  </li>
+<li>
+<div class="arithmatex">\[v_{\text{orb}} = 7.91 \, \text{km/s}\]</div>
+</li>
+<li>
+<div class="arithmatex">\[v_{\text{esc}} = 11.19 \, \text{km/s}\]</div>
+</li>
+<li><strong>Moon</strong> has the lowest velocities:  </li>
+<li>
+<div class="arithmatex">\[v_{\text{orb}} = 1.68 \, \text{km/s}\]</div>
+</li>
+<li>
+<div class="arithmatex">\[v_{\text{esc}} = 2.38 \, \text{km/s}\]</div>
+</li>
+</ul>
+<h3 id="mathematical-context">Mathematical Context:</h3>
+<ul>
+<li><strong>Orbital Velocity (1st Cosmic):</strong><br/>
+  $$ v_{\text{orb}} = \sqrt{\frac{GM}{R}} $$<br/>
+  Where:  </li>
+<li><span class="arithmatex">\(G\)</span> = Gravitational constant  </li>
+<li><span class="arithmatex">\(M\)</span> = Mass of the body  </li>
+<li>
+<p><span class="arithmatex">\(R\)</span> = Orbital radius  </p>
+</li>
+<li>
+<p><strong>Escape Velocity (2nd Cosmic):</strong><br/>
+  $ v_{\text{esc}} = \sqrt{\frac{2GM}{R}} $$ </p>
+</li>
+</ul>
+<hr/>
+<h2 id="2-velocity-comparison-line-plot">2. Velocity Comparison (Line Plot)</h2>
+<p>Shows how velocities scale with planetary mass and radius.  </p>
+<h3 id="trends">Trends:</h3>
+<ol>
+<li><strong>Exponential Growth:</strong> </li>
+<li>
+<p>Escape velocity <span class="arithmatex">\(v_{\text{esc}}\)</span> grows with <span class="arithmatex">\(\sqrt{M/R}\)</span>, explaining Jupiter’s extreme values.  </p>
+</li>
+<li>
+<p><strong>Earth vs. Mars:</strong> </p>
+</li>
+<li>
+<p>Mars’ lower mass (<span class="arithmatex">\(M_{\text{Mars}} \approx 0.1 M_{\text{Earth}}\)</span>) reduces its <span class="arithmatex">\(v_{\text{esc}}\)</span> to <strong>5.03 km/s</strong>.  </p>
+</li>
+<li>
+<p><strong>Practical Implications:</strong> </p>
+</li>
+<li><strong>Fuel Requirements:</strong><br/>
+     $ \text{Fuel} \propto v^2 $ → Jupiter missions need <strong>~25×</strong> more fuel than Earth’s!  </li>
+</ol>
+<hr/>
+<h2 id="data-table-reference">Data Table (Reference)</h2>
+<table>
+<thead>
+<tr>
+<th>Body</th>
+<th>1st Cosmic (km/s)</th>
+<th>2nd Cosmic (km/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moon</td>
+<td>1.68</td>
+<td>2.38</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>3.55</td>
+<td>5.03</td>
+</tr>
+<tr>
+<td>Earth</td>
+<td>7.91</td>
+<td>11.19</td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td>42.1</td>
+<td>59.5</td>
+</tr>
+</tbody>
+</table>
+<h1 id="cosmic-velocities-and-their-role-in-space-exploration">Cosmic Velocities and Their Role in Space Exploration</h1>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+import numpy as np
+
+bodies = ['Earth', 'Mars', 'Jupiter']
+v_orb = [7.91, 3.55, 42.1]
+v_esc = [11.19, 5.03, 59.5]
+
+x = np.arange(len(bodies))
+width = 0.35
+
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.bar(x - width/2, v_orb, width, label='Orbital Velocity', color='blue')
+ax.bar(x + width/2, v_esc, width, label='Escape Velocity', color='red')
+
+ax.set_xticks(x)
+ax.set_xticklabels(bodies)
+ax.set_ylabel('Velocity (km/s)')
+ax.set_title('Cosmic Velocities Comparison')
+ax.legend()
+plt.grid(True)
+plt.show()
+</code></pre>
+<p><img alt="alt text" src="../image-8.png"/></p>
+<h2 id="1-calculations-and-visualizations">1. Calculations and Visualizations</h2>
+<h3 id="cosmic-velocity-formulas">Cosmic Velocity Formulas</h3>
+<ol>
+<li><strong>First Cosmic Velocity (Orbital)</strong><br/>
+   Minimum speed to orbit a celestial body:<br/>
+   $$
+   v_{\text{orb}} = \sqrt{\frac{GM}{R}}
+   $$</li>
+<li><strong>Second Cosmic Velocity (Escape)</strong><br/>
+   Minimum speed to escape gravitational pull:<br/>
+   $$
+   v_{\text{esc}} = \sqrt{\frac{2GM}{R}} = \sqrt{2} \cdot v_{\text{orb}}
+   $$</li>
+</ol>
+<hr/>
+<h3 id="calculated-velocities-for-earth-mars-and-jupiter">Calculated Velocities for Earth, Mars, and Jupiter</h3>
+<table>
+<thead>
+<tr>
+<th>Body</th>
+<th>Mass <span class="arithmatex">\((M)\)</span></th>
+<th>Radius (km)</th>
+<th><span class="arithmatex">\(v_{\text{orb}}\)</span> (km/s)</th>
+<th><span class="arithmatex">\(v_{\text{esc}}\)</span> (km/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Earth</strong></td>
+<td>1.0</td>
+<td>6,371</td>
+<td>7.91</td>
+<td>11.19</td>
+</tr>
+<tr>
+<td><strong>Mars</strong></td>
+<td>0.107</td>
+<td>3,390</td>
+<td>3.55</td>
+<td>5.03</td>
+</tr>
+<tr>
+<td><strong>Jupiter</strong></td>
+<td>317.8</td>
+<td>69,911</td>
+<td>42.1</td>
+<td>59.5</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p><img alt="alt text" src="../newplot%20%283%29.png"/></p>
+<h1 id="cosmic-velocities-orbital-vs-escape">Cosmic Velocities: Orbital vs Escape</h1>
+<h2 id="1-key-concepts">1. Key Concepts</h2>
+<ul>
+<li>
+<p><strong>First Cosmic Velocity (Orbital)</strong>:<br/>
+  Minimum speed to maintain a stable orbit:<br/>
+  $$ v_{\text{orb}} = \sqrt{\frac{GM}{R}} $$</p>
+</li>
+<li>
+<p><strong>Second Cosmic Velocity (Escape)</strong>:<br/>
+  Minimum speed to escape gravitational pull:<br/>
+  $$ v_{\text{esc}} = \sqrt{\frac{2GM}{R}} = \sqrt{2} \cdot v_{\text{orb}} $$</p>
+</li>
+</ul>
+<hr/>
+<h2 id="2-data-interpretation">2. Data Interpretation</h2>
+<h3 id="jupiter">Jupiter</h3>
+<ul>
+<li><strong>Escape Velocity</strong>: Dominates at $ 59.50 \, \text{km/s} $ Requires ~5.3× Earth's escape velocity!</li>
+</ul>
+<h3 id="comparative-v-delta-v">Comparative Δv (Delta-V)</h3>
+<table>
+<thead>
+<tr>
+<th>Body</th>
+<th>Orbital (km/s)</th>
+<th>Escape (km/s)</th>
+<th>$$ \Delta v $$ (km/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mars</td>
+<td>$$ 3.55 $$</td>
+<td>$$ 5.03 $$</td>
+<td>$$ \Delta v = 1.48 $$</td>
+</tr>
+<tr>
+<td>Earth</td>
+<td>$$ 7.91 $$</td>
+<td>$$ 11.19 $$</td>
+<td>$$ \Delta v = 3.28 $$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong>:<br/>
+- $ \Delta v $ = Difference between escape and orbital velocities.<br/>
+- Jupiter’s values imply extreme energy requirements for missions.</p>
+<hr/>
+<h2 id="3-visual-annotations">3. Visual Annotations</h2>
+<ol>
+<li><strong>Bar Chart</strong>:  </li>
+<li><strong>Blue Bars</strong>: Orbital velocities ($ v_{\text{orb}} $).  </li>
+<li>
+<p><strong>Red Bars</strong>: Escape velocities ($ v_{\text{esc}} $).  </p>
+</li>
+<li>
+<p><strong>Critical Observations</strong>:  </p>
+</li>
+<li>Mars has the smallest $ \Delta v $ (1.48 km/s), making return trips feasible.  </li>
+<li>Jupiter’s $ v_{\text{esc}} $ (59.50 km/s) is impractical for current propulsion.  </li>
+</ol>
+<hr/>
+<h2 id="4-physics-context">4. Physics Context</h2>
+<h3 id="energy-requirements">Energy Requirements</h3>
+<p>Fuel mass scales with the square of velocity:<br/>
+$$ E \propto v^2 $$<br/>
+- <strong>Jupiter Mission</strong>: Needs ~$ (59.5/11.2)^2 \approx 28× $ more energy than Earth escape.</p>
+<h3 id="gravity-assist">Gravity Assist</h3>
+<p>Probes leverage Jupiter’s gravity to achieve solar escape velocity:<br/>
+$$ v_{\text{3rd}} \approx 16.65 \, \text{km/s} $$</p>
+<hr/>
+<h2 id="5-errors-in-original-image">5. Errors in Original Image</h2>
+<ul>
+<li><strong>Typos</strong>: "Ars" should be "Mars".  </li>
+<li><strong>Inconsistent Δv</strong>: Listed as 1.10 km/s (Mars) vs. calculated $$ 5.03 - 3.55 = 1.48 \, \text{km/s} $$.  </li>
+<li><strong>Missing Jupiter Orbital</strong>: Should show $$ v_{\text{orb}}^{\text{Jupiter}} = 42.1 \, \text{km/s} $$.</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
