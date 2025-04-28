@@ -644,3 +644,7 @@ Each of these scenarios involves controlling the payload’s velocity and trajec
 NASA’s OSIRIS-REx is the first U.S. mission to collect a sample from an asteroid. The OSIRIS-REx spacecraft will deliver a capsule with fragments of asteroid Bennu to Earth on Sept. 24, 2023. The spacecraft briefly touched down on Bennu in October 2020 and gathered an estimated cupful of material. Seven months later, it departed Bennu on a 1.2-billion-mile cruise back to Earth. OSIRIS-REx will release the capsule above Earth’s atmosphere for a landing in Utah’s West Desert and continue flying past Earth. After delivering the sample, the spacecraft will adopt a new name for an extended mission to asteroid Apophis: OSIRIS-APEX. It will spend 5.5 years in an elliptical orbit of the Sun and rendezvous with Apophis in 2029. It will orbit and study Apophis for 1.5 years and then venture close to its surface to stir up loose material. 
 
 This visualization depicts a portion (July 2022 – October 2023) of the spacecraft’s return cruise from Bennu to Earth. 
+
+![alt text](image-13.png)
+
+![alt text](phph-ezgif.com-video-to-gif-converter.gif)
