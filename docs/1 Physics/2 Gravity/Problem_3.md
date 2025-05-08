@@ -225,9 +225,11 @@ Calculating escape speed at Earth's surface:
 $$
 GM \approx 3.986 \times 10^{14} \, \text{m}^3/\text{s}^2
 $$
+
 $$
 r = 6,371 \, \text{km} = 6.371 \times 10^6 \, \text{m}
 $$
+
 $$
 v_{\text{esc}} = \sqrt{\frac{2 \times 3.986 \times 10^{14}}{6.371 \times 10^6}} \approx 11,186 \, \text{m/s} \approx 11.2 \, \text{km/s}
 $$
