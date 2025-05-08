@@ -394,6 +394,7 @@ By rewriting them as two coupled **first-order** ODEs:
 $$
 \frac{d\vec{r}}{dt} = \vec{v}
 $$
+
 $$
 \frac{d\vec{v}}{dt} = -\frac{GM}{r^3} \vec{r}
 $$
@@ -457,7 +458,7 @@ The graph demonstrates how the payload’s path changes based on its velocity wh
 - **X-axis** (\(x\), km): Horizontal position of the payload, ranging from -12,000 km to 4,000 km.
 - **Y-axis** (\(y\), km): Vertical position of the payload, ranging from 0 km to 14,000 km.
 - **Earth**: The purple region at the origin represents Earth, with a radius of approximately 6,371 km.
-- **Release Point**: The payload is released near Earth's surface, likely at the rightmost edge (\(x=6,371\, \text{km}\), \(y=0\)).
+- **Release Point**: The payload is released near Earth's surface, likely at the rightmost edge.
 
 ---
 
@@ -495,7 +496,7 @@ The trajectory depends on the speed relative to this escape speed:
 
 ### Blue Lines: Elliptical Trajectories (Sub-escape Speed)
 
-- **Description**: Payload’s speed is less than escape speed (\(v < 11.2\, \text{km/s}\)).
+- **Description**: Payload’s speed is less than escape speed.
 - **Path**: The payload follows elliptical orbits around Earth. Each blue line represents a closed loop.
 - **Physics**: The total mechanical energy is negative:
 
