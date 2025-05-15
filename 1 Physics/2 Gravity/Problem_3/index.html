@@ -317,11 +317,11 @@ def simulate_orbit(r0, v0_vec, dt=1, t_max=20000):
         trajectory[i] = r
 
         if r_norm &lt; R_earth:
-            print(f"🌍 Crashed into Earth at t={i*dt} s")
+            print(f"Crashed into Earth at t={i*dt} s")
             return trajectory[:i]
 
         if r_norm &gt; 30*R_earth:  # Far away = escaped
-            print(f"🚀 Escaped Earth's gravity at t={i*dt} s")
+            print(f"Escaped Earth's gravity at t={i*dt} s")
             return trajectory[:i]
 
     return trajectory
@@ -516,9 +516,9 @@ v_{\text{esc}} = \sqrt{\frac{2 \times 3.986 \times 10^{14}}{6.371 \times 10^6}} 
 <li><strong>Numerical integration methods</strong> (Euler or Runge-Kutta)</li>
 </ul>
 <p>This simulation provides insight into <strong>real-world applications</strong> such as:
-- Space mission planning 🚀
-- Satellite deployment 🛰️
-- Planetary exploration 🌌</p>
+- Space mission planning 
+- Satellite deployment 
+- Planetary exploration </p>
 <hr/>
 <h2 id="fundamental-physical-principles">Fundamental Physical Principles</h2>
 <h3 id="newtons-law-of-universal-gravitation">Newton's Law of Universal Gravitation</h3>
@@ -617,12 +617,6 @@ GM \approx 3.986 \times 10^{14}\, \text{m}^3\text{s}^{-2}
 <div class="arithmatex">\[
 v_{\text{esc}} = \sqrt{\frac{2 \times 3.986 \times 10^{14}}{6.371 \times 10^6}} \approx 11,186\, \text{m/s} \approx 11.2\, \text{km/s}
 \]</div>
-<p>The trajectory depends on the speed relative to this escape speed:</p>
-<ul>
-<li><strong>Sub-escape speed</strong> (<span class="arithmatex">\(v &lt; v_{\text{esc}}\)</span>): Elliptical orbit.</li>
-<li><strong>At escape speed</strong> (<span class="arithmatex">\(v = v_{\text{esc}}\)</span>): Parabolic trajectory.</li>
-<li><strong>Above escape speed</strong> (<span class="arithmatex">\(v &gt; v_{\text{esc}}\)</span>): Hyperbolic trajectory.</li>
-</ul>
 <hr/>
 <h2 id="4-analyzing-the-trajectories_1">4. Analyzing the Trajectories</h2>
 <h3 id="blue-lines-elliptical-trajectories-sub-escape-speed">Blue Lines: Elliptical Trajectories (Sub-escape Speed)</h3>
@@ -679,82 +673,108 @@ E = \frac{1}{2}mv^2 - \frac{GMm}{r} &gt; 0
 <li><strong>Hyperbolic (above escape speed)</strong>: Escapes Earth with excess speed (green).</li>
 </ul>
 <p>These trajectories highlight the essential principles of orbital mechanics, governed by gravitational forces and the initial energy of the payload.</p>
-<p><img alt="alt text" src="../image-12.png"/></p>
-<h2 id="task-3-trajectories-and-their-relation-to-orbital-insertion-reentry-and-escape-scenarios">Task 3. Trajectories and Their Relation to Orbital Insertion, Reentry, and Escape Scenarios</h2>
-<h2 id="orbital-insertion">Orbital Insertion</h2>
-<p><strong>Orbital insertion</strong> refers to the process of placing a payload (such as a satellite) into a stable orbit around Earth. This process involves controlling the velocity and trajectory of the payload so that it enters a <strong>circular or elliptical orbit</strong>.</p>
-<ul>
-<li>
-<p><strong>Elliptical Trajectories (Blue Lines)</strong>: </p>
-<p>When a payload is launched with a velocity less than the escape speed, it follows an <strong>elliptical trajectory</strong>. This type of trajectory is common in <strong>orbital insertion</strong> scenarios, as it allows the payload to remain in a closed orbit around Earth. The size of the ellipse depends on the payload’s initial velocity. A higher velocity results in a larger elliptical orbit, while a lower velocity results in a smaller one.</p>
-<p>For example, satellites placed in <strong>low Earth orbit (LEO)</strong> or <strong>geostationary orbit (GEO)</strong> typically follow elliptical orbits as part of their insertion.</p>
-<ul>
-<li>The total mechanical energy of the payload is negative, indicating that it is bound to Earth:</li>
-</ul>
-<div class="arithmatex">\[
-E = \frac{1}{2}mv^2 - \frac{GMm}{r}
-\]</div>
-</li>
-</ul>
-<h2 id="reentry">Reentry</h2>
-<p><strong>Reentry</strong> occurs when a spacecraft, such as a returning satellite or crewed space capsule, re-enters Earth’s atmosphere after completing a mission. This process requires precise control of the spacecraft’s trajectory and velocity to ensure it returns safely to Earth.</p>
-<ul>
-<li>
-<p><strong>Elliptical Trajectories (Blue Lines)</strong>: </p>
-<p>In many reentry scenarios, spacecraft follow an elliptical or sub-escape trajectory. As a spacecraft approaches Earth, it enters the atmosphere on an elliptical path. The perigee (the closest point to Earth) of this ellipse is typically very close to Earth’s surface.</p>
-<ul>
-<li>As the spacecraft’s velocity decreases due to atmospheric drag, it may eventually fall into a <strong>sub-orbital trajectory</strong>, where it will reenter the atmosphere and land.</li>
-</ul>
-</li>
-<li>
-<p><strong>Hyperbolic Trajectories (Green Lines)</strong>: </p>
-<p>If a spacecraft escapes Earth’s gravity and then returns on a <strong>hyperbolic trajectory</strong>, it will follow a very fast, unbounded path back toward Earth. To prevent catastrophic damage, the spacecraft needs to slow down and reenter at a controlled angle to avoid burning up due to the high-speed descent.</p>
-<p>The total mechanical energy of a spacecraft on a hyperbolic trajectory is positive, indicating that the spacecraft has enough energy to escape Earth’s gravity:</p>
-<div class="arithmatex">\[
-E = \frac{1}{2}mv^2 - \frac{GMm}{r} &gt; 0
-\]</div>
-<p>If the spacecraft is returning to Earth from interplanetary space, it will need to reenter the atmosphere at a controlled speed to avoid excessive heat buildup from reentry friction.</p>
-</li>
-</ul>
-<h2 id="escape-scenarios">Escape Scenarios</h2>
-<p><strong>Escape</strong> occurs when a payload (or spacecraft) is launched with enough velocity to overcome Earth’s gravitational pull and continue traveling into space indefinitely. The payload follows a trajectory that is either <strong>parabolic</strong> or <strong>hyperbolic</strong>.</p>
-<ul>
-<li>
-<p><strong>Parabolic Trajectory (Orange Line)</strong>:</p>
-<p>When a payload is launched with exactly the escape speed, it follows a <strong>parabolic trajectory</strong>. This trajectory represents the minimum speed required for the payload to escape Earth’s gravity. After reaching a maximum distance, the payload will slow down and eventually come to a stop at infinity.</p>
-<ul>
-<li>The total mechanical energy of the payload is zero, indicating that the energy is just enough to escape Earth’s gravity:</li>
-</ul>
-<div class="arithmatex">\[
-E = \frac{1}{2}mv_{\text{esc}}^2 - \frac{GMm}{r} = 0
-\]</div>
-<p>This type of trajectory is used in <strong>space missions</strong> that require the payload to escape Earth's gravitational influence, such as missions to the Moon, Mars, or interstellar space.</p>
-</li>
-<li>
-<p><strong>Hyperbolic Trajectory (Green Line)</strong>:</p>
-<p>If the payload’s velocity is greater than the escape speed, it follows a <strong>hyperbolic trajectory</strong>. This is common for spacecraft that leave Earth with excess speed. For example, interplanetary probes or spacecraft leaving the solar system (like Voyager) follow hyperbolic trajectories.</p>
-<ul>
-<li>The total mechanical energy of the payload is positive, indicating excess energy:</li>
-</ul>
-<div class="arithmatex">\[
-E = \frac{1}{2}mv^2 - \frac{GMm}{r} &gt; 0
-\]</div>
-<p>The spacecraft will continue to move away from Earth, traveling indefinitely in space. This trajectory is used for <strong>escape missions</strong> with high velocities, such as deep space exploration.</p>
-</li>
-</ul>
-<h2 id="summary-of-applications-in-space-missions">Summary of Applications in Space Missions</h2>
-<ul>
-<li><strong>Orbital Insertion</strong>: The payload follows an elliptical orbit (blue lines), which allows it to remain in orbit around Earth.</li>
-<li><strong>Reentry</strong>: If the payload is on an elliptical or hyperbolic trajectory (blue or green lines), it may reenter Earth's atmosphere. The reentry speed must be carefully controlled to prevent burning up.</li>
-<li><strong>Escape</strong>: The payload follows a parabolic or hyperbolic trajectory (orange or green lines) to escape Earth’s gravitational influence and travel into space.</li>
-</ul>
-<p>Each of these scenarios involves controlling the payload’s velocity and trajectory to ensure successful mission outcomes, whether staying in orbit, returning to Earth, or escaping to other celestial bodies.</p>
 <h2 id="osiris-rex-trajectory-july-2022-october-2023">OSIRIS-REx Trajectory July 2022 - October 2023</h2>
 <p><img alt="alt text" src="../OSIRIS-RExTrajectoryJuly2022-October2023-ezgif.com-video-to-gif-converter.gif"/></p>
 <p>NASA’s OSIRIS-REx is the first U.S. mission to collect a sample from an asteroid. The OSIRIS-REx spacecraft will deliver a capsule with fragments of asteroid Bennu to Earth on Sept. 24, 2023. The spacecraft briefly touched down on Bennu in October 2020 and gathered an estimated cupful of material. Seven months later, it departed Bennu on a 1.2-billion-mile cruise back to Earth. OSIRIS-REx will release the capsule above Earth’s atmosphere for a landing in Utah’s West Desert and continue flying past Earth. After delivering the sample, the spacecraft will adopt a new name for an extended mission to asteroid Apophis: OSIRIS-APEX. It will spend 5.5 years in an elliptical orbit of the Sun and rendezvous with Apophis in 2029. It will orbit and study Apophis for 1.5 years and then venture close to its surface to stir up loose material. </p>
 <p>This visualization depicts a portion (July 2022 – October 2023) of the spacecraft’s return cruise from Bennu to Earth. </p>
 <p><img alt="alt text" src="../image-13.png"/></p>
 <p><img alt="alt text" src="../phph-ezgif.com-video-to-gif-converter.gif"/></p>
+<h1 id="trajectories-of-a-freely-released-payload-near-earth_1">Trajectories of a Freely Released Payload Near Earth</h1>
+<p>This simulation explores the trajectories of a payload released from an altitude of 800 km above Earth’s surface, given varying initial speeds. The payload is launched tangentially (perpendicular to the radial direction) with initial speeds ranging from 5 km/s to 13 km/s, in increments of 0.5 km/s.</p>
+<hr/>
+<h2 id="earth-and-initial-conditions">Earth and Initial Conditions</h2>
+<ul>
+<li>
+<p>Earth radius:<br/>
+  $$ R_{\text{earth}} = 6.371 \times 10^6 \ \text{m} $$</p>
+</li>
+<li>
+<p>Altitude of release:<br/>
+  $$ h = 800 \ \text{km} = 8.0 \times 10^5 \ \text{m} $$</p>
+</li>
+<li>
+<p>Initial position:<br/>
+  $$
+  \vec{r}<em>0 = (R</em>{\text{earth}} + h, \ 0)
+  $$</p>
+</li>
+<li>
+<p>Initial velocities (perpendicular to radius):<br/>
+  $$
+  \vec{v}_0 = (0, \ v), \quad v \in {5, 5.5, 6, \dots, 13} \ \text{km/s}
+  $$</p>
+</li>
+</ul>
+<hr/>
+<h2 id="gravitational-model">Gravitational Model</h2>
+<p>The only force acting on the payload is Earth’s gravity, governed by Newton’s Law of Universal Gravitation:</p>
+<div class="arithmatex">\[
+\vec{F}_g = -\frac{G M_{\text{earth}} m}{r^2} \hat{r}
+\]</div>
+<p>Using Newton’s Second Law:</p>
+<div class="arithmatex">\[
+\vec{a} = \frac{\vec{F}}{m} = -\frac{G M_{\text{earth}}}{r^2} \hat{r}
+\]</div>
+<hr/>
+<h2 id="simulation-method">Simulation Method</h2>
+<p>The simulation uses a basic numerical integrator (Euler method) with small time steps to compute the payload’s motion under gravitational acceleration. Each trajectory is terminated if the payload hits the Earth.</p>
+<p>Initial conditions are varied by changing the speed <span class="arithmatex">\( v \)</span> from 5 km/s to 13 km/s.</p>
+<hr/>
+<h2 id="trajectory-classification">Trajectory Classification</h2>
+<table>
+<thead>
+<tr>
+<th>Initial Speed (km/s)</th>
+<th>Behavior</th>
+<th>Trajectory Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.0 – 7.0</td>
+<td>Reentry</td>
+<td>Suborbital</td>
+</tr>
+<tr>
+<td>~7.8 – 8.0</td>
+<td>Near-circular orbit</td>
+<td>Elliptical/Circular</td>
+</tr>
+<tr>
+<td>8.5 – 11.0</td>
+<td>Extended elliptical orbit</td>
+<td>Elliptical</td>
+</tr>
+<tr>
+<td>&gt; 11.2</td>
+<td>Escape trajectory</td>
+<td>Hyperbolic</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="observations">Observations</h2>
+<ul>
+<li>
+<p>If $ v &lt; 7.8 \ \text{km/s}, $
+  the payload follows a suborbital or decaying elliptical path and eventually reenters Earth.</p>
+</li>
+<li>
+<p>If $ v \approx 7.8 \ \text{km/s}, $
+  the payload enters a stable near-circular orbit.</p>
+</li>
+<li>
+<p>If $ 7.8 &lt; v &lt; 11.2 \ \text{km/s}, $
+  the payload enters an elliptical orbit, possibly extending far from Earth depending on the exact speed.</p>
+</li>
+<li>
+<p>If $ v \geq 11.2 \ \text{km/s}, $
+  the payload exceeds Earth’s escape velocity and follows a hyperbolic path.</p>
+</li>
+</ul>
+<hr/>
+<h2 id="conclusion">Conclusion</h2>
+<p>The trajectory of a freely released payload near Earth is determined by its initial speed and direction. This simulation shows the transition from reentry, through orbital motion, to escape, based on increasing launch velocities. This analysis is fundamental to orbital mechanics and is applicable to satellite deployment, reentry planning, and deep space missions.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
