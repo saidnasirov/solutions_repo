@@ -131,11 +131,11 @@ def simulate_orbit(r0, v0_vec, dt=1, t_max=20000):
         trajectory[i] = r
 
         if r_norm < R_earth:
-            print(f"🌍 Crashed into Earth at t={i*dt} s")
+            print(f"Crashed into Earth at t={i*dt} s")
             return trajectory[:i]
         
         if r_norm > 30*R_earth:  # Far away = escaped
-            print(f"🚀 Escaped Earth's gravity at t={i*dt} s")
+            print(f"Escaped Earth's gravity at t={i*dt} s")
             return trajectory[:i]
 
     return trajectory
@@ -341,9 +341,9 @@ We aim to **numerically compute** the path of a payload **freely released** near
 - **Numerical integration methods** (Euler or Runge-Kutta)
 
 This simulation provides insight into **real-world applications** such as:
-- Space mission planning 🚀
-- Satellite deployment 🛰️
-- Planetary exploration 🌌
+- Space mission planning 
+- Satellite deployment 
+- Planetary exploration 
 
 ---
 
@@ -484,12 +484,6 @@ $$
 v_{\text{esc}} = \sqrt{\frac{2 \times 3.986 \times 10^{14}}{6.371 \times 10^6}} \approx 11,186\, \text{m/s} \approx 11.2\, \text{km/s}
 $$
 
-The trajectory depends on the speed relative to this escape speed:
-
-- **Sub-escape speed** (\(v < v_{\text{esc}}\)): Elliptical orbit.
-- **At escape speed** (\(v = v_{\text{esc}}\)): Parabolic trajectory.
-- **Above escape speed** (\(v > v_{\text{esc}}\)): Hyperbolic trajectory.
-
 ---
 
 ## 4. Analyzing the Trajectories
@@ -562,84 +556,6 @@ The graph illustrates the possible trajectories of a payload released near Earth
 
 These trajectories highlight the essential principles of orbital mechanics, governed by gravitational forces and the initial energy of the payload.
 
-![alt text](image-12.png)
-
-## Task 3. Trajectories and Their Relation to Orbital Insertion, Reentry, and Escape Scenarios
-
-## Orbital Insertion
-
-**Orbital insertion** refers to the process of placing a payload (such as a satellite) into a stable orbit around Earth. This process involves controlling the velocity and trajectory of the payload so that it enters a **circular or elliptical orbit**.
-
-- **Elliptical Trajectories (Blue Lines)**: 
-
-    When a payload is launched with a velocity less than the escape speed, it follows an **elliptical trajectory**. This type of trajectory is common in **orbital insertion** scenarios, as it allows the payload to remain in a closed orbit around Earth. The size of the ellipse depends on the payload’s initial velocity. A higher velocity results in a larger elliptical orbit, while a lower velocity results in a smaller one.
-
-    For example, satellites placed in **low Earth orbit (LEO)** or **geostationary orbit (GEO)** typically follow elliptical orbits as part of their insertion.
-
-    - The total mechanical energy of the payload is negative, indicating that it is bound to Earth:
-
-    $$
-    E = \frac{1}{2}mv^2 - \frac{GMm}{r}
-    $$
-
-## Reentry
-
-**Reentry** occurs when a spacecraft, such as a returning satellite or crewed space capsule, re-enters Earth’s atmosphere after completing a mission. This process requires precise control of the spacecraft’s trajectory and velocity to ensure it returns safely to Earth.
-
-- **Elliptical Trajectories (Blue Lines)**: 
-
-    In many reentry scenarios, spacecraft follow an elliptical or sub-escape trajectory. As a spacecraft approaches Earth, it enters the atmosphere on an elliptical path. The perigee (the closest point to Earth) of this ellipse is typically very close to Earth’s surface.
-
-    - As the spacecraft’s velocity decreases due to atmospheric drag, it may eventually fall into a **sub-orbital trajectory**, where it will reenter the atmosphere and land.
-
-- **Hyperbolic Trajectories (Green Lines)**: 
-
-    If a spacecraft escapes Earth’s gravity and then returns on a **hyperbolic trajectory**, it will follow a very fast, unbounded path back toward Earth. To prevent catastrophic damage, the spacecraft needs to slow down and reenter at a controlled angle to avoid burning up due to the high-speed descent.
-
-    The total mechanical energy of a spacecraft on a hyperbolic trajectory is positive, indicating that the spacecraft has enough energy to escape Earth’s gravity:
-
-    $$
-    E = \frac{1}{2}mv^2 - \frac{GMm}{r} > 0
-    $$
-
-    If the spacecraft is returning to Earth from interplanetary space, it will need to reenter the atmosphere at a controlled speed to avoid excessive heat buildup from reentry friction.
-
-## Escape Scenarios
-
-**Escape** occurs when a payload (or spacecraft) is launched with enough velocity to overcome Earth’s gravitational pull and continue traveling into space indefinitely. The payload follows a trajectory that is either **parabolic** or **hyperbolic**.
-
-- **Parabolic Trajectory (Orange Line)**:
-
-    When a payload is launched with exactly the escape speed, it follows a **parabolic trajectory**. This trajectory represents the minimum speed required for the payload to escape Earth’s gravity. After reaching a maximum distance, the payload will slow down and eventually come to a stop at infinity.
-
-    - The total mechanical energy of the payload is zero, indicating that the energy is just enough to escape Earth’s gravity:
-
-    $$
-    E = \frac{1}{2}mv_{\text{esc}}^2 - \frac{GMm}{r} = 0
-    $$
-
-    This type of trajectory is used in **space missions** that require the payload to escape Earth's gravitational influence, such as missions to the Moon, Mars, or interstellar space.
-
-- **Hyperbolic Trajectory (Green Line)**:
-
-    If the payload’s velocity is greater than the escape speed, it follows a **hyperbolic trajectory**. This is common for spacecraft that leave Earth with excess speed. For example, interplanetary probes or spacecraft leaving the solar system (like Voyager) follow hyperbolic trajectories.
-
-    - The total mechanical energy of the payload is positive, indicating excess energy:
-
-    $$
-    E = \frac{1}{2}mv^2 - \frac{GMm}{r} > 0
-    $$
-
-    The spacecraft will continue to move away from Earth, traveling indefinitely in space. This trajectory is used for **escape missions** with high velocities, such as deep space exploration.
-
-## Summary of Applications in Space Missions
-
-- **Orbital Insertion**: The payload follows an elliptical orbit (blue lines), which allows it to remain in orbit around Earth.
-- **Reentry**: If the payload is on an elliptical or hyperbolic trajectory (blue or green lines), it may reenter Earth's atmosphere. The reentry speed must be carefully controlled to prevent burning up.
-- **Escape**: The payload follows a parabolic or hyperbolic trajectory (orange or green lines) to escape Earth’s gravitational influence and travel into space.
-
-Each of these scenarios involves controlling the payload’s velocity and trajectory to ensure successful mission outcomes, whether staying in orbit, returning to Earth, or escaping to other celestial bodies.
-
 ## OSIRIS-REx Trajectory July 2022 - October 2023
 
 ![alt text](OSIRIS-RExTrajectoryJuly2022-October2023-ezgif.com-video-to-gif-converter.gif)
@@ -651,3 +567,84 @@ This visualization depicts a portion (July 2022 – October 2023) of the spacecr
 ![alt text](image-13.png)
 
 ![alt text](phph-ezgif.com-video-to-gif-converter.gif)
+
+# Trajectories of a Freely Released Payload Near Earth
+
+This simulation explores the trajectories of a payload released from an altitude of 800 km above Earth’s surface, given varying initial speeds. The payload is launched tangentially (perpendicular to the radial direction) with initial speeds ranging from 5 km/s to 13 km/s, in increments of 0.5 km/s.
+
+---
+
+## Earth and Initial Conditions
+
+- Earth radius:  
+  $$ R_{\text{earth}} = 6.371 \times 10^6 \ \text{m} $$
+
+- Altitude of release:  
+  $$ h = 800 \ \text{km} = 8.0 \times 10^5 \ \text{m} $$
+
+- Initial position:  
+  $$
+  \vec{r}_0 = (R_{\text{earth}} + h, \ 0)
+  $$
+
+- Initial velocities (perpendicular to radius):  
+  $$
+  \vec{v}_0 = (0, \ v), \quad v \in \{5, 5.5, 6, \dots, 13\} \ \text{km/s}
+  $$
+
+---
+
+## Gravitational Model
+
+The only force acting on the payload is Earth’s gravity, governed by Newton’s Law of Universal Gravitation:
+
+$$
+\vec{F}_g = -\frac{G M_{\text{earth}} m}{r^2} \hat{r}
+$$
+
+Using Newton’s Second Law:
+
+$$
+\vec{a} = \frac{\vec{F}}{m} = -\frac{G M_{\text{earth}}}{r^2} \hat{r}
+$$
+
+---
+
+## Simulation Method
+
+The simulation uses a basic numerical integrator (Euler method) with small time steps to compute the payload’s motion under gravitational acceleration. Each trajectory is terminated if the payload hits the Earth.
+
+Initial conditions are varied by changing the speed \( v \) from 5 km/s to 13 km/s.
+
+---
+
+## Trajectory Classification
+
+| Initial Speed (km/s) | Behavior                    | Trajectory Type   |
+|----------------------|-----------------------------|-------------------|
+| 5.0 – 7.0            | Reentry                     | Suborbital        |
+| ~7.8 – 8.0           | Near-circular orbit         | Elliptical/Circular |
+| 8.5 – 11.0           | Extended elliptical orbit   | Elliptical        |
+| > 11.2               | Escape trajectory           | Hyperbolic        |
+
+---
+
+## Observations
+
+- If $ v < 7.8 \ \text{km/s}, $
+  the payload follows a suborbital or decaying elliptical path and eventually reenters Earth.
+
+- If $ v \approx 7.8 \ \text{km/s}, $
+  the payload enters a stable near-circular orbit.
+
+- If $ 7.8 < v < 11.2 \ \text{km/s}, $
+  the payload enters an elliptical orbit, possibly extending far from Earth depending on the exact speed.
+
+- If $ v \geq 11.2 \ \text{km/s}, $
+  the payload exceeds Earth’s escape velocity and follows a hyperbolic path.
+
+---
+
+## Conclusion
+
+The trajectory of a freely released payload near Earth is determined by its initial speed and direction. This simulation shows the transition from reentry, through orbital motion, to escape, based on increasing launch velocities. This analysis is fundamental to orbital mechanics and is applicable to satellite deployment, reentry planning, and deep space missions.
