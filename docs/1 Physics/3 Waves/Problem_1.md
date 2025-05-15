@@ -20,8 +20,3 @@ $$
 \eta_{\rm sum}(x,y,t) \;=\;\sum_{i=1}^N \eta_i(x,y,t).
 $$
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> b5cdbde59b161eee5d26e58279bce63a7f5369c5
