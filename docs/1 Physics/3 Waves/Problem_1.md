@@ -20,7 +20,3 @@ $$
 \eta_{\rm sum}(x,y,t) \;=\;\sum_{i=1}^N \eta_i(x,y,t).
 $$
 
-
-![alt text](ScreenRecording2025-05-15122532-ezgif.com-video-to-gif-converter.gif)
-
-![alt text](ScreenRecording2025-05-15122855-ezgif.com-video-to-gif-converter.gif)
