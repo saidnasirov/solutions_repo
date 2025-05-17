@@ -172,6 +172,141 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="simulating-the-effects-of-the-lorentz-force">Simulating the effects of the Lorentz Force</h1>
+<h2 id="mathematical-definition">Mathematical Definition</h2>
+<p>The Lorentz force describes the combined effect of electric and magnetic fields on a charged particle:</p>
+<div class="arithmatex">\[
+\vec{F} = q(\vec{E} + \vec{v} \times \vec{B})
+\]</div>
+<p>Where:
+- <span class="arithmatex">\(\vec{F}\)</span> is the force (N)
+- <span class="arithmatex">\(q\)</span> is the particle charge (C)
+- <span class="arithmatex">\(\vec{v}\)</span> is the particle velocity (m/s)
+- <span class="arithmatex">\(\vec{E}\)</span> is the electric field (V/m)
+- <span class="arithmatex">\(\vec{B}\)</span> is the magnetic field (T)</p>
+<h2 id="key-components">Key Components</h2>
+<h3 id="1-electric-field-contribution">1. Electric Field Contribution</h3>
+<div class="arithmatex">\[
+\vec{F}_E = q\vec{E}
+\]</div>
+<ul>
+<li>Always parallel to <span class="arithmatex">\(\vec{E}\)</span> field</li>
+<li>Accelerates charges along field lines</li>
+</ul>
+<h3 id="2-magnetic-field-contribution">2. Magnetic Field Contribution</h3>
+<div class="arithmatex">\[
+\vec{F}_B = q(\vec{v} \times \vec{B})
+\]</div>
+<ul>
+<li>Perpendicular to both <span class="arithmatex">\(\vec{v}\)</span> and <span class="arithmatex">\(\vec{B}\)</span></li>
+<li>Does no work (<span class="arithmatex">\(\vec{F}_B \cdot \vec{v} = 0\)</span>)</li>
+</ul>
+<h2 id="special-cases">Special Cases</h2>
+<h3 id="crossed-fields-vece-perp-vecb">Crossed Fields (<span class="arithmatex">\(\vec{E} \perp \vec{B}\)</span>)</h3>
+<p>Produces characteristic drift motion:</p>
+<div class="arithmatex">\[
+\vec{v}_d = \frac{\vec{E} \times \vec{B}}{B^2}
+\]</div>
+<h3 id="pure-magnetic-field">Pure Magnetic Field</h3>
+<p>Leads to circular motion with cyclotron frequency:</p>
+<div class="arithmatex">\[
+\omega_c = \frac{qB}{m}
+\]</div>
+<p>Radius of gyration:
+$$
+r_c = \frac{mv_\perp}{qB}
+$$</p>
+<h2 id="applications">Applications</h2>
+<h3 id="1-particle-accelerators">1. Particle Accelerators</h3>
+<ul>
+<li>Magnetic fields bend particle trajectories</li>
+<li>Electric fields provide acceleration</li>
+<li>Relativistic correction:
+  $$
+  \vec{F} = \frac{q}{c}(\vec{v} \times \vec{B}) \quad \text{(for } v \approx c\text{)}
+  $$</li>
+</ul>
+<h3 id="2-mass-spectrometers">2. Mass Spectrometers</h3>
+<ul>
+<li>Separation by mass-to-charge ratio (<span class="arithmatex">\(m/q\)</span>)</li>
+<li>Workspace equation:
+  $$
+  \frac{m}{q} = \frac{B^2r^2}{2V}
+  $$</li>
+</ul>
+<p><img alt="alt text" src="../image.png"/>
+<img alt="alt text" src="../image-1.png"/></p>
+<h3 id="3-plasma-confinement">3. Plasma Confinement</h3>
+<ul>
+<li>Tokamaks use toroidal magnetic fields</li>
+<li>Magnetic mirror effect:
+  $$
+  \mu = \frac{mv_\perp^2}{2B} \quad \text{(magnetic moment)}
+  $$</li>
+</ul>
+<h3 id="4-hall-effect-devices">4. Hall Effect Devices</h3>
+<ul>
+<li>Measure carrier density:
+  $$
+  n = \frac{IB}{qV_H t}
+  $$</li>
+</ul>
+<h2 id="numerical-simulation">Numerical Simulation</h2>
+<p>The Python simulation demonstrates:</p>
+<ol>
+<li>
+<p><strong>Initial Conditions</strong>:
+   $$
+   \vec{v}_0 = v_0\hat{x}, \quad \vec{E} = E_0\hat{y}, \quad \vec{B} = B_0\hat{z}
+   $$</p>
+</li>
+<li>
+<p><strong>Equations of Motion</strong>:
+   $$
+   \frac{d\vec{v}}{dt} = \frac{q}{m}(\vec{E} + \vec{v} \times \vec{B})
+   $$
+   $$
+   \frac{d\vec{r}}{dt} = \vec{v}
+   $$</p>
+</li>
+<li>
+<p><strong>Numerical Integration</strong>:
+   Using Runge-Kutta 4th order method for accuracy:
+   $$
+   k_1 = f(t_n, y_n)
+   $$
+   $$
+   k_2 = f(t_n + \frac{h}{2}, y_n + \frac{h}{2}k_1)
+   $$
+   $$
+   k_3 = f(t_n + \frac{h}{2}, y_n + \frac{h}{2}k_2)
+   $$
+   $$
+   k_4 = f(t_n + h, y_n + hk_3)
+   $$
+   $$
+   y_{n+1} = y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)
+   $$</p>
+</li>
+</ol>
+<h2 id="visualization-features">Visualization Features</h2>
+<p>The enhanced simulation shows:
+- Cycloid trajectory from crossed fields
+- Real-time particle information:
+  $$
+  \vec{r}(t) = (x(t), y(t))
+  $$
+  $$
+  \vec{v}(t) = (v_x(t), v_y(t))
+  $$
+- Field vectors and drift velocity:
+  $$
+  \vec{v}_d = \frac{E_0}{B_0}\hat{x}
+  $$</p>
+<p>## Animation 1</p>
+<p><img alt="alt text" src="../download1-ezgif.com-video-to-gif-converter.gif"/></p>
+<p>## Animation 2</p>
+<p><img alt="alt text" src="../download-ezgif.com-video-to-gif-converter.gif"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
