@@ -629,22 +629,6 @@ Initial conditions are varied by changing the speed \( v \) from 5 km/s to 13 km
 
 ---
 
-## Observations
-
-- If $ v < 7.8 \ \text{km/s}, $
-  the payload follows a suborbital or decaying elliptical path and eventually reenters Earth.
-
-- If $ v \approx 7.8 \ \text{km/s}, $
-  the payload enters a stable near-circular orbit.
-
-- If $ 7.8 < v < 11.2 \ \text{km/s}, $
-  the payload enters an elliptical orbit, possibly extending far from Earth depending on the exact speed.
-
-- If $ v \geq 11.2 \ \text{km/s}, $
-  the payload exceeds Earth’s escape velocity and follows a hyperbolic path.
-
----
-
 ## Conclusion
 
 The trajectory of a freely released payload near Earth is determined by its initial speed and direction. This simulation shows the transition from reentry, through orbital motion, to escape, based on increasing launch velocities. This analysis is fundamental to orbital mechanics and is applicable to satellite deployment, reentry planning, and deep space missions.
