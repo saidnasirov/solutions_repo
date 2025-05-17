@@ -141,10 +141,10 @@ The enhanced simulation shows:
   \vec{v}_d = \frac{E_0}{B_0}\hat{x}
   $$
 
-## Animation
+## Animation 1
 
  ![alt text](download1-ezgif.com-video-to-gif-converter.gif)
 
-
+## Animation 2
 
  ![alt text](download-ezgif.com-video-to-gif-converter.gif)
