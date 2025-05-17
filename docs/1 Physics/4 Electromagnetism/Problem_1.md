@@ -84,6 +84,10 @@ $$
   \mu = \frac{mv_\perp^2}{2B} \quad \text{(magnetic moment)}
   $$
 
+  ![alt text](image-2.png)
+
+  
+
 ### 4. Hall Effect Devices
 - Measure carrier density:
   $$
@@ -148,3 +152,9 @@ The enhanced simulation shows:
 ## Animation 2
 
  ![alt text](download-ezgif.com-video-to-gif-converter.gif)
+
+ ![alt text](image-3.png)
+
+ ![alt text](image-4.png)
+
+ ![alt text](image-5.png)
