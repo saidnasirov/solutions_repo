@@ -137,3 +137,13 @@ The code outputs this result with 2 decimal places: $7.38\ \Omega$.
 ![alt text](<Screenshot 2025-05-19 105237.png>)
 
 ![alt text](<Screenshot 2025-05-19 105242.png>)
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+![alt text](image-9.png)
