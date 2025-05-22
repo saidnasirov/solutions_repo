@@ -4,38 +4,43 @@
 
 ## 1. Simulating Population Distributions
 
-We begin by defining three different population distributions:
+#### 1. Uniform Distribution
+$$ X \sim \text{Uniform}(a, b) $$
 
-1. **Uniform Distribution**  
-   $$X \sim \mathrm{Uniform}(a,b)$$  
-   - PDF:  
-     $$f_X(x) = \frac{1}{b - a}, \quad a \le x \le b$$  
-   - Mean:  
-     $$\mu = \frac{a + b}{2}$$  
-   - Variance:  
-     $$\sigma^2 = \frac{(b - a)^2}{12}$$  
+#### 2. PDF:
+$$ f_X(x) = \frac{1}{b - a}, \quad a \leq x \leq b $$
 
-2. **Exponential Distribution**  
-   $$X \sim \mathrm{Exponential}(\lambda)$$  
-   - PDF:  
-     $$f_X(x) = \lambda e^{-\lambda x}, \quad x \ge 0$$  
-   - Mean:  
-     $$\mu = \frac{1}{\lambda}$$  
-   - Variance:  
-     $$\sigma^2 = \frac{1}{\lambda^2}$$  
+#### 3. Mean:
+$$ \mu = \frac{a + b}{2} $$
 
-3. **Binomial Distribution**  
-   $$X \sim \mathrm{Binomial}(n, p)$$  
-   - PMF:  
-     $$P(X = k) = {n \choose k} p^k (1-p)^{\,n-k}, \quad k=0,1,\dots,n$$  
-   - Mean:  
-     $$\mu = np$$  
-   - Variance:  
-     $$\sigma^2 = np(1-p)$$  
+#### 4. Variance:
+$$ \sigma^2 = \frac{(b - a)^2}{12} $$
 
-For each distribution, generate a large “population” sample of size \(N\) (e.g., \(N=100{,}000\)).
+#### 5. Exponential Distribution
+$$ X \sim \text{Exponential}(\lambda) $$
 
----
+#### 6. PDF:
+$$ f_X(x) = \lambda e^{-\lambda x}, \quad x \geq 0 $$
+
+#### 7. Mean:
+$$ \mu = \frac{1}{\lambda} $$
+
+#### 8. Variance:
+$$ \sigma^2 = \frac{1}{\lambda^2} $$
+
+#### 9. Binomial Distribution
+$$ X \sim \text{Binomial}(n, p) $$
+
+#### 10. PMF:
+$$ P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k = 0, 1, \ldots, n $$
+
+#### 11. Mean:
+$$ \mu = n p $$
+
+#### 12. Variance:
+$$ \sigma^2 = n p (1 - p) $$
+
+For each distribution, generate a large "population" sample of size \( N \) (e.g., \( N = 100,000 \)).
 
 ## 2. Sampling & Visualization
 
