@@ -174,43 +174,31 @@
 <h1 id="problem-1">Problem 1</h1>
 <h1 id="exploring-the-central-limit-theorem-through-simulations">Exploring the Central Limit Theorem through simulations</h1>
 <h2 id="1-simulating-population-distributions">1. Simulating Population Distributions</h2>
-<p>We begin by defining three different population distributions:</p>
-<ol>
-<li><strong>Uniform Distribution</strong><br/>
-<span class="arithmatex">\(<span class="arithmatex">\(X \sim \mathrm{Uniform}(a,b)\)</span>\)</span> </li>
-<li>PDF:<br/>
-<span class="arithmatex">\(<span class="arithmatex">\(f_X(x) = \frac{1}{b - a}, \quad a \le x \le b\)</span>\)</span> </li>
-<li>Mean:<br/>
-<span class="arithmatex">\(<span class="arithmatex">\(\mu = \frac{a + b}{2}\)</span>\)</span> </li>
-<li>
-<p>Variance:<br/>
-<span class="arithmatex">\(<span class="arithmatex">\(\sigma^2 = \frac{(b - a)^2}{12}\)</span>\)</span> </p>
-</li>
-<li>
-<p><strong>Exponential Distribution</strong><br/>
-<span class="arithmatex">\(<span class="arithmatex">\(X \sim \mathrm{Exponential}(\lambda)\)</span>\)</span> </p>
-</li>
-<li>PDF:<br/>
-<span class="arithmatex">\(<span class="arithmatex">\(f_X(x) = \lambda e^{-\lambda x}, \quad x \ge 0\)</span>\)</span> </li>
-<li>Mean:<br/>
-<span class="arithmatex">\(<span class="arithmatex">\(\mu = \frac{1}{\lambda}\)</span>\)</span> </li>
-<li>
-<p>Variance:<br/>
-<span class="arithmatex">\(<span class="arithmatex">\(\sigma^2 = \frac{1}{\lambda^2}\)</span>\)</span> </p>
-</li>
-<li>
-<p><strong>Binomial Distribution</strong><br/>
-<span class="arithmatex">\(<span class="arithmatex">\(X \sim \mathrm{Binomial}(n, p)\)</span>\)</span> </p>
-</li>
-<li>PMF:<br/>
-<span class="arithmatex">\(<span class="arithmatex">\(P(X = k) = {n \choose k} p^k (1-p)^{\,n-k}, \quad k=0,1,\dots,n\)</span>\)</span> </li>
-<li>Mean:<br/>
-<span class="arithmatex">\(<span class="arithmatex">\(\mu = np\)</span>\)</span> </li>
-<li>Variance:<br/>
-<span class="arithmatex">\(<span class="arithmatex">\(\sigma^2 = np(1-p)\)</span>\)</span> </li>
-</ol>
-<p>For each distribution, generate a large “population” sample of size <span class="arithmatex">\(N\)</span> (e.g., <span class="arithmatex">\(N=100{,}000\)</span>).</p>
-<hr/>
+<h4 id="1-uniform-distribution">1. Uniform Distribution</h4>
+<div class="arithmatex">\[ X \sim \text{Uniform}(a, b) \]</div>
+<h4 id="2-pdf">2. PDF:</h4>
+<div class="arithmatex">\[ f_X(x) = \frac{1}{b - a}, \quad a \leq x \leq b \]</div>
+<h4 id="3-mean">3. Mean:</h4>
+<div class="arithmatex">\[ \mu = \frac{a + b}{2} \]</div>
+<h4 id="4-variance">4. Variance:</h4>
+<div class="arithmatex">\[ \sigma^2 = \frac{(b - a)^2}{12} \]</div>
+<h4 id="5-exponential-distribution">5. Exponential Distribution</h4>
+<div class="arithmatex">\[ X \sim \text{Exponential}(\lambda) \]</div>
+<h4 id="6-pdf">6. PDF:</h4>
+<div class="arithmatex">\[ f_X(x) = \lambda e^{-\lambda x}, \quad x \geq 0 \]</div>
+<h4 id="7-mean">7. Mean:</h4>
+<div class="arithmatex">\[ \mu = \frac{1}{\lambda} \]</div>
+<h4 id="8-variance">8. Variance:</h4>
+<div class="arithmatex">\[ \sigma^2 = \frac{1}{\lambda^2} \]</div>
+<h4 id="9-binomial-distribution">9. Binomial Distribution</h4>
+<div class="arithmatex">\[ X \sim \text{Binomial}(n, p) \]</div>
+<h4 id="10-pmf">10. PMF:</h4>
+<div class="arithmatex">\[ P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}, \quad k = 0, 1, \ldots, n \]</div>
+<h4 id="11-mean">11. Mean:</h4>
+<div class="arithmatex">\[ \mu = n p \]</div>
+<h4 id="12-variance">12. Variance:</h4>
+<div class="arithmatex">\[ \sigma^2 = n p (1 - p) \]</div>
+<p>For each distribution, generate a large "population" sample of size <span class="arithmatex">\( N \)</span> (e.g., <span class="arithmatex">\( N = 100,000 \)</span>).</p>
 <h2 id="2-sampling-visualization">2. Sampling &amp; Visualization</h2>
 <ol>
 <li><strong>Draw Random Samples</strong><br/>
