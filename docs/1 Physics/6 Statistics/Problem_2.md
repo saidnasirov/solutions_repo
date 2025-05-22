@@ -122,6 +122,8 @@ A diagram should show:
 
 Both methods highlight the deep connections between geometry, probability, and numerical estimation.
 
+## Animation
+
 ![alt text](download2-ezgif.com-video-to-gif-converter.gif)
 
 ![alt text](image-12.png)
@@ -129,3 +131,162 @@ Both methods highlight the deep connections between geometry, probability, and n
 ![alt text](image-13.png)
 
 ![alt text](image-11.png)
+
+## Animation
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+from IPython.display import HTML
+
+# Use default style for compatibility
+plt.style.use('default')
+
+# Simulation settings
+total_points = 1000
+x = np.random.uniform(-1, 1, total_points)
+y = np.random.uniform(-1, 1, total_points)
+
+# Setup figure with two subplots
+fig, (ax_circle, ax_pi) = plt.subplots(1, 2, figsize=(12, 6))
+
+# Left plot: Unit circle
+ax_circle.set_xlim(-1, 1)
+ax_circle.set_ylim(-1, 1)
+ax_circle.set_aspect('equal')
+ax_circle.set_title('Random Points in Square')
+circle = plt.Circle((0, 0), 1, color='black', fill=False)
+ax_circle.add_patch(circle)
+
+inside_scatter = ax_circle.plot([], [], 'bo', markersize=2, label='Inside')[0]
+outside_scatter = ax_circle.plot([], [], 'ro', markersize=2, label='Outside')[0]
+
+# Right plot: π estimate over time
+ax_pi.set_xlim(0, total_points)
+ax_pi.set_ylim(2, 4)
+ax_pi.set_title('Convergence of π Estimate')
+ax_pi.set_xlabel('Number of Points')
+ax_pi.set_ylabel('Estimated π')
+line_pi, = ax_pi.plot([], [], 'g-')
+
+true_pi = np.pi
+ax_pi.axhline(y=true_pi, color='gray', linestyle='--', label='π (true)')
+ax_pi.legend()
+
+# Storage
+xin, yin = [], []
+xout, yout = [], []
+pi_estimates = []
+
+def init():
+    inside_scatter.set_data([], [])
+    outside_scatter.set_data([], [])
+    line_pi.set_data([], [])
+    return inside_scatter, outside_scatter, line_pi
+
+def update(i):
+    xi, yi = x[i], y[i]
+    if xi**2 + yi**2 <= 1:
+        xin.append(xi)
+        yin.append(yi)
+    else:
+        xout.append(xi)
+        yout.append(yi)
+
+    inside_scatter.set_data(xin, yin)
+    outside_scatter.set_data(xout, yout)
+
+    N = i + 1
+    pi_est = 4 * len(xin) / N
+    pi_estimates.append(pi_est)
+
+    line_pi.set_data(range(1, N + 1), pi_estimates)
+
+    return inside_scatter, outside_scatter, line_pi
+
+anim = FuncAnimation(fig, update, frames=total_points, init_func=init,
+                     interval=20, blit=True)
+
+# Render animation as HTML5 video
+HTML(anim.to_jshtml())
+```
+
+![alt text](ScreenRecording2025-05-22095607-ezgif.com-video-to-gif-converter.gif)
+
+![alt text](image-14.png)
+
+# Estimating π using Monte Carlo Simulation
+
+This animation demonstrates how we can estimate the value of π by simulating random points in a square that bounds a unit circle.
+
+---
+
+## Theoretical Foundation
+
+Consider a square of side length 2 centered at the origin, and a unit circle (radius = 1) also centered at the origin.
+
+The **area** of the square is:
+
+$$
+A_{\text{square}} = (2 \cdot 1)^2 = 4
+$$
+
+The **area** of the circle is:
+
+$$
+A_{\text{circle}} = \pi \cdot r^2 = \pi \cdot 1^2 = \pi
+$$
+
+If we randomly generate many points uniformly inside the square, the proportion that falls inside the circle approximates the ratio of the areas:
+
+$$
+\frac{\text{Points inside circle}}{\text{Total points}} \approx \frac{\pi}{4}
+$$
+
+Solving for π:
+
+$$
+\pi \approx 4 \cdot \frac{\text{Points inside}}{\text{Total points}}
+$$
+
+---
+
+## Visualization Breakdown
+
+![Monte Carlo π Estimate](./28c80d36-6d41-4e35-8228-0665cc6d8f83.png)
+
+### Left Plot: Circle Simulation
+- The **blue dots** represent random points that fall *inside* the unit circle.
+- The **red dots** are points that fall *outside* the circle but still within the square.
+- Over time, more points are added, improving the estimate.
+
+---
+
+### Right Plot: π Convergence
+- This chart shows how the **estimated value of π** changes as more points are added.
+- The **dashed horizontal line** represents the true value of π.
+- As the number of points increases, the estimate **converges** toward the true value due to the **Law of Large Numbers**.
+
+---
+
+## Summary
+
+This method:
+- Is easy to implement.
+- Demonstrates probabilistic estimation.
+- Converges slowly (requires a lot of points for high precision).
+- Visualizes the randomness and convergence beautifully.
+
+---
+
+## Formula Recap
+
+$$
+\pi \approx 4 \cdot \frac{N_{\text{in}}}{N_{\text{total}}}
+$$
+
+Where:
+- \( N_{\text{in}} \) = number of points inside the circle
+- \( N_{\text{total}} \) = total number of points sampled
+
+---
