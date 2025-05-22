@@ -291,3 +291,6 @@ Where:
 
 ---
 
+## Using Buffon’s Needle
+
+![alt text](image-15.png)
