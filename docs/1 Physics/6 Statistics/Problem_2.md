@@ -299,4 +299,4 @@ Where:
 
 ![alt text](image-16.png)
 
-![alt text](ScreenRecording2025-05-22161652-ezgif.com-video-to-gif-converter.gif)
+![alt text](ScreenRecording2025-05-22162411-ezgif.com-video-to-gif-converter.gif)
