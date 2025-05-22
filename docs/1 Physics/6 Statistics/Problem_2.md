@@ -251,10 +251,6 @@ $$
 
 ---
 
-## Visualization Breakdown
-
-![Monte Carlo π Estimate](./28c80d36-6d41-4e35-8228-0665cc6d8f83.png)
-
 ### Left Plot: Circle Simulation
 - The **blue dots** represent random points that fall *inside* the unit circle.
 - The **red dots** are points that fall *outside* the circle but still within the square.
