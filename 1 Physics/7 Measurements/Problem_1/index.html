@@ -172,6 +172,77 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="measuring-earths-gravitational-acceleration-with-a-pendulum">Measuring Earth's Gravitational Acceleration with a Pendulum</h1>
+<p>This experiment estimates the acceleration due to gravity <span class="arithmatex">\( g \)</span> using a simple pendulum by analyzing the period of its oscillation and the pendulum's length.</p>
+<hr/>
+<h2 id="materials">Materials</h2>
+<ul>
+<li>String (1 or 1.5 meters)</li>
+<li>Small mass (e.g., key chain, bag of coins)</li>
+<li>Stopwatch (or phone timer)</li>
+<li>Ruler or measuring tape</li>
+</ul>
+<hr/>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Attach the weight to one end of the string and fix the other end securely.</li>
+<li>Measure the length <span class="arithmatex">\( L \)</span> from the suspension point to the center of the weight.</li>
+<li>Estimate the uncertainty in length measurement:</li>
+</ul>
+<div class="arithmatex">\[
+\Delta L = \frac{\text{Ruler Resolution}}{2}
+\]</div>
+<hr/>
+<h2 id="data-collection">Data Collection</h2>
+<ol>
+<li>Displace the pendulum slightly (less than 15°) and release.</li>
+<li>Measure the time for 10 full oscillations, <span class="arithmatex">\( T_{10} \)</span>, and repeat 10 times.</li>
+<li>Calculate the average time:</li>
+</ol>
+<div class="arithmatex">\[
+\overline{T_{10}} = \frac{1}{10} \sum_{i=1}^{10} T_{10,i}
+\]</div>
+<ol>
+<li>Determine the standard deviation <span class="arithmatex">\( \sigma_T \)</span>, then compute:</li>
+</ol>
+<div class="arithmatex">\[
+\Delta T_{10} = \frac{\sigma_T}{\sqrt{n}} \quad \text{where } n = 10
+\]</div>
+<ol>
+<li>The period of one oscillation is:</li>
+</ol>
+<div class="arithmatex">\[
+T = \frac{\overline{T_{10}}}{10}, \quad \Delta T = \frac{\Delta T_{10}}{10}
+\]</div>
+<hr/>
+<h2 id="calculations">Calculations</h2>
+<h3 id="1-calculate-g">1. Calculate <span class="arithmatex">\( g \)</span></h3>
+<p>Using the pendulum formula:</p>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 L}{T^2}
+\]</div>
+<h3 id="2-propagate-uncertainty">2. Propagate Uncertainty</h3>
+<p>Apply uncertainty propagation for functions involving multiplication and powers:</p>
+<div class="arithmatex">\[
+\Delta g = g \cdot \sqrt{ \left( \frac{\Delta L}{L} \right)^2 + \left( 2 \cdot \frac{\Delta T}{T} \right)^2 }
+\]</div>
+<hr/>
+<h2 id="analysis">Analysis</h2>
+<ol>
+<li>Compare your measured value of <span class="arithmatex">\( g \)</span> with the standard value:</li>
+</ol>
+<div class="arithmatex">\[
+g_{\text{standard}} = 9.81 \, \text{m/s}^2
+\]</div>
+<ol>
+<li>Discuss the following points:</li>
+<li>The effect of measurement resolution on <span class="arithmatex">\( \Delta L \)</span></li>
+<li>Variability in timing and its impact on <span class="arithmatex">\( \Delta T \)</span></li>
+<li>Assumptions and possible sources of experimental error (e.g., angle of displacement, air resistance, human reaction time)</li>
+</ol>
+<hr/>
+<h2 id="conclusion">Conclusion</h2>
+<p>A simple pendulum is an effective tool for estimating gravitational acceleration. Accuracy depends on precise measurements of time and length, and proper treatment of uncertainties provides insight into the reliability of the result.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
