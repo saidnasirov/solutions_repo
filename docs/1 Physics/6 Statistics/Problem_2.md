@@ -295,8 +295,6 @@ Where:
 
 ![alt text](image-15.png)
 
-![alt text](ScreenRecording2025-05-22161143-ezgif.com-video-to-gif-converter.gif)
+![alt text](ScreenRecording2025-05-22162411-ezgif.com-video-to-gif-converter.gif)
 
 ![alt text](image-16.png)
-
-![alt text](ScreenRecording2025-05-22162411-ezgif.com-video-to-gif-converter.gif)
