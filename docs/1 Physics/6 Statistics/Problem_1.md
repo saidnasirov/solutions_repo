@@ -112,3 +112,13 @@ For each distribution, generate a large "population" sample of size \( N \) (e.g
 ![alt text](image-6.png)
 
 ![alt text](image-7.png)
+
+## Animation
+
+![alt text](ScreenRecording2025-05-22091548-ezgif.com-video-to-gif-converter.gif)
+
+![alt text](image-8.png)
+
+![alt text](image-9.png)
+
+![alt text](image-10.png)
