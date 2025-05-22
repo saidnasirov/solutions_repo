@@ -122,7 +122,7 @@ A diagram should show:
 
 Both methods highlight the deep connections between geometry, probability, and numerical estimation.
 
-## Animation
+## Animation 1
 
 ![alt text](download2-ezgif.com-video-to-gif-converter.gif)
 
@@ -132,7 +132,11 @@ Both methods highlight the deep connections between geometry, probability, and n
 
 ![alt text](image-11.png)
 
-## Animation
+## Animation 2
+
+![alt text](EstimatingPiWithMonteCarloSimulation-ezgif.com-video-to-gif-converter.gif)
+
+## Animation 3
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -286,3 +290,4 @@ Where:
 - \( N_{\text{total}} \) = total number of points sampled
 
 ---
+
