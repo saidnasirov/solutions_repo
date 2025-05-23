@@ -44,11 +44,7 @@ $$
 R_{\text{parallel}} = \left( \sum_{i=1}^{k} \frac{1}{R_i} \right)^{-1}
 $$
 
-![alt text](image.png)
 
-![alt text](image-1.png)
-
-![alt text](image-2.png)
 
 # Option 2: Advanced Task – Full Implementation
 
@@ -127,27 +123,3 @@ For the network $(1 \parallel 2) + (3 \parallel 4) + 5$:
    $$ R_{eq} = 0.6667 + 1.7143 + 5 = 7.3810\ \Omega $$
 
 The code outputs this result with 2 decimal places: $7.38\ \Omega$.
-
-![alt text](image-3.png)
-
-![alt text](image-4.png)
-
-![alt text](<Screenshot 2025-05-19 105232.png>)
-
-![alt text](<Screenshot 2025-05-19 105237.png>)
-
-![alt text](<Screenshot 2025-05-19 105242.png>)
-
-![alt text](image-5.png)
-
-![alt text](image-6.png)
-
-![alt text](image-7.png)
-
-![alt text](image-8.png)
-
-![alt text](image-9.png)
-
-## Animation
-
-![alt text](LearningGraphEmbeddings-ezgif.com-video-to-gif-converter.gif)
