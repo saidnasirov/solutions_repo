@@ -98,3 +98,7 @@ A simple pendulum is an effective tool for estimating gravitational acceleration
 ![alt text](image-1.png)
 
 ![alt text](image-2.png)
+
+
+
+![alt text](Untitledvideo-MadewithClipchamp8-ezgif.com-video-to-gif-converter.gif)
