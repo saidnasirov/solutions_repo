@@ -123,3 +123,13 @@ For the network $(1 \parallel 2) + (3 \parallel 4) + 5$:
    $$ R_{eq} = 0.6667 + 1.7143 + 5 = 7.3810\ \Omega $$
 
 The code outputs this result with 2 decimal places: $7.38\ \Omega$.
+
+![alt text](image-11.png)
+
+![alt text](image-10.png)
+
+![alt text](download3-ezgif.com-video-to-gif-converter.gif)
+
+![alt text](ScreenRecording2025-05-23103142-ezgif.com-video-to-gif-converter.gif)
+
+![alt text](ScreenRecording2025-05-23104951-ezgif.com-video-to-gif-converter.gif)
