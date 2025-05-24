@@ -129,7 +129,128 @@ The code outputs this result with 2 decimal places: $7.38\ \Omega$.
 ![alt text](image-10.png)
 
 ![alt text](download3-ezgif.com-video-to-gif-converter.gif)
+# LED Blinking Circuit Explanation
+
+This is a basic LED blinking circuit powered by a 9V battery. The components in the circuit are:
+
+- **9V Battery**: Power supply providing constant voltage.
+- **220Ω Resistor**: Limits the current to protect the LED.
+- **LED (Light Emitting Diode)**: Emits light when current flows through it.
+- **Switch**: Controls the flow of current (ON/OFF).
+
+## Circuit Path
+
+When the switch is **closed** (ON), the electrical current flows from the positive terminal of the battery through the resistor, then the LED, and finally returns to the negative terminal of the battery.
+
+### Purpose of the Resistor
+
+The resistor is crucial to prevent excessive current from damaging the LED.
+
+Using Ohm's Law:
+
+$$
+V = IR
+$$
+
+Where:
+
+- \( V \) = Voltage across the resistor and LED (approximately 9V from battery)
+- \( I \) = Current through the circuit
+- \( R \) = Resistance (220Ω)
+
+Assuming the LED forward voltage drop is approximately 2V:
+
+$$
+V_R = V_{battery} - V_{LED} = 9V - 2V = 7V
+$$
+
+Then the current \( I \) is:
+
+$$
+I = \frac{V_R}{R} = \frac{7V}{220Ω} \approx 0.0318A = 31.8mA
+$$
+
+This is within safe operating limits for most standard LEDs.
+
+## Conclusion
+
+When the switch is turned ON, the LED lights up as current flows through the circuit. The resistor ensures that the current remains safe for the LED.
+
 
 ![alt text](ScreenRecording2025-05-23103142-ezgif.com-video-to-gif-converter.gif)
 
 ![alt text](ScreenRecording2025-05-23104951-ezgif.com-video-to-gif-converter.gif)
+
+# Series vs. Parallel Circuit Explanation
+
+This image compares two fundamental types of electrical circuits: **Series** and **Parallel**.
+
+---
+
+## Series Circuit
+
+In a **series circuit**, components are connected end-to-end, forming a single path for current to flow.
+
+### Characteristics:
+
+- Current flows through each component sequentially.
+- If **one component fails**, the **entire circuit stops working**.
+- The total resistance increases:
+
+$$
+R_{total} = R_1 + R_2 + R_3 + \dots + R_n
+$$
+
+- The current is the **same** through all components:
+
+$$
+I_{total} = I_1 = I_2 = \dots = I_n
+$$
+
+- Voltage is **divided** among the components:
+
+$$
+V_{total} = V_1 + V_2 + \dots + V_n
+$$
+
+**Example in Image:** One bulb is removed or broken, so the other bulb also goes out.
+
+---
+
+## Parallel Circuit
+
+In a **parallel circuit**, components are connected across the same voltage source, forming multiple paths for the current.
+
+### Characteristics:
+
+- Each component gets the **same voltage**:
+
+$$
+V_{total} = V_1 = V_2 = \dots = V_n
+$$
+
+- The total current is the **sum** of the currents in each branch:
+
+$$
+I_{total} = I_1 + I_2 + \dots + I_n
+$$
+
+- The total resistance is **less** than the smallest resistor:
+
+$$
+\frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n}
+$$
+
+**Example in Image:** One bulb is removed or broken, but the other bulb **continues to work**.
+
+---
+
+## 🔍 Summary Table
+
+| Feature              | Series Circuit       | Parallel Circuit      |
+|----------------------|----------------------|------------------------|
+| Path for current     | One                  | Multiple               |
+| Effect of break      | Entire circuit fails | Other paths still work |
+| Voltage distribution | Divided              | Equal                  |
+| Resistance           | Increases            | Decreases              |
+
