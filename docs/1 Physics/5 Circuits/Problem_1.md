@@ -128,6 +128,12 @@ The code outputs this result with 2 decimal places: $7.38\ \Omega$.
 
 ![alt text](image-10.png)
 
+![alt text](<Screenshot 2025-05-19 105206.png>)
+
+![alt text](<Screenshot 2025-05-19 105218.png>)
+
+![alt text](<Screenshot 2025-05-19 105242-1.png>)
+
 ![alt text](download3-ezgif.com-video-to-gif-converter.gif)
 # LED Blinking Circuit Explanation
 
