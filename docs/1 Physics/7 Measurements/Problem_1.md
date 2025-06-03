@@ -137,9 +137,16 @@ The right side of the figure plots the measured gravitational acceleration value
 
 This experiment highlights the importance of uncertainty quantification and repeated measurements in experimental physics.
 
+![alt text](ScreenRecording2025-06-03081420-ezgif.com-video-to-gif-converter.gif)
 
+![alt text](image-7.png)
 
-![alt text](Untitledvideo-MadewithClipchamp8-ezgif.com-video-to-gif-converter.gif)
+![alt text](image-6.png)
 
+![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
 
 ![alt text](ScreenRecording2025-05-24100306-ezgif.com-video-to-gif-converter.gif)
