@@ -125,6 +125,15 @@ For the network $(1 \parallel 2) + (3 \parallel 4) + 5$:
 The code outputs this result with 2 decimal places: $7.38\ \Omega$.
 
 
+![alt text](<Screenshot 2025-06-11 213723.png>)
+
+![alt text](image-18.png)
+
+![alt text](image-19.png)
+
+![alt text](image-20.png)
+
+
 ![alt text](image-13.png)
 
 ![alt text](image-12.png)
