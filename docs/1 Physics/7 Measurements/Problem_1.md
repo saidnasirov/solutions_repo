@@ -4,16 +4,80 @@
 
 This experiment estimates the acceleration due to gravity \( g \) using a simple pendulum by analyzing the period of its oscillation and the pendulum's length.
 
+# Pendulum Measurement Report
+
+## Materials and Tools
+- Thin chain used as a pendulum string  
+- Small mass (object at the end of the chain)  
+- Ruler (uncertainty: ±1 mm)  
+- Phone with stopwatch app  
+
 ---
 
-## Materials
-
-- String (1 or 1.5 meters)
-- Small mass (e.g., key chain, bag of coins)
-- Stopwatch (or phone timer)
-- Ruler or measuring tape
+## Pendulum Length
+- **Length (L):** 0.250 m  
+- **Uncertainty (ΔL):** ±0.001 m  
 
 ---
+
+## Time Measurements for 10 Oscillations
+
+| Trial | Time (seconds) |
+|-------|----------------|
+| 1     | 10.11          |
+| 2     | 10.58          |
+| 3     | 9.62           |
+| 4     | 10.01          |
+| 5     | 10.12          |
+| 6     | 9.60           |
+| 7     | 10.35          |
+| 8     | 10.46          |
+| 9     | 10.12          |
+| 10    | 9.02           |
+
+---
+
+## Calculations
+
+### Mean Time for 10 Oscillations
+$$
+\bar{T}_{10} = \frac{10.11 + 10.58 + 9.62 + 10.01 + 10.12 + 9.60 + 10.35 + 10.46 + 10.12 + 9.02}{10} = 10.00 \text{ s}
+$$
+
+### Mean Time for 1 Oscillation
+$$
+\bar{T} = \frac{\bar{T}_{10}}{10} = \frac{10.00}{10} = 1.00 \text{ s}
+$$
+
+### Experimental Value of Gravitational Acceleration ($g$)
+Using the formula for the period of a simple pendulum:
+$$
+T = 2\pi \sqrt{\frac{L}{g}} \quad \Rightarrow \quad g = \frac{4\pi^2 L}{T^2}
+$$
+
+Calculate $g$:
+$$
+g = \frac{4\pi^2 \times 0.250}{(1.00)^2} = 9.87 \text{ m/s}^2
+$$
+
+---
+
+## Notes on Uncertainty and Errors
+
+- Length uncertainty: $$\Delta L = 0.001 \text{ m}$$  
+- Time measurement uncertainty depends on reaction time but is minimized by measuring 10 oscillations.
+
+- The calculated $g$ is close to the standard value $$9.81 \text{ m/s}^2$$, showing good experimental accuracy.
+
+---
+
+## Conclusion
+
+The experiment successfully measured the period of a simple pendulum and estimated gravitational acceleration with reasonable accuracy using real data.
+
+---
+
+
 
 ## Setup
 
@@ -150,7 +214,5 @@ This experiment highlights the importance of uncertainty quantification and repe
 ![alt text](image-3.png)
 
 ![alt text](image-4.png)
-
-![alt text](image-5.png)
 
 ![alt text](ScreenRecording2025-05-24100306-ezgif.com-video-to-gif-converter.gif)
