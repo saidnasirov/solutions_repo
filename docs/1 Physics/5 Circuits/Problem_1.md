@@ -124,7 +124,18 @@ For the network $(1 \parallel 2) + (3 \parallel 4) + 5$:
 
 The code outputs this result with 2 decimal places: $7.38\ \Omega$.
 
-![alt text](image-11.png)
+
+![alt text](image-13.png)
+
+![alt text](image-12.png)
+
+![alt text](image-14.png)
+
+![alt text](image-15.png)
+
+![alt text](image-16.png)
+
+![alt text](image-17.png)
 
 ![alt text](image-10.png)
 
@@ -182,10 +193,6 @@ This is within safe operating limits for most standard LEDs.
 
 When the switch is turned ON, the LED lights up as current flows through the circuit. The resistor ensures that the current remains safe for the LED.
 
-
-![alt text](ScreenRecording2025-05-23103142-ezgif.com-video-to-gif-converter.gif)
-
-![alt text](ScreenRecording2025-05-23104951-ezgif.com-video-to-gif-converter.gif)
 
 # Series vs. Parallel Circuit Explanation
 
