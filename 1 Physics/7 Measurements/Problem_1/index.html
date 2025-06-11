@@ -174,14 +174,105 @@
 <h1 id="problem-1">Problem 1</h1>
 <h1 id="measuring-earths-gravitational-acceleration-with-a-pendulum">Measuring Earth's Gravitational Acceleration with a Pendulum</h1>
 <p>This experiment estimates the acceleration due to gravity <span class="arithmatex">\( g \)</span> using a simple pendulum by analyzing the period of its oscillation and the pendulum's length.</p>
-<hr/>
-<h2 id="materials">Materials</h2>
+<h1 id="pendulum-measurement-report">Pendulum Measurement Report</h1>
+<h2 id="materials-and-tools">Materials and Tools</h2>
 <ul>
-<li>String (1 or 1.5 meters)</li>
-<li>Small mass (e.g., key chain, bag of coins)</li>
-<li>Stopwatch (or phone timer)</li>
-<li>Ruler or measuring tape</li>
+<li>Thin chain used as a pendulum string  </li>
+<li>Small mass (object at the end of the chain)  </li>
+<li>Ruler (uncertainty: ±1 mm)  </li>
+<li>Phone with stopwatch app  </li>
 </ul>
+<hr/>
+<h2 id="pendulum-length">Pendulum Length</h2>
+<ul>
+<li><strong>Length (L):</strong> 0.250 m  </li>
+<li><strong>Uncertainty (ΔL):</strong> ±0.001 m  </li>
+</ul>
+<hr/>
+<h2 id="time-measurements-for-10-oscillations">Time Measurements for 10 Oscillations</h2>
+<table>
+<thead>
+<tr>
+<th>Trial</th>
+<th>Time (seconds)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10.11</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10.58</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9.62</td>
+</tr>
+<tr>
+<td>4</td>
+<td>10.01</td>
+</tr>
+<tr>
+<td>5</td>
+<td>10.12</td>
+</tr>
+<tr>
+<td>6</td>
+<td>9.60</td>
+</tr>
+<tr>
+<td>7</td>
+<td>10.35</td>
+</tr>
+<tr>
+<td>8</td>
+<td>10.46</td>
+</tr>
+<tr>
+<td>9</td>
+<td>10.12</td>
+</tr>
+<tr>
+<td>10</td>
+<td>9.02</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="calculations">Calculations</h2>
+<h3 id="mean-time-for-10-oscillations">Mean Time for 10 Oscillations</h3>
+<div class="arithmatex">\[
+\bar{T}_{10} = \frac{10.11 + 10.58 + 9.62 + 10.01 + 10.12 + 9.60 + 10.35 + 10.46 + 10.12 + 9.02}{10} = 10.00 \text{ s}
+\]</div>
+<h3 id="mean-time-for-1-oscillation">Mean Time for 1 Oscillation</h3>
+<div class="arithmatex">\[
+\bar{T} = \frac{\bar{T}_{10}}{10} = \frac{10.00}{10} = 1.00 \text{ s}
+\]</div>
+<h3 id="experimental-value-of-gravitational-acceleration-g">Experimental Value of Gravitational Acceleration (<span class="arithmatex">\(g\)</span>)</h3>
+<p>Using the formula for the period of a simple pendulum:
+$$
+T = 2\pi \sqrt{\frac{L}{g}} \quad \Rightarrow \quad g = \frac{4\pi^2 L}{T^2}
+$$</p>
+<p>Calculate <span class="arithmatex">\(g\)</span>:
+$$
+g = \frac{4\pi^2 \times 0.250}{(1.00)^2} = 9.87 \text{ m/s}^2
+$$</p>
+<hr/>
+<h2 id="notes-on-uncertainty-and-errors">Notes on Uncertainty and Errors</h2>
+<ul>
+<li>Length uncertainty: <span class="arithmatex">\(<span class="arithmatex">\(\Delta L = 0.001 \text{ m}\)</span>\)</span> </li>
+<li>
+<p>Time measurement uncertainty depends on reaction time but is minimized by measuring 10 oscillations.</p>
+</li>
+<li>
+<p>The calculated <span class="arithmatex">\(g\)</span> is close to the standard value <span class="arithmatex">\(<span class="arithmatex">\(9.81 \text{ m/s}^2\)</span>\)</span>, showing good experimental accuracy.</p>
+</li>
+</ul>
+<hr/>
+<h2 id="conclusion">Conclusion</h2>
+<p>The experiment successfully measured the period of a simple pendulum and estimated gravitational acceleration with reasonable accuracy using real data.</p>
 <hr/>
 <h2 id="setup">Setup</h2>
 <ul>
@@ -215,7 +306,7 @@
 T = \frac{\overline{T_{10}}}{10}, \quad \Delta T = \frac{\Delta T_{10}}{10}
 \]</div>
 <hr/>
-<h2 id="calculations">Calculations</h2>
+<h2 id="calculations_1">Calculations</h2>
 <h3 id="1-calculate-g">1. Calculate <span class="arithmatex">\( g \)</span></h3>
 <p>Using the pendulum formula:</p>
 <div class="arithmatex">\[
@@ -241,7 +332,7 @@ g_{\text{standard}} = 9.81 \, \text{m/s}^2
 <li>Assumptions and possible sources of experimental error (e.g., angle of displacement, air resistance, human reaction time)</li>
 </ol>
 <hr/>
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="conclusion_1">Conclusion</h2>
 <p>A simple pendulum is an effective tool for estimating gravitational acceleration. Accuracy depends on precise measurements of time and length, and proper treatment of uncertainties provides insight into the reliability of the result.</p>
 <p><img alt="alt text" src="../image-8.png"/></p>
 <p><img alt="alt text" src="../image-9.png"/></p>
@@ -280,7 +371,6 @@ g = \frac{4\pi^2 L}{T^2}
 <p><img alt="alt text" src="../image-6.png"/></p>
 <p><img alt="alt text" src="../image-3.png"/></p>
 <p><img alt="alt text" src="../image-4.png"/></p>
-<p><img alt="alt text" src="../image-5.png"/></p>
 <p><img alt="alt text" src="../ScreenRecording2025-05-24100306-ezgif.com-video-to-gif-converter.gif"/></p>
 </div>
 </div><footer>
