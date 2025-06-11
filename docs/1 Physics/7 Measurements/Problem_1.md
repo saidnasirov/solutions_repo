@@ -24,7 +24,7 @@ This experiment estimates the acceleration due to gravity \( g \) using a simple
 
 | Trial | Time (seconds) |
 |-------|----------------|
-| 1     | 10.11          |
+| 1     | 9.66          |
 | 2     | 10.58          |
 | 3     | 9.62           |
 | 4     | 10.01          |
