@@ -16,7 +16,7 @@ This experiment estimates the acceleration due to gravity \( g \) using a simple
 
 ## Pendulum Length
 - **Length (L):** 0.250 m  
-- **Uncertainty (ΔL):** ±0.001 m  
+- **Uncertainty (ΔL):** ±1 m  
 
 ---
 
