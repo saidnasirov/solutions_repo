@@ -60,6 +60,8 @@ $$
 g = \frac{4\pi^2 \times 0.250}{(1.00)^2} = 9.87 \text{ m/s}^2
 $$
 
+![alt text](<Untitled video - Made with Clipchamp (1).gif>)
+
 ---
 
 ## Notes on Uncertainty and Errors
