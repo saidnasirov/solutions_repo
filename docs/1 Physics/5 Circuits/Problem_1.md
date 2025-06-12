@@ -129,10 +129,96 @@ The code outputs this result with 2 decimal places: $7.38\ \Omega$.
 
 ![alt text](<Screenshot 2025-06-12 090446.png>)
 
+## Circuit Analysis Explanation
+
+### Circuit Diagram Interpretation
+From the second screenshot, we can identify the following components:
+- Voltage source (vgen5/vsrc5): $5V$
+- Two resistors (r9 and r10): $100k\Omega$ each
+- Capacitor (c6): $650nF$
+
+This appears to be a simple RC circuit with:
+$$ R = 100k\Omega $$
+$$ C = 650nF $$
+
+### Graph Analysis (First Screenshot)
+The graph shows current (A) vs. voltage (V) over time (s):
+
+#### Key Observations:
+1. **Current Range**: $-50.0mA$ to $650.0mA$
+2. **Voltage Range**: Appears to be in millivolt range (labels unclear)
+3. **Time Scale**: $0ms$ to $500ms$
+
+#### Notable Points:
+- At $t = 99.7841ms$ and $t = 122.4446ms$, there are significant current values
+- The curve shape suggests a transient response, possibly of an RC circuit
+
+### Time Constant Calculation
+For an RC circuit, the time constant is:
+$$ \tau = R \times C = 100k\Omega \times 650nF = 65ms $$
+
+This matches the timescale of the observed transient response (graph shows 0-500ms).
+
+### Current Behavior
+The current spike suggests:
+$$ I_{max} \approx 650mA $$
+This could represent the initial charging current of the capacitor when voltage is first applied:
+$$ I_0 = \frac{V}{R} = \frac{5V}{100k\Omega} = 50\mu A $$
+
+**Discrepancy Note**: The observed current (650mA) is much higher than expected (50μA), suggesting either:
+1. Different circuit configuration than assumed
+2. Measurement error
+3. Different component values than labeled
+
+### Voltage Behavior
+The voltage appears to be in millivolt range, which might represent:
+$$ V_C(t) = V_0(1 - e^{-t/\tau}) $$
+for capacitor charging, though the scale seems unusually low for a 5V source.
+
 ## 2
 ![alt text](image-22.png)
 
 ![alt text](image-23.png)
+
+## Circuit Analysis
+
+### Voltage Nodes Identification
+The first image shows four labeled voltage points:
+- $V_1$ (with additional "Voltage A" annotation)
+- $V_2$
+- $V_3$
+- $V_4$
+
+### Transient Response Analysis
+The second image shows a voltage vs. time plot for two nets (net23 and net7):
+
+#### Graph Characteristics:
+- Time range: $0 \text{ms}$ to $500 \text{ms}$
+- Notable event at: $t = 183.2797 \text{ms}$
+- Voltage scale appears to be in millivolts (implied by axis labels)
+
+#### Possible Circuit Interpretation:
+This appears to show the transient response of a first-order system, likely an RC circuit with:
+$ \tau = RC $
+
+#### Key Observations:
+1. The response reaches a significant point at $183.28 \text{ms}$
+2. If this represents the time constant ($\tau$), then for a known $R$, we can calculate $C$:
+$ C = \frac{\tau}{R} $
+
+3. For example, if $R = 100 \text{k}\Omega$:
+$$ C = \frac{0.18328}{100,000} = 1.8328 \mu\text{F} $$
+
+### Comparison with Previous Circuit
+Notable differences from the earlier RC circuit analysis:
+- Different time constant ($183 \text{ms}$ vs previous $65 \text{ms}$)
+- Possibly different circuit configuration
+- Voltage scale appears smaller (mV range vs V range previously)
+
+### Suggested Next Steps:
+1. Confirm actual component values
+2. Verify measurement scales
+3. Check for additional circuit elements that might affect the time constant
 
 ![alt text](image-13.png)
 
