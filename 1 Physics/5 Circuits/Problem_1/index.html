@@ -268,9 +268,89 @@ R_{\text{eq}} = R_1 + R_2
 <h2 id="1">1</h2>
 <p><img alt="alt text" src="../image-21.png"/></p>
 <p><img alt="alt text" src="../Screenshot%202025-06-12%20090446.png"/></p>
+<h2 id="circuit-analysis-explanation">Circuit Analysis Explanation</h2>
+<h3 id="circuit-diagram-interpretation">Circuit Diagram Interpretation</h3>
+<p>From the second screenshot, we can identify the following components:
+- Voltage source (vgen5/vsrc5): <span class="arithmatex">\(5V\)</span>
+- Two resistors (r9 and r10): <span class="arithmatex">\(100k\Omega\)</span> each
+- Capacitor (c6): <span class="arithmatex">\(650nF\)</span></p>
+<p>This appears to be a simple RC circuit with:
+$$ R = 100k\Omega $$
+$$ C = 650nF $$</p>
+<h3 id="graph-analysis-first-screenshot">Graph Analysis (First Screenshot)</h3>
+<p>The graph shows current (A) vs. voltage (V) over time (s):</p>
+<h4 id="key-observations">Key Observations:</h4>
+<ol>
+<li><strong>Current Range</strong>: <span class="arithmatex">\(-50.0mA\)</span> to <span class="arithmatex">\(650.0mA\)</span></li>
+<li><strong>Voltage Range</strong>: Appears to be in millivolt range (labels unclear)</li>
+<li><strong>Time Scale</strong>: <span class="arithmatex">\(0ms\)</span> to <span class="arithmatex">\(500ms\)</span></li>
+</ol>
+<h4 id="notable-points">Notable Points:</h4>
+<ul>
+<li>At <span class="arithmatex">\(t = 99.7841ms\)</span> and <span class="arithmatex">\(t = 122.4446ms\)</span>, there are significant current values</li>
+<li>The curve shape suggests a transient response, possibly of an RC circuit</li>
+</ul>
+<h3 id="time-constant-calculation">Time Constant Calculation</h3>
+<p>For an RC circuit, the time constant is:
+$$ \tau = R \times C = 100k\Omega \times 650nF = 65ms $$</p>
+<p>This matches the timescale of the observed transient response (graph shows 0-500ms).</p>
+<h3 id="current-behavior">Current Behavior</h3>
+<p>The current spike suggests:
+$$ I_{max} \approx 650mA $$
+This could represent the initial charging current of the capacitor when voltage is first applied:
+$$ I_0 = \frac{V}{R} = \frac{5V}{100k\Omega} = 50\mu A $$</p>
+<p><strong>Discrepancy Note</strong>: The observed current (650mA) is much higher than expected (50μA), suggesting either:
+1. Different circuit configuration than assumed
+2. Measurement error
+3. Different component values than labeled</p>
+<h3 id="voltage-behavior">Voltage Behavior</h3>
+<p>The voltage appears to be in millivolt range, which might represent:
+$$ V_C(t) = V_0(1 - e^{-t/\tau}) $$
+for capacitor charging, though the scale seems unusually low for a 5V source.</p>
 <h2 id="2">2</h2>
 <p><img alt="alt text" src="../image-22.png"/></p>
 <p><img alt="alt text" src="../image-23.png"/></p>
+<h2 id="circuit-analysis">Circuit Analysis</h2>
+<h3 id="voltage-nodes-identification">Voltage Nodes Identification</h3>
+<p>The first image shows four labeled voltage points:
+- <span class="arithmatex">\(V_1\)</span> (with additional "Voltage A" annotation)
+- <span class="arithmatex">\(V_2\)</span>
+- <span class="arithmatex">\(V_3\)</span>
+- <span class="arithmatex">\(V_4\)</span></p>
+<h3 id="transient-response-analysis">Transient Response Analysis</h3>
+<p>The second image shows a voltage vs. time plot for two nets (net23 and net7):</p>
+<h4 id="graph-characteristics">Graph Characteristics:</h4>
+<ul>
+<li>Time range: <span class="arithmatex">\(0 \text{ms}\)</span> to <span class="arithmatex">\(500 \text{ms}\)</span></li>
+<li>Notable event at: <span class="arithmatex">\(t = 183.2797 \text{ms}\)</span></li>
+<li>Voltage scale appears to be in millivolts (implied by axis labels)</li>
+</ul>
+<h4 id="possible-circuit-interpretation">Possible Circuit Interpretation:</h4>
+<p>This appears to show the transient response of a first-order system, likely an RC circuit with:
+$ \tau = RC $</p>
+<h4 id="key-observations_1">Key Observations:</h4>
+<ol>
+<li>The response reaches a significant point at <span class="arithmatex">\(183.28 \text{ms}\)</span></li>
+<li>
+<p>If this represents the time constant (<span class="arithmatex">\(\tau\)</span>), then for a known <span class="arithmatex">\(R\)</span>, we can calculate <span class="arithmatex">\(C\)</span>:
+$ C = \frac{\tau}{R} $</p>
+</li>
+<li>
+<p>For example, if <span class="arithmatex">\(R = 100 \text{k}\Omega\)</span>:
+$$ C = \frac{0.18328}{100,000} = 1.8328 \mu\text{F} $$</p>
+</li>
+</ol>
+<h3 id="comparison-with-previous-circuit">Comparison with Previous Circuit</h3>
+<p>Notable differences from the earlier RC circuit analysis:
+- Different time constant (<span class="arithmatex">\(183 \text{ms}\)</span> vs previous <span class="arithmatex">\(65 \text{ms}\)</span>)
+- Possibly different circuit configuration
+- Voltage scale appears smaller (mV range vs V range previously)</p>
+<h3 id="suggested-next-steps">Suggested Next Steps:</h3>
+<ol>
+<li>Confirm actual component values</li>
+<li>Verify measurement scales</li>
+<li>Check for additional circuit elements that might affect the time constant</li>
+</ol>
 <p><img alt="alt text" src="../image-13.png"/></p>
 <p><img alt="alt text" src="../image-12.png"/></p>
 <p><img alt="alt text" src="../image-14.png"/></p>
